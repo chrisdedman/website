@@ -3,6 +3,7 @@ import '@styles/themes/dark.css'
 import '@styles/themes/light.css'
 
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'Per Aspera Ad Astra',
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-w-[350px]">
           {children}
+          <Analytics />
       </body>
     </html>
   )
