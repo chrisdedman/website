@@ -2,14 +2,17 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://chrisdedman.github.io/website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "publish": "gh-pages -d src"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "gh-pages": "^6.1.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
