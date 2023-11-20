@@ -1,0 +1,35 @@
+.dark {
+  --background-color: #212121;
+  --foreground-color: white;
+
+  --nav-background-color: #1a1a1a;
+  --nav-tab-hover-background-color: #222;
+  --nav-selected-background-color: #2a2a2a;
+  --nav-selected-foreground-color: white;
+
+  --button-background-color: white;
+  --button-foreground-color: black;
+}
+
+.dark .svg {
+  filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #212121;
+    --foreground-color: white;
+
+    --nav-background-color: #1a1a1a;
+    --nav-tab-hover-background-color: #222;
+    --nav-selected-background-color: #2a2a2a;
+    --nav-selected-foreground-color: white;
+
+    --button-background-color: white;
+    --button-foreground-color: black;
+  }
+
+  .svg {
+    filter: invert(1);
+  }
+}

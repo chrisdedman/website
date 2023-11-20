@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-color: black;
+  --background-color: white;
+
+  --nav-background-color: #E3E3E3;
+  --nav-tab-hover-background-color: #eee;
+  --nav-selected-background-color: #D3D3D3;
+  --nav-selected-background-color: black;
+
+  --button-background-color: white;
+  --button-foreground-color: black;
+}
+
+@layer base {
+  .font-montez {
+    font-family: 'Montez';
+  }
+}
+
+body {
+  color: var(--foreground-color);
+  background: var(--background-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  box-shadow: inset 0 -4px 10px 0 rgb(0 0 0 / 0.25);
+}
+
+strong {
+  @apply font-bold text-gray-400
+}
+p {
+  @apply mt-3 mb-3 font-normal
+}
+
+h3 {
+  @apply mb-3 font-bold font-montez text-xl
+}
+
+ul {
+  @apply flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 
+}
+
+li {
+  color: var(--foreground-color);
+  background: var(--background-color);
+  box-shadow: inset 0 -4px 10px 0 rgb(0 0 0 / 0.25);
+  padding: 0.5rem 1rem;
+
+  @apply border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0
+}
+
+ul li:hover {
+  background-color: var(--nav-tab-hover-background-color) !important;
+  color: var(--foreground-color);
+}
+
+ul li.selected {
+  background-color: var(--nav-selected-background-color);
+  color: var(--nav-selected-foreground-color);
+}
+
+.banner {
+  background: rgb(var(--foreground-color));
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5);
+  padding: auto;
+}
+
+button.btn {
+  color: var(--foreground-color);
+}
+
+button.hid {
+  @apply inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200;
+}
+
+.spin-on-hover:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rocket-container {
+  position: relative;
+  animation: arrive-and-spin 2s ease-in-out forwards;
+}
+
+.rocket {
+  transform-origin: bottom left;
+}
+
+@keyframes arrive-and-spin {
+  0% {
+    transform: translateX(-100%) translateY(100%) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
