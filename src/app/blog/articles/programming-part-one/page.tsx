@@ -43,7 +43,7 @@ export default function Page() {
               games, or other applications that solve problems or provide entertainment.
             </span>
             <span className="block">
-              <strong>Technology</strong>: In today's digital age, understanding technology is increasingly important.
+              <strong>Technology</strong>: In today&#39;s digital age, understanding technology is increasingly important.
               Learning programming provides a foundation for understanding how software and applications work, which can help
               individuals make better-informed decisions about technology.
             </span>
@@ -51,26 +51,26 @@ export default function Page() {
 
           <p>
             Overall, learning programming can provide numerous benefits, both personally and professionally.
-            Whether you're interested in a career in technology or just looking for a new hobby, programming can be a valuable skill to have.
+            Whether you&#39;re interested in a career in technology or just looking for a new hobby, programming can be a valuable skill to have.
           </p>
           <h3>Choosing a Programming Language</h3>
           <p>
             There are many programming languages available, each with its own syntax and purpose. Some popular languages include Python, C++,
             and Java. When choosing a programming language, consider the task you want to accomplish and the resources available for learning.
             You might come across some programming language fanboys online who claim that one language is superior to another.
-            However, it's important not to listen to them because each language has its own usefulness depending on the task
+            However, it&#39;s important not to listen to them because each language has its own usefulness depending on the task
             the programmer wants to solve.
           </p>
           <h3>Getting Started with Programming</h3>
           <p>
-            Before diving into coding, it's important to understand the basic concepts of programming. These include variables, data types,
+            Before diving into coding, it&#39;s important to understand the basic concepts of programming. These include variables, data types,
             loops, and conditionals. Once you have a solid understanding of these concepts, you can begin writing code.
-            Getting started with programming can be an intimidating task, but it doesn't have to be.
+            Getting started with programming can be an intimidating task, but it doesn&#39;t have to be.
             Remember, programming is a skill that takes time and practice to master. Be patient, stay motivated, and enjoy the journey of learning and creating with code.
           </p>
           <h3>Setting up the Development Environment</h3>
           <p>
-            To write and run code, you'll need to set up a development environment on your computer. This typically involves installing a
+            To write and run code, you&#39;ll need to set up a development environment on your computer. This typically involves installing a
             text editor or integrated development environment (IDE), as well as the necessary libraries and tools for your chosen
             programming language.
           </p>

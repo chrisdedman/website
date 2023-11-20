@@ -49,13 +49,13 @@ export default function Page() {
           </p>
           <h3>Personal Interest</h3>
           <p>
-            Ultimately, consider your personal interest and passion. If you're genuinely excited about a particular language or its
-            applications, you're more likely to stay motivated and enjoy the learning process.
+            Ultimately, consider your personal interest and passion. If you&#39;re genuinely excited about a particular language or its
+            applications, you&#39;re more likely to stay motivated and enjoy the learning process.
           </p>
           <p>
-            It's worth noting that learning one programming language will make it easier to learn others in the future, as programming concepts
-            tend to transfer across languages. So, don't worry too much about making the "perfect" choice.
-            It's more important to dive in, start learning, and gain practical experience as you progress.
+            It&#39;s worth noting that learning one programming language will make it easier to learn others in the future, as programming concepts
+            tend to transfer across languages. So, don&#39;t worry too much about making &#34;he &#34;perfect&#34; choice.
+            It&#39;s more important to dive in, start learning, and gain practical experience as you progress.
           </p>
           <h3>Popular Programming Languages</h3>
           That being said, here is a list of 10 popular programming languages along with a little summary of the fields they are commonly used in:
@@ -150,7 +150,7 @@ export default function Page() {
                 server-side scripting. It powers popular content management systems (CMS) like WordPress and Drupal.
               </p>
               <p>
-                Worse Used For: PHP's design and history can make it prone to security vulnerabilities
+                Worse Used For: PHP&#39;s design and history can make it prone to security vulnerabilities
                 if not used properly, so it requires careful attention to best practices for security.
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function Page() {
                 It offers simplicity, speed, and strong support for concurrent programming.
               </p>
               <p>
-                Worse Used For: Go's simplicity and limited feature set may not make it the best
+                Worse Used For: Go&#39;s simplicity and limited feature set may not make it the best
                 choice for highly complex or specialized domains where more expressive languages may be preferred.
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function Page() {
                 and secure applications where memory safety is critical.
               </p>
               <p>
-                Worse Used For: Rust's strict ownership and borrowing rules can make it more challenging for
+                Worse Used For: Rust&#39;s strict ownership and borrowing rules can make it more challenging for
                 beginners and result in a steeper learning curve compared to other languages. It may not be
                 the best choice for rapid prototyping or projects with tight deadlines that require quick iterations.
                 Additionally, the ecosystem and libraries in Rust might not be as extensive as those of more established
@@ -185,10 +185,10 @@ export default function Page() {
             </div>
           </div>
           <p>
-            It's important to note that programming languages are versatile, and their usage extends beyond these general descriptions.
+            It&#39;s important to note that programming languages are versatile, and their usage extends beyond these general descriptions.
             The choice of language may also depend on personal preference, project requirements, and the specific ecosystem and
             community associated with each language.
-            Note that the "<b>Worse Used For</b>" section highlights areas where a language might have limitations or challenges compared to other languages.
+            Note that the &#3;<b>Worse Used For</b>&#34; section highlights areas where a language might have limitations or challenges compared to other languages.
             However, these considerations should not discourage exploration and experimentation with any language, as each has its own
             strengths and can be valuable in the right context.
           </p>

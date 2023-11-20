@@ -11,9 +11,9 @@ export default function Experiences() {
           <p className="text-sm font-light italic">June 2023 - September 2023</p>
           <p className="text-sm font-light font-montez">
             As a Software Engineer Intern at Uber, I led initiatives like load testing and
-            deploying web services, enhancing Fusion.js' performance.
+            deploying web services, enhancing Fusion.js&#39; performance.
             I researched systematic approaches for analyzing web application performance,
-            automated testing with Uber's Ballast tool, and contributed to significant cost savings.
+            automated testing with Uber&#39;s Ballast tool, and contributed to significant cost savings.
             Proficient in tools like Typescript, JavaScript, JIRA, Docker, and CI/CD pipelines,
             I facilitated continuous service creation and played a crucial role in process improvement through comprehensive documentation.
           </p>
@@ -29,7 +29,7 @@ export default function Experiences() {
         </div>
 
         <div className="mb-3 font-normal">
-          <strong>NASA L'SPACE</strong>
+          <strong>NASA L&#39;SPACE</strong>
           <p className="text-sm font-light">Proposal Writing & Evaluation Intern</p>
           <p className="text-sm font-light italic">May 2021 - July 2021</p>
           <p className="text-sm font-light font-montez">Worked with a team of student from different background. Learned to effectively write a concept proposal that turns innovative ideas into reality,

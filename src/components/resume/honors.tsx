@@ -12,7 +12,7 @@ export default function Honors() {
         </div>
 
         <div className="mb-3 font-normal">
-          <strong>Dean's List</strong>
+          <strong>Dean&#39;s List</strong>
           <p className="text-sm font-light">El Camino College</p>
           <p className="text-sm font-light italic">Fall 2021 throught Fall 2022 Semesters</p>
           <p className="text-sm font-light font-montez">
