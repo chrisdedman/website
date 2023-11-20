@@ -1,0 +1,16 @@
+.light {
+  --foreground-color: black;
+  --background-color: white;
+
+  --nav-background-color: #E3E3E3;
+  --nav-tab-hover-background-color: #BFBFBF;
+  --nav-selected-background-color: #D3D3D3;
+  --nav-selected-foreground-color: black;
+
+  --button-background-color: black;
+  --button-foreground-color: white;
+}
+
+.light .svg {
+  filter: invert(0);
+}
