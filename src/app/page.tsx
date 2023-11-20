@@ -8,9 +8,9 @@ export default function Page() {
     <div className="h-screen flex items-center justify-center">
       <Menu />
       <div className="text-center rocket-container">
-        <RocketLaunchIcon className="w-9 h-9 rocket spin-on-hover" />
-        <h1 className="text-6xl font-bold">Hi, This is</h1>
-        <h1 className="text-6xl font-bold">Chris Dedman</h1>
+        <RocketLaunchIcon className="w-8 h-8 rocket spin-on-hover" />
+        <h1 className="text-5xl font-bold">Hi, This is</h1>
+        <h1 className="text-5xl font-bold">Chris Dedman</h1>
         <div className="flex justify-center">
           <div className="w-64 h-1 bg-red-600 rounded mt- mb-4"></div>
         </div>
