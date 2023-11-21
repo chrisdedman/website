@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Skills() {
   return (
-    <div className="p-6">
-      <div className="p-5">
+    <div className="p-1 mt-6">
+      <div className="p-0">
         <h5 className="mb-2 text-m font-bold tracking-tight">Technical Skills</h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="mb-3 font-normal">
