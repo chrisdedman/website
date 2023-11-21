@@ -38,14 +38,16 @@ export default function Page() {
 function AboutMe() {
   return (
     <div className="p-6">
+      <div className="mb-3 font-normal flex justify-center">
       <Image
         src="/me.jpg"
         alt="Picture of the author"
         width={300}
         height={300}
       />
-      <div className="p-5">
-        <h5 className="mb-2 text-2xl font-bold font-montez tracking-tight">Computer Science Student</h5>
+      </div>
+      <div className="p-3">
+        <h5 className="mb-2 text-2xl font-bold font-montez tracking-tight flex justify-center">Computer Science Student</h5>
         <p className="mb-3 font-normal font-montez">
           My name is Christopher Dedman-Rollet! I am a computer science student currently pursuing a Bachelor of Science degree.
           I have a strong passion for programming and a deep interest in learning and exploring the field.

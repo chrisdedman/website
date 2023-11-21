@@ -10,8 +10,9 @@ export default function Page() {
     <div className="h-screen p-8 lg:p-16 mt-16 ">
       <Menu />
       <div className="p-6 border border-gray-200 rounded-lg shadow">
-        <div className="p-5">
+        <div className="p-1">
           <h5 className="mb-2 text-2xl font-bold tracking-tight">Introduction to Programming (Part II) Choosing a Programming Language</h5>
+          <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
           <div>
             <address>By <a rel="author" href="/">Chris Dedman-Rollet</a></address>
             on <time dateTime="05-15-2023" title="May 15th, 2023">05-15-2023</time>
