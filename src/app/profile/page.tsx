@@ -14,8 +14,8 @@ export default function Page() {
     <div className="h-screen p-8 lg:p-16 mt-16">
       <Menu />
       <AboutMe />
-      <hr className="h-px my-8 bg-black border-0 dark:bg-white" />
-      <p className="text-sm font-montez">resume</p>
+      <hr className="h-px my-8 bg-black border-0 separator" />
+      <p className="text-sm font-montez">RESUME</p>
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="lg:w-1/3 mb-4 lg:mb-0">
           <Educations />

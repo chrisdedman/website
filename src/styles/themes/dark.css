@@ -9,6 +9,8 @@
 
   --button-background-color: white;
   --button-foreground-color: black;
+
+  --separator-color: white;
 }
 
 .dark .svg {
@@ -27,6 +29,8 @@
 
     --button-background-color: white;
     --button-foreground-color: black;
+
+    --separator-color: white;
   }
 
   .svg {

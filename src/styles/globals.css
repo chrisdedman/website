@@ -13,6 +13,8 @@
 
   --button-background-color: white;
   --button-foreground-color: black;
+
+  --separator-color: black;
 }
 
 @layer base {
@@ -30,7 +32,9 @@ nav {
   background-color: var(--nav-background-color);
   box-shadow: inset 0 -4px 10px 0 rgb(0 0 0 / 0.25);
 }
-
+.separator {
+  background-color: var(--separator-color);
+}
 strong {
   @apply font-bold text-gray-400
 }

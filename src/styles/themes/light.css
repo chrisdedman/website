@@ -9,6 +9,8 @@
 
   --button-background-color: black;
   --button-foreground-color: white;
+
+  --separator-color: black;
 }
 
 .light .svg {
