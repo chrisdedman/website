@@ -5,6 +5,7 @@ export default function Skills() {
     <div className="p-6">
       <div className="p-5">
         <h5 className="mb-2 text-m font-bold tracking-tight">Technical Skills</h5>
+        <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="mb-3 font-normal">
           <p className="text-sm font-light font-montez">
             Object Oriented Programing, Java, C/C++, Python, Golang, Elixir/Phoenix,
