@@ -43,7 +43,11 @@ export default function MyTimer() {
           colors={['#004777', '#F7B801', '#A30000', '#A30000']}
           colorsTime={[(inputMinutes * 60) / 2, (inputMinutes * 60) / 3, (inputMinutes * 60) / 4, 0]}
           isSmoothColorTransition={true}
-          onComplete={() => setIsRunning(false)}
+          onComplete={() => {
+            setIsRunning(false);
+            window.location.reload();
+          }
+          }
         >
           {({ remainingTime }) => {
             const minutes = Math.floor(remainingTime / 60);
