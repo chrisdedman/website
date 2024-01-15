@@ -56,6 +56,15 @@ export default function Page() {
             <span className="block mb-4">
               <a href="/blog/articles/pthread">&lt;pthread.h&gt; Library</a>
             </span>
+            <span className="block mb-4">
+              <a href="/blog/articles/poll">&lt;poll.h&gt; Library</a>
+            </span>
+            <span className="block mb-4">
+              <a href="/blog/articles/mutex">Mutual Exclusion</a>
+            </span>
+            <span className="block mb-4">
+              <a href="/blog/articles/semaphore">&lt;semaphore.h&gt; Library</a>
+            </span>
 
           </div>
         </div>
