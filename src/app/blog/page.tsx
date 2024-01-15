@@ -52,6 +52,11 @@ export default function Page() {
               <a href="/blog/articles/programming-part-two">Intro to Programming (Part II) Choosing a Programming Language</a>
             </span>
 
+            <h3>- Embedded Systems Development Journey</h3>
+            <span className="block mb-4">
+              <a href="/blog/articles/pthread">&lt;pthread.h&gt; Library</a>
+            </span>
+
           </div>
         </div>
       </div>
