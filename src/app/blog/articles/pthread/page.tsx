@@ -15,7 +15,7 @@ export default function Page() {
           <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
           <div>
             <address>By <a rel="author" href="/">Chris Dedman-Rollet</a></address>
-            on <time dateTime="01-14-2024" title="Jan 14th, 2024">01-14-2024</time>
+            on <time dateTime="01-8-2024" title="Jan 8th, 2024">01-8-2024</time>
           </div>
           <p>
             I learned about the <b>&lt;pthread.h&gt; library</b>. 
