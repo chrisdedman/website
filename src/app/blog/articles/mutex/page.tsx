@@ -21,7 +21,7 @@ export default function Page() {
             I learned about Mutual Exclusion (Mutex) from the <b>&lt;pthread.h&gt; library</b>. 
             A mutex is a concurrency control mechanism that prevents multiple threads from accessing 
             the same shared resource simultaneously, thus avoiding race conditions. 
-            The pthread library includes a function to 'lock' a thread, which needs 
+            The pthread library includes a function to &apos;lock&apos; a thread, which needs 
             to be initialized before accessing a thread. Then, the thread can acquire 
             the mutex before accessing the shared resource. If another thread tries 
             to acquire the mutex while the previous one still holds it, it will be 
