@@ -26,7 +26,7 @@ export default function Page() {
       <div className="flex flex-wrap justify-center">
         <p>
           <b>Latest Blog Article</b>: 
-          <a href="/blog/articles/pthread" className="underline">pthread.h Library</a>
+          <a href="/blog/articles/semaphore" className="underline">semaphore.h Library</a>
         </p>
       </div>
     </div>
