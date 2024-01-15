@@ -22,6 +22,13 @@ export default function Page() {
         <CategoryCard title="Work" />
         <CategoryCard title="Projects" />
       </div>
+
+      <div className="flex flex-wrap justify-center">
+        <p>
+          <b>Latest Blog Article</b>: 
+          <a href="/blog/articles/pthread" className="underline">pthread.h Library</a>
+        </p>
+      </div>
     </div>
   );
 }
