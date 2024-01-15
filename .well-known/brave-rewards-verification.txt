@@ -1,0 +1,4 @@
+This is a Brave Creators publisher verification file.
+
+Domain: chrisdedman.vercel.app
+Token: 7315b116f4faa6545ea5aa7a59b617b9422cbdac5cb326488d77f4064c8f4bef
