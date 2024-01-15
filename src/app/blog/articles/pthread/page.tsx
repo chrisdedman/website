@@ -58,7 +58,7 @@ int main() {
   return 0;
 }`}
             language='cpp'
-            showLineNumbers={true}
+            showLineNumbers={false}
             theme={dracula} 
           /> 
         </div>
