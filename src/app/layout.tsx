@@ -4,6 +4,7 @@ import '@styles/themes/light.css'
 
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'Per Aspera Ad Astra',
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className="min-w-[350px]">
           {children}
           <Analytics />
+          <SpeedInsights />
       </body>
     </html>
   )
