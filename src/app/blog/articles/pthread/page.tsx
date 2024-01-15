@@ -61,6 +61,10 @@ int main() {
             showLineNumbers={false}
             theme={dracula} 
           /> 
+
+          <p>
+            Here is the documentation for the <a href="https://pubs.opengroup.org/onlinepubs/7908799/xsh/pthread.h.html" target="_blank" rel="noreferrer noopener" className="underline">pthread.h library</a>
+          </p>
         </div>
       </div>
       <Footer />
