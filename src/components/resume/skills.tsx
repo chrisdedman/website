@@ -8,8 +8,8 @@ export default function Skills() {
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="mb-3 font-normal">
           <p className="text-sm font-light font-montez">
-            Object Oriented Programing, Java, C/C++, Python, Golang, Elixir/Phoenix,
-            TypeScript, React, NextJS, Git/GitHub, JIRA, Docker, CI/CD.
+            Microcontrollers, Object Oriented Programing, C/C++, Assembly, Java, Python, Golang, Elixir/Phoenix,
+            TypeScript, React, Next.JS, Fusion.JS, Git, GitHub, JIRA, Docker, CI/CD, TCP/IP Protocols, Server Performance Testing.
           </p>
         </div>
       </div>
