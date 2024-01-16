@@ -8,7 +8,7 @@ export default function Honors() {
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="mb-3 font-normal">
           <strong>National Society of Leadership & Success (NSLS)</strong>
-          <p className="text-sm font-light">Inducted</p>
+          <p className="text-sm font-light">FOL 101-1 Certificate</p>
           <p className="text-sm font-light italic">October 2023 - Present</p>
         </div>
 
