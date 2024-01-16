@@ -34,19 +34,19 @@ export default function Page() {
             The <b>pthread_mutex_init()</b> function is used to initialize a mutex.
             <br></br>- The first argument is a pointer to a pthread_mutex_t variable.
             <br></br>- The second argument is a pointer to a pthread_mutexattr_t variable.
-            <br></br>The <b>pthread_mutex_init()</b> function returns 0 if the mutex is successfully initialized, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the mutex is successfully initialized, otherwise it returns an error code.
           </p>
 
           <p>
             The <b>pthread_mutex_lock()</b> function is used to acquire a mutex.
             <br></br>- The first argument is a pointer to a pthread_mutex_t variable.
-            <br></br>The <b>pthread_mutex_lock()</b> function returns 0 if the mutex is successfully acquired, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the mutex is successfully acquired, otherwise it returns an error code.
           </p>
 
           <p>
             The <b>pthread_mutex_unlock()</b> function is used to release a mutex.
             <br></br>- The first argument is a pointer to a pthread_mutex_t variable.
-            <br></br>The <b>pthread_mutex_unlock()</b> function returns 0 if the mutex is successfully released, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the mutex is successfully released, otherwise it returns an error code.
           </p>
 
           <p>

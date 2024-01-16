@@ -40,7 +40,7 @@ export default function Page() {
             <br></br>- The first argument is a pointer to an array of pollfd structures.
             <br></br>- The second argument is the number of elements in the array.
             <br></br>- The third argument is the timeout in milliseconds.
-            <br></br>The <b>poll()</b> function returns the number of file descriptors that are ready for I/O operations, or -1 if an error occurs.
+            <br></br>- The function returns the number of file descriptors that are ready for I/O operations, or -1 if an error occurs.
           </p>
           <p>
             Here is a simple implementation of the poll library:

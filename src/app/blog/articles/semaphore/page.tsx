@@ -37,19 +37,19 @@ export default function Page() {
             <br></br>- The first argument is a pointer to a sem_t variable.
             <br></br>- The second argument is a flag that indicates whether the semaphore is shared between processes.
             <br></br>- The third argument is the initial value of the semaphore.
-            <br></br>The <b>sem_init()</b> function returns 0 if the semaphore is successfully initialized, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the semaphore is successfully initialized, otherwise it returns an error code.
           </p>
 
           <p>
             The <b>sem_wait()</b> function is used to acquire a semaphore.
             <br></br>- The first argument is a pointer to a sem_t variable.
-            <br></br>The <b>sem_wait()</b> function returns 0 if the semaphore is successfully acquired, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the semaphore is successfully acquired, otherwise it returns an error code.
           </p>
 
           <p>
             The <b>sem_post()</b> function is used to release a semaphore.
             <br></br>- The first argument is a pointer to a sem_t variable.
-            <br></br>The <b>sem_post()</b> function returns 0 if the semaphore is successfully released, otherwise it returns an error code.  
+            <br></br>- The function returns 0 if the semaphore is successfully released, otherwise it returns an error code.  
           </p>
 
           <p>

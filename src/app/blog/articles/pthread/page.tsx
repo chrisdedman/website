@@ -29,13 +29,13 @@ export default function Page() {
             <br></br>- The second argument is used to set the attributes of the thread. 
             <br></br>- The third argument is a pointer to the function that will be executed by the thread. 
             <br></br>- The fourth argument is a pointer to the argument that will be passed to the thread function. 
-            <br></br>The <b>pthread_create()</b> function returns 0 if the thread is successfully created, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the thread is successfully created, otherwise it returns an error code.
           </p>
           <p>
             The <b>pthread_join()</b> function is used to wait for a thread to terminate.
             <br></br>- The first argument is the thread to wait for.
             <br></br>- The second argument is a pointer to a pointer that will be used to return the value returned by the thread function.
-            <br></br>The <b>pthread_join()</b> function returns 0 if the thread is successfully joined, otherwise it returns an error code.
+            <br></br>- The function returns 0 if the thread is successfully joined, otherwise it returns an error code.
           </p>
           <p>
             Here is a simple implementation of the pthread library:
