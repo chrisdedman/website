@@ -12,7 +12,9 @@ export default function Educations() {
           <p className="text-sm font-light italic">January 2023 - May 2025</p>
           <p className="text-sm font-light font-montez">
             As a student at California State University, Dominguez Hills, I am pursuing a Bachelor of Science degree in Computer Science.
-            I am currently taking courses in Data Structures, Computer Organization, and Probability.
+            I have completed several computer science courses, including Software Development in java, Data Structure, and Computer Organisation.
+            I have also completed Probability and Statistics course.
+            I am currently taking courses in Data Management, Analysis of Algorithms, Programming Languages Concepts and Physics 1.
           </p>
         </div>
 
@@ -22,8 +24,8 @@ export default function Educations() {
           <p className="text-sm font-light italic">July 2021 - June 2023</p>
           <p className="text-sm font-light font-montez">
             As a student at El Camino College, I have completed several computer science courses,
-            including Data Structures, Assembly Language, and Computer Architecture.
-            I have also completed several general education courses, including English and Mathematics.
+            including Data Structures and Algorithms, Assembly Language, and Intro to C++, Intro do Java.
+            I have also completed several courses, including English, Calculus 1 & 2, Discret Mathemathics, and Cisco Network Engineering (CCNA).
           </p>
         </div>
       </div>
