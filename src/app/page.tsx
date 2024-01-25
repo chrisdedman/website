@@ -19,12 +19,12 @@ export default function Page() {
         <div className="absolute top-0 left-0 text-center w-full">
           <div className="rocket-container">
             <RocketLaunchIcon className="w-8 h-8 rocket spin-on-hover" />
-            <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Hi, This is</h1>
+            <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Hi, I am</h1>
             <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Chris Dedman</h1>
             <div className="flex justify-center">
               <div className="w-64 h-1 bg-red-600 rounded mt- mb-4"></div>
             </div>
-            <p className="text-2xl font-light mt-32 lg:mt-64 text-gray-200 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Computer Scientist Student</p>
+            <p className="text-2xl lg:text-3xl font-light mt-32 lg:mt-64 text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Aspiring Software Engineer</p>
           </div>
         </div>
       </div>
