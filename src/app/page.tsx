@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Menu from "@/components/navigation";
 import { RocketLaunchIcon } from '@heroicons/react/24/solid';
 
@@ -7,15 +8,27 @@ export default function Page() {
     <div className="h-screen flex flex-col items-center justify-center">
       <Menu />
 
-      <div className="text-center rocket-container">
-        <RocketLaunchIcon className="w-8 h-8 rocket spin-on-hover" />
-        <h1 className="text-5xl font-bold">Hi, This is</h1>
-        <h1 className="text-5xl font-bold">Chris Dedman</h1>
-        <div className="flex justify-center">
-          <div className="w-64 h-1 bg-red-600 rounded mt- mb-4"></div>
+      <div className="relative bottom-2">
+        <Image
+          className="rounded-lg"
+          src="/me_engine.jpeg"
+          alt="Picture of the author"
+          width={600}
+          height={600}
+        />
+        <div className="absolute top-0 left-0 text-center w-full">
+          <div className="rocket-container">
+            <RocketLaunchIcon className="w-8 h-8 rocket spin-on-hover" />
+            <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Hi, This is</h1>
+            <h1 className="text-3xl lg:text-5xl font-bold text-gray-200 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">Chris Dedman</h1>
+            <div className="flex justify-center">
+              <div className="w-64 h-1 bg-red-600 rounded mt- mb-4"></div>
+            </div>
+            <p className="text-2xl font-light mt-32 lg:mt-64 text-gray-200 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Computer Scientist Student</p>
+          </div>
         </div>
-        <p className="text-2xl font-light mb-8">Computer Scientist Student</p>
       </div>
+
 
       <div className="flex flex-wrap justify-center">
         <CategoryCard title="Profile" />

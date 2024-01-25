@@ -40,6 +40,7 @@ function AboutMe() {
     <div className="p-6">
       <div className="mb-3 font-normal flex justify-center">
       <Image
+        className="rounded-full"
         src="/me.jpg"
         alt="Picture of the author"
         width={300}
