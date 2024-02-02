@@ -39,7 +39,7 @@ export default function Page() {
       <div className="flex flex-wrap justify-center">
         <p>
           <b>Latest Blog Article</b>: 
-          <a href="/blog/articles/semaphore" className="underline">semaphore.h Library</a>
+          <a href="/blog/articles/volatile" className="underline">Volatile Type Qualifier</a>
         </p>
       </div>
     </div>

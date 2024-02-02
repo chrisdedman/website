@@ -65,6 +65,9 @@ export default function Page() {
             <span className="block mb-4">
               <a href="/blog/articles/semaphore">&lt;semaphore.h&gt; Library</a>
             </span>
+            <span className="block mb-4">
+              <a href="/blog/articles/volatile">Volatile Type Qualifier</a>
+            </span>
 
           </div>
         </div>
