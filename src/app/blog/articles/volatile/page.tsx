@@ -11,7 +11,7 @@ export default function Page() {
       <Menu />
       <div className="p-6 border border-gray-200 rounded-lg shadow">
         <div className="p-1">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight">Volitile Type Qualifier</h5>
+          <h5 className="mb-2 text-2xl font-bold tracking-tight">Volatile Type Qualifier</h5>
           <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
           <div>
             <address>By <a rel="author" href="/">Chris Dedman-Rollet</a></address>
