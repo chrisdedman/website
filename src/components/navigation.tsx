@@ -37,7 +37,7 @@ export default function Menu() {
             <NavItem to="/">Home</NavItem>
             <NavItem to="/work">Work</NavItem>
             <NavItem to="/profile">Profile</NavItem>
-            <NavItem to="/blog">Blog</NavItem>
+            <NavItem to="https://astranebula.gitbook.io/">Blog</NavItem>
             <NavItem to="/projects">Projects</NavItem>
           </ul>
         </div>
