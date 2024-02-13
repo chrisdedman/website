@@ -50,10 +50,11 @@ function AboutMe() {
       <div className="p-3">
         <h5 className="mb-2 text-2xl font-bold font-montez tracking-tight flex justify-center">Computer Science Student</h5>
         <p className="mb-3 font-normal font-montez">
-          My name is Christopher Dedman-Rollet! I am a computer science student currently pursuing a Bachelor of Science degree.
+          My name is Christopher Dedman-Rollet! I am a first generation computer science student currently pursuing a Bachelor of Science degree.
           I have a strong passion for programming and a deep interest in learning and exploring the field.
           I have experience with several languages, including Python, C/C++, Java, JavaScript, Elixir, and Golang.
-          I have also learned the fundamentals of Assembly Language (MASM).
+          I have also learned the fundamentals of Assembly Language (MASM). My current focus is learning embedded systems software engineering
+           and low-level programming, as well as design and analysis of algorithms.
           In addition to my technical skills, I am also a quick learner, a critical thinker, and a problem-solver.
           I am eager to apply my knowledge and skills to real-world projects and to continue growing as a programmer.
           As a student, I have completed several programming-related courses and have consistently received high marks for my work.

@@ -15,7 +15,7 @@ export default function Experiences() {
             deploying web services, enhancing Fusion.js&#39; performance.
             I researched systematic approaches for analyzing web application performance,
             automated testing with Uber&#39;s Ballast tool, and contributed to significant cost savings.
-            Proficient in tools like Typescript, JavaScript, JIRA, Docker, and CI/CD pipelines,
+            Proficient in tools like Typescript, JIRA, Docker, and CI/CD pipelines,
             I facilitated continuous service creation and played a crucial role in process improvement through comprehensive documentation.
           </p>
         </div>
