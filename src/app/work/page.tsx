@@ -3,6 +3,7 @@
 import React from "react";
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
+import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function Page() {
   return (
@@ -17,10 +18,7 @@ export default function Page() {
             First summer internship as a software engineer with Uber and Growth Platform/DOCTOM Team.
           </p>
           <a href="/work/uber" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
-            Read more
-            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-            </svg>
+            Read more <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
           </a>
         </div>
       </div>
