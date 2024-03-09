@@ -30,10 +30,10 @@ function Article() {
       <p>
         Cursif is yet another note-taking application that adds an exciting twist to your productivity. 
         Unlike conventional tools, Cursif empowers you with scriptable notes, allowing you to craft personalized macros for streamlined note automation. 
-        Currently under heavy development, it's being crafted by the talented team at the Code Society Lab on discord.
+        Currently under heavy development, it&#39;s being crafted by the talented team at the Code Society Lab on discord.
       </p>
       <p>
-        I've been deeply involved in this endeavor since the summer of 2023, collaborating with an international group of developers. 
+        I&#39;ve been deeply involved in this endeavor since the summer of 2023, collaborating with an international group of developers. 
         Our tech stack includes TypeScript with Next.js and Apollo for the frontend, and Elixir with Phoenix plus Absinthe, and PostgreSQL for the backend.
       </p>
 
@@ -61,7 +61,7 @@ function Article() {
       </ul>
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
       <p>
-        I'm excited to see this project through to completion and to share it with the world.
+        I&#39;m excited to see this project through to completion and to share it with the world.
         You can expect to see more updates on Cursif as we continue to develop and refine the application.
       </p>
       <p>
