@@ -69,12 +69,6 @@ ul li.selected {
   color: var(--nav-selected-foreground-color);
 }
 
-.banner {
-  background: rgb(var(--foreground-color));
-  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5);
-  padding: auto;
-}
-
 button.btn {
   color: var(--foreground-color);
 }
