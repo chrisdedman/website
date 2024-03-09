@@ -3,6 +3,7 @@
 import React from "react";
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
+import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function Cursif() {
   return (
@@ -69,7 +70,7 @@ function Article() {
         Stay tuned for updates!
       </p>
       <a href="https://github.com/Code-Society-Lab/cursif" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
-        Check the repo!
+        Check the repository <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
       </a>
     </>
   )
