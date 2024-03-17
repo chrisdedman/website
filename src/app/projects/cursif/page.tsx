@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState } from "react";
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
@@ -26,15 +26,32 @@ export default function Cursif() {
 }
 
 function Article() {
+  const images = [
+    { src: '/homepage.png', alt: 'Cursif Homepage' },
+    { src: '/login.png', alt: 'Cursif Login Page' },
+    { src: '/dashboard.png', alt: 'Cursif Notebook Dashboard' },
+    { src: '/dashboard-page.png', alt: 'Cursif Dashboard Pages' },
+    { src: '/markdown-editor.png', alt: 'Cursif Markdown Editor' },
+    { src: '/update-notebook.png', alt: 'Cursif Update Notebook' },
+    { src: '/create-notebook.png', alt: 'Cursif Create Notebook' },
+    { src: '/navigation-page.png', alt: 'Cursif Navigation Pages' },
+  ];
+
+  const [enlargedImage, setEnlargedImage] = useState("");
+
+  const enlargeImage = (src: string) => {
+    setEnlargedImage(src);
+  };
+
   return (
     <>
       <p>
-        Cursif is yet another note-taking application that adds an exciting twist to your productivity. 
-        Unlike conventional tools, Cursif empowers you with scriptable notes, allowing you to craft personalized macros for streamlined note automation. 
+        Cursif is yet another note-taking application that adds an exciting twist to your productivity.
+        Unlike conventional tools, Cursif empowers you with scriptable notes, allowing you to craft personalized macros for streamlined note automation.
         Currently under heavy development, it&#39;s being crafted by the talented team at the Code Society Lab on discord.
       </p>
       <p>
-        I&#39;ve been deeply involved in this endeavor since the summer of 2023, collaborating with an international group of developers. 
+        I&#39;ve been deeply involved in this endeavor since the summer of 2023, collaborating with an international group of developers.
         Our tech stack includes TypeScript with Next.js and Apollo for the frontend, and Elixir with Phoenix plus Absinthe, and PostgreSQL for the backend.
       </p>
 
@@ -72,6 +89,32 @@ function Article() {
       <a href="https://github.com/Code-Society-Lab/cursif" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
         Check the repository <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
       </a>
+
+      <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
+
+      <div>
+        <h3>Cursif Development Gallery Images</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+          {images.map((image, index) => (
+            <div key={index}>
+              <img
+                className="rounded-lg"
+                src={image.src}
+                alt={image.alt}
+                style={{ cursor: "pointer", maxWidth: "100%" }}
+                onClick={() => enlargeImage(image.src)}
+              />
+            </div>
+          ))}
+        </div>
+
+        {enlargedImage && (
+          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
+            <img src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
+            <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
+          </div>
+        )}
+      </div>
     </>
   )
 }
