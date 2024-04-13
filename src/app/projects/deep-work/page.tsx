@@ -10,7 +10,9 @@ export default function Page() {
       <Menu />
       <div className="p-6">
         <div className="p-1">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight">Deep Work</h5>
+          <h5 className="mb-2 text-2xl font-bold tracking-tight">
+            <a href="/projects" className="underline">Projects</a>{" > "}Deep Work
+          </h5>
           <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
           <MyTimer />
         </div>
