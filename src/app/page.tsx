@@ -38,8 +38,7 @@ export default function Page() {
 
       <div className="flex flex-wrap justify-center">
         <p>
-          <b>Latest Blog Article</b>: 
-          <a href="https://astranebula.gitbook.io/blog/computer-science/git-and-github-guide" className="underline">Git & GitHub Guide</a>
+          <b>Latest Blog Article</b>: <a href="https://astranebula.gitbook.io/blog/computer-science/graph-theory" className="underline">Graph Theory</a>
         </p>
       </div>
     </div>
