@@ -3,8 +3,8 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <hr className="h-px my-8 border-0 separator sm:mx-auto lg:my-8" />
+      <div className="mx-auto w-full max-w-screen-xl">
+        <hr className="h-px my-8 border-1 separator sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-400 sm:text-center dark:text-gray-500">© 2024 Chris Dedman. All Rights Reserved.
           </span>

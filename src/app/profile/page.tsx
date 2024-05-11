@@ -12,11 +12,11 @@ import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function Page() {
   return (
-    <div className="h-screen p-8 lg:p-16 mt-16">
+    <div className="h-screen p-4 lg:p-8 mt-16">
       <Menu />
       <AboutMe />
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
-      <p className="text-sm font-montez mt-0 mb-0">RESUME</p>
+      <p className="text-sm font-montez mt-0 mb-4">RESUME</p>
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="lg:w-1/3 mb-4 lg:mb-0">
           <Educations />
@@ -38,35 +38,33 @@ export default function Page() {
 
 function AboutMe() {
   return (
-    <div className="p-6">
+    <div className="p-4">
       <div className="mb-3 font-normal flex justify-center">
-      <Image
-        className="rounded-full"
-        src="/me.jpg"
-        alt="Picture of the author"
-        width={300}
-        height={300}
-      />
+        <Image
+          className="rounded-full"
+          src="/me.jpg"
+          alt="Picture of the author"
+          width={300}
+          height={300}
+        />
       </div>
-      <div className="p-3">
-        <h5 className="mb-2 text-2xl font-bold font-montez tracking-tight flex justify-center">Computer Science Student</h5>
-        <p className="mb-3 font-normal font-montez">
-          My name is Christopher Dedman-Rollet! I am a first generation computer science student currently pursuing a Bachelor of Science degree.
-          I have a strong passion for programming and a deep interest in learning and exploring the field.
-          I have experience with several languages, including Python, C/C++, Java, JavaScript, Elixir, and Golang.
-          I have also learned the fundamentals of Assembly Language (MASM). My current focus is learning embedded systems software engineering
-           and low-level programming, as well as design and analysis of algorithms.
-          In addition to my technical skills, I am also a quick learner, a critical thinker, and a problem-solver.
-          I am eager to apply my knowledge and skills to real-world projects and to continue growing as a programmer.
-          As a student, I have completed several programming-related courses and have consistently received high marks for my work.
-          In addition, I have also completed several independent projects, including contributing to open-source projects.
-          I am constantly seeking out opportunities to learn and grow, and I am
-          looking for internship opportunities that will allow me to gain practical experience in the field.
-        </p>
-        <a href="mailto:cdedmanrollet1@toromail.csudh" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Email Me <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
-        </a>
-      </div>
+      <h5 className="mb-2 text-2xl font-bold font-montez tracking-tight flex justify-center">Computer Science Student</h5>
+      <p className="mb-3 font-normal font-montez">
+        My name is Christopher Dedman-Rollet! I am a first generation computer science student currently pursuing a Bachelor of Science degree.
+        I have a strong passion for programming and a deep interest in learning and exploring the field.
+        I have experience with several languages, including Python, C/C++, Java, JavaScript, Elixir, and Golang.
+        I have also learned the fundamentals of Assembly Language (MASM). My current focus is learning embedded systems software engineering
+        and low-level programming, as well as design and analysis of algorithms.
+        In addition to my technical skills, I am also a quick learner, a critical thinker, and a problem-solver.
+        I am eager to apply my knowledge and skills to real-world projects and to continue growing as a programmer.
+        As a student, I have completed several programming-related courses and have consistently received high marks for my work.
+        In addition, I have also completed several independent projects, including contributing to open-source projects.
+        I am constantly seeking out opportunities to learn and grow, and I am
+        looking for internship opportunities that will allow me to gain practical experience in the field.
+      </p>
+      <a href="mailto:cdedmanrollet1@toromail.csudh" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Email Me <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+      </a>
     </div>
   )
 }

@@ -33,7 +33,7 @@ export default function Menu() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
-          <div className="hidden md:flex items-center space-x-4" id="navbar-sticky">
+          <div className="hidden md:flex items-center space-x-2" id="navbar-sticky">
             <NavItem to="/">Home</NavItem>
             <NavItem to="/work">Work</NavItem>
             <NavItem to="/profile">Profile</NavItem>
@@ -48,5 +48,5 @@ export default function Menu() {
 
 // Navigation item component
 const NavItem = ({ to, children }: { to: string, children: React.ReactNode }) => (
-  <a href={to} className="block px-4 py-2 rounded-md hover:bg-gray-800">{children}</a>
+  <a href={to} className="block px-2 py-2 rounded-md hover:bg-gray-800">{children}</a>
 );

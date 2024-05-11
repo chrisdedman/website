@@ -29,7 +29,6 @@ export default function Page() {
         </div>
       </div>
 
-
       <div className="flex flex-wrap justify-center">
         <CategoryCard title="Profile" />
         <CategoryCard title="Work" />
