@@ -32,12 +32,15 @@ nav {
   background-color: var(--nav-background-color);
   box-shadow: inset 0 -4px 10px 0 rgb(0 0 0 / 0.25);
 }
+
 .separator {
   background-color: var(--separator-color);
 }
+
 strong {
   @apply font-bold text-gray-400
 }
+
 p {
   @apply mt-3 mb-3 font-normal
 }
@@ -47,7 +50,7 @@ h3 {
 }
 
 ul {
-  @apply flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 
+  @apply flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0
 }
 
 li {
