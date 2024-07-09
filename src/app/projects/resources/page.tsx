@@ -10,7 +10,7 @@ export default function Asteroid() {
   return (
     <div className="h-screen p-4 lg:p-8 mt-16 ">
       <Menu />
-      <div className="p-4 border border-gray-200 rounded-lg shadow">
+      <div className="p-4">
         <h5 className="mb-2 text-2xl font-bold tracking-tight">
           <a href="/projects" className="underline">Projects</a>{" > "}Resource Library
         </h5>
