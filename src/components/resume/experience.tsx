@@ -7,6 +7,11 @@ export default function Experiences() {
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <div className="mb-3 font-normal">
         <strong>Uber</strong>
+        <p className="text-sm font-light">Software Engineering Intern</p>
+        <p className="text-sm font-light italic">May 2024 - August 2024</p>
+        <p className="text-sm font-light font-montez">
+          Intern as software engineer during summer 2024 with the AdTech team at Uber.
+        </p>
         <p className="text-sm font-light">UberSTAR Software Engineer Intern</p>
         <p className="text-sm font-light italic">June 2023 - September 2023</p>
         <p className="text-sm font-light font-montez">
