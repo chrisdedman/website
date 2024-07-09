@@ -43,7 +43,7 @@ function Article() {
       <p className="mt-4">
         The library is a collection of resources put together by the members of the <a className="underline" href="https://codesociety.xyz" target="_blank">Code Society</a> for
         various programming and software development subjects that the community have found useful.
-        It's a great place to find books, articles, videos, and more to help you learn and
+        It&apos;s a great place to find books, articles, videos, and more to help you learn and
         grow as a programmer or scientist.
       </p>
       <p className="mt-4">
@@ -57,7 +57,7 @@ function Article() {
       </a>
 
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
-      
+
       <div className="mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           <div key={0}>

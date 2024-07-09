@@ -21,7 +21,7 @@ export default function Page() {
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Near Earth Object, Daily Tracker</h5>
               </a>
               <p className="mb-3 font-normal text-gray-700">
-                This web app allows users to retrieve and display daily information about Near Earth Objects (NEOs). NEOs are asteroids and comets with orbits that come close to Earth's orbit.
+                This web app allows users to retrieve and display daily information about Near Earth Objects (NEOs). NEOs are asteroids and comets with orbits that come close to Earth&apos;s orbit.
               </p>
               <a href="/projects/asteroid" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
                 Read More <CursorArrowRaysIcon className="w-4 h-4 ms-2" />

@@ -43,7 +43,7 @@ function Article() {
   return (
     <>
       <h6 className="mt-4 text-xl font-bold">Daily Asteroid Tracking</h6>
-      <p>This web app allows users to retrieve and display information about Near Earth Objects (NEOs). NEOs are asteroids and comets with orbits that come close to Earth's orbit.</p>
+      <p>This web app allows users to retrieve and display information about Near Earth Objects (NEOs). NEOs are asteroids and comets with orbits that come close to Earth&apos;s orbit.</p>
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
       <h3>Key features of the app include:</h3>
       <div className="ml-4">
