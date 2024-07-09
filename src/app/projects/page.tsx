@@ -13,9 +13,23 @@ export default function Page() {
       <div className="p-4">
         <h5 className="mb-2 text-2xl font-bold tracking-tight">Projects</h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
-        <div className="lg:flex lg:items-center lg:justify-center flex-col">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 lg:items-center lg:justify-center lg:flex">
 
-          <div className="lg:w-1/3 mb-4 lg:mb-0">
+          <div className="lg:w-100 mb-4 lg:mb-0">
+            <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+              <a href="/projects/resources">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Resource Library</h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700">
+                This project is a web page that allows users to search for resources by category and keyword. The user can also add new resources to the library by adding to the GitHub README file, which then will be displayed on the webpage.
+              </p>
+              <a href="/projects/resources" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+                Read More <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:w-100 mb-4 lg:mb-12">
             <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
               <a href="/projects/cursif">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Cursif ~ In Development</h5>
@@ -29,7 +43,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="lg:w-1/3 mb-4 lg:mb-0">
+          <div className="lg:w-100 mb-4 lg:mb-16">
             <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
               <a href="/projects/deep-work">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Deep Work Timer</h5>
