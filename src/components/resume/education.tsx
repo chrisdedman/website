@@ -12,7 +12,7 @@ export default function Educations() {
         <p className="text-sm font-light font-montez">
           As a student at California State University, Dominguez Hills, I am pursuing a Bachelor of Science degree in Computer Science.
           I have completed several computer science courses, including Software Development in java, Data Structure, Design and Analysis of Algorithms, Database Management and Computer Organisation.
-          I have also completed Probability & Statistics, and Physics 1 courses.
+          I have also completed Probability & Statistics, and Physics 1 courses. I am currently taking Operating System, Software Engineering, and Physics 2 courses.
         </p>
       </div>
 
