@@ -54,15 +54,15 @@ function AboutMe() {
         I have a strong passion for programming and a deep interest in learning and exploring the field.
         I have experience with several languages, including Python, C/C++, Java, JavaScript, Elixir, and Golang.
         I have also learned the fundamentals of Assembly Language (MASM). My current focus is learning embedded systems software engineering
-        and low-level programming, as well as design and analysis of algorithms.
+        and low-level programming.
         In addition to my technical skills, I am also a quick learner, a critical thinker, and a problem-solver.
         I am eager to apply my knowledge and skills to real-world projects and to continue growing as a programmer.
         As a student, I have completed several programming-related courses and have consistently received high marks for my work.
         In addition, I have also completed several independent projects, including contributing to open-source projects.
         I am constantly seeking out opportunities to learn and grow, and I am
-        looking for internship opportunities that will allow me to gain practical experience in the field.
+        looking for an entry-level opportunity for after graduation in may 2025.
       </p>
-      <a href="mailto:cdedmanrollet1@toromail.csudh" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <a href="mailto:chrisdedman@proton.me" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
         Email Me <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
       </a>
     </div>
