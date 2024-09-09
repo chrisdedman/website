@@ -72,14 +72,13 @@ function Article() {
       </p>
 
       <div className="">
-      <a href="https://asteroid-tracking.vercel.app/" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 mr-10 mb-4 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
-        Check the webpage  <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
-      </a>
+        <a href="https://asteroid-tracking.vercel.app/" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 mr-10 mb-4 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+          Check the webpage  <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+        </a>
 
-      <a href="https://github.com/chrisdedman/py-neo" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
-        Check the code  <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
-      </a>
-
+        <a href="https://github.com/chrisdedman/py-neo" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+          Check the code  <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+        </a>
       </div>
 
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
