@@ -46,7 +46,7 @@ export default function Page() {
           <div className="lg:w-100 mb-4 lg:mb-12">
             <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
               <a href="/projects/cursif">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Cursif ~ In Development</h5>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Cursif</h5>
               </a>
               <p className="mb-3 font-normal text-gray-700">
                 A collaborative, scriptable note taking application. Cursif is yet another note-taking application that adds an exciting twist to your productivity.
