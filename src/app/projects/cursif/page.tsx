@@ -86,9 +86,17 @@ function Article() {
         You can see more about the project and my work at the <a href="https://github.com/Code-Society-Lab/cursif" target="_blank" rel="noreferrer noopener">Cursif</a> GitHub repository.
         Stay tuned for updates!
       </p>
-      <a href="https://github.com/Code-Society-Lab/cursif" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+
+      <div className="">
+        <a href="https://cursif.codesociety.xyz/" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 mr-10 mb-4 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+          Check the app  <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+        </a>
+
+        <a href="https://github.com/Code-Society-Lab/cursif" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
         Check the repository <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
       </a>
+      </div>
+      
 
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
 
