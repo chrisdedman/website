@@ -15,7 +15,7 @@ export default function Honors() {
         <strong>Dean&#39;s List</strong>
         <p className="text-sm font-light">El Camino College</p>
         <p className="text-sm font-light italic">Fall 2021 throught Fall 2022 Semesters</p>
-        <p className="text-sm font-light">California States University, Dominguez Hills</p>
+        <p className="text-sm font-light">California State University, Dominguez Hills</p>
         <p className="text-sm font-light italic">Spring 2023 throught Spring 2024 Semesters</p>
         <p className="text-sm font-light font-montez">
           To qualify for this honor a student must, in any one semester,
