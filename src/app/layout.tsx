@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://chrisdedman.vercel.app/_next/image?url=%2Fme.jpg',
+        url: '/me.jpg',
         width: 1200,
         height: 630,
         alt: 'Chris Dedman\'s Portfolio'
