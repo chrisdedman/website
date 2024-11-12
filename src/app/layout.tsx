@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/me.jpg',
+        url: '/website.jpeg',
         width: 1200,
         height: 630,
         alt: 'Chris Dedman\'s Portfolio'
