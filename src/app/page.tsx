@@ -40,7 +40,9 @@ export default function Page() {
 
       <div className="flex flex-wrap justify-center">
         <CategoryCard title="Profile" />
-        <CategoryCard title="Blog" />
+        <span className="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">
+          <a href="https://astranebula.gitbook.io/" className=" hover:underline">Blog</a>
+        </span>
         <CategoryCard title="Projects" />
       </div>
 
