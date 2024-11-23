@@ -5,7 +5,16 @@ import { RocketLaunchIcon } from '@heroicons/react/24/solid';
 
 export default function Page() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div
+      className="h-screen flex flex-col items-center justify-center"
+      style={{
+        backgroundImage: "url('/background.jpeg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        WebkitBackgroundSize: "2000px"
+      }}
+    >
+
       <Menu />
 
       <div className="relative bottom-2">
@@ -35,9 +44,9 @@ export default function Page() {
         <CategoryCard title="Projects" />
       </div>
 
-      <div className="flex flex-wrap justify-center">
-        <p>
-          <b>Latest Blog Article</b>: <a href="https://astranebula.gitbook.io/blog/computer-science/graph-theory" className="underline">Graph Theory</a>
+      <div className="flex flex-wrap justify-center ">
+        <p className="text-white text-xl font-bold drop-shadow-md bg-black bg-opacity-50 p-1">
+          Latest Blog Article: <a href="https://astranebula.gitbook.io/blog/computer-science/graph-theory" className="underline">Graph Theory</a>
         </p>
       </div>
     </div>
