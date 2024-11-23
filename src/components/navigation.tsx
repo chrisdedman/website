@@ -35,7 +35,6 @@ export default function Menu() {
           </button>
           <div className="hidden md:flex items-center space-x-2" id="navbar-sticky">
             <NavItem to="/">Home</NavItem>
-            <NavItem to="/work">Work</NavItem>
             <NavItem to="/profile">Profile</NavItem>
             <NavItem to="https://astranebula.gitbook.io/">Blog</NavItem>
             <NavItem to="/projects">Projects</NavItem>
