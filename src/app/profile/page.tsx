@@ -16,7 +16,7 @@ export default function Page() {
       <Menu />
       <AboutMe />
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
-      <p className="text-sm font-montez mt-0 mb-4">RESUME</p>
+      <p className="text-sm font mt-0 mb-4">RESUME</p>
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="lg:w-1/3 mb-4 lg:mb-0">
           <Educations />
@@ -48,8 +48,8 @@ function AboutMe() {
           height={300}
         />
       </div>
-      <h5 className="mb-2 text-2xl font-bold font-montez tracking-tight flex justify-center">Computer Science Student</h5>
-      <p className="mb-3 font-normal font-montez">
+      <h5 className="mb-2 text-2xl font-bold font tracking-tight flex justify-center">Computer Science Student</h5>
+      <p className="mb-3 font-normal font">
         My name is Christopher Dedman-Rollet! I am a first generation computer science student currently pursuing a Bachelor of Science degree.
         I have a strong passion for programming and a deep interest in learning and exploring the field.
         I have experience with several languages, including Python, C/C++, Java, JavaScript, Elixir, and Golang.

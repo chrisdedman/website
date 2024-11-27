@@ -18,8 +18,8 @@
 }
 
 @layer base {
-  .font-montez {
-    font-family: 'Montez';
+  .font {
+    font-family: 'inter';
   }
 }
 
@@ -46,7 +46,7 @@ p {
 }
 
 h3 {
-  @apply mb-3 font-bold font-montez text-xl
+  @apply mb-3 font-bold font text-xl
 }
 
 ul {

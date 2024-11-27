@@ -17,7 +17,7 @@ export default function Menu() {
         <div className="flex items-center">
           <a href="/" className="flex items-center space-x-2">
             <RocketLaunchIcon className="w-6 h-6 spin-on-hover" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap font-montez">Ad Astra</span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap font">Ad Astra</span>
           </a>
         </div>
         <div className="flex items-center">
