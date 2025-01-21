@@ -83,13 +83,13 @@ function Article() {
         </li>
 
         <li>
-          <code>make run ARGS='points_with_charge_file control_point_file output_file'</code>
+          <code>make run ARGS=&apos;points_with_charge_file control_point_file output_file&apos;</code>
           <br />
           Run the Java project from <code>/build/src/CGPartitioning</code> with argument files.<br />
           <strong>Example:</strong>
           <pre>
             <code>
-              make run ARGS='pointsWithCharge1MYK.txt controlPoints1MYK.txt irrParts_Output.txt'
+              make run ARGS=&apos;pointsWithCharge1MYK.txt controlPoints1MYK.txt irrParts_Output.txt
             </code>
           </pre>
         </li>
