@@ -15,6 +15,8 @@
   --button-foreground-color: black;
 
   --separator-color: black;
+
+  --background-code: #f4f4f4
 }
 
 @layer base {
@@ -58,15 +60,16 @@ h1 {
 }
 
 pre {
-  background-color: #f4f4f4;
+  color: var(--foreground-color);
+  background: var(--background-code);
   padding: 10px;
   border-radius: 5px;
   overflow-x: auto;
 }
 code {
   font-family: Consolas, "Courier New", Courier, monospace;
-  background-color: #f4f4f4;
   border-radius: 3px;
+  color: var(--foreground-color);
 }
 
 ul {
@@ -75,11 +78,13 @@ ul {
   padding: 0 1.5em;
   color: #333;
   font-size: 1rem;
+  color: var(--foreground-color);
 }
 
 li {
   margin: 0.5em 0;
   line-height: 1.5;
+  color: var(--foreground-color);
 }
 
 button.btn {
