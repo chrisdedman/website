@@ -26,7 +26,7 @@ function Article() {
   return (
     <>
       <p>
-        Click the link to
+        Click to
         <a className="pl-2" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank"><strong>Download the Tool</strong></a>
       </p>
 
@@ -51,10 +51,11 @@ function Article() {
 
       <h2>Requirements</h2>
       <ul>
-        <li><strong>Java Development Kit (JDK)</strong></li>
-        <li><strong><code>make</code> Utility</strong></li>
-        <li><strong><code>git</code></strong> (Version Control for development purposes)</li>
+        <li><strong><a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank">Java Development Kit (JDK)</a></strong></li>
+        <li><strong><a href="https://www.gnu.org/software/make/" target="_blank">make Utility</a></strong></li>
+        <li><strong><a href="https://git-scm.com/" target="_blank">git (Version Control for development purposes)</a></strong></li>
       </ul>
+
 
       <h2>Usage</h2>
       <p>From the root directory, you can manually compile and run the project using purely Java.</p>
