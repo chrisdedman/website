@@ -35,11 +35,9 @@ function Article() {
 
   return (
     <>
-      <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
-
       <div className="mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          <div key={0}>
+          <div key={0} className="flex justify-center items-center">
             <img
               className="rounded-lg"
               src={"/app_icon.png"}
