@@ -36,7 +36,7 @@ export default function Page() {
             placeholder="Enter URL to generate QR code"
             value={url}
             onChange={handleInputChange}
-            className="w-full p-2 border border-gray-300 rounded mb-2"
+            className="w-full p-2 border border-gray-300 rounded mb-2 text-black"
           />
           <button
             type="submit"

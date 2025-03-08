@@ -15,6 +15,8 @@
   --button-foreground-color: black;
 
   --separator-color: black;
+
+  --background-code: #f4f4f4
 }
 
 @layer base {
@@ -37,39 +39,52 @@ nav {
   background-color: var(--separator-color);
 }
 
-strong {
-  @apply font-bold text-gray-400
-}
-
 p {
   @apply mt-3 mb-3 font-normal
 }
 
+h4 {
+  @apply mb-3 font text-base
+}
+
 h3 {
+  @apply mb-3 font-bold font text-lg
+}
+
+h2 {
   @apply mb-3 font-bold font text-xl
 }
 
+h1 {
+  @apply mb-3 font-bold font text-2xl
+}
+
+pre {
+  color: var(--foreground-color);
+  background: var(--background-code);
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+code {
+  font-family: Consolas, "Courier New", Courier, monospace;
+  border-radius: 3px;
+  color: var(--foreground-color);
+}
+
 ul {
-  @apply flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0
+  list-style-type: circle;
+  margin: 1em 0;
+  padding: 0 1.5em;
+  color: #333;
+  font-size: 1rem;
+  color: var(--foreground-color);
 }
 
 li {
+  margin: 0.5em 0;
+  line-height: 1.5;
   color: var(--foreground-color);
-  background: var(--background-color);
-  box-shadow: inset 0 -4px 10px 0 rgb(0 0 0 / 0.25);
-  padding: 0.5rem 1rem;
-
-  @apply border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0
-}
-
-ul li:hover {
-  background-color: var(--nav-tab-hover-background-color) !important;
-  color: var(--foreground-color);
-}
-
-ul li.selected {
-  background-color: var(--nav-selected-background-color);
-  color: var(--nav-selected-foreground-color);
 }
 
 button.btn {

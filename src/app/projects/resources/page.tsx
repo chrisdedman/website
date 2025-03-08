@@ -6,7 +6,7 @@ import Footer from '@/components/footer'
 import { useState } from "react";
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
-export default function Asteroid() {
+export default function Resource() {
   return (
     <div className="h-screen p-4 lg:p-8 mt-16 ">
       <Menu />
