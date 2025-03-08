@@ -3,6 +3,7 @@
 import React from "react";
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
+import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function ResearchTool() {
   return (
@@ -25,9 +26,10 @@ export default function ResearchTool() {
 function Article() {
   return (
     <>
-      <p>
-        Click to
-        <a className="pl-2" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank"><strong>Download the Tool</strong></a>
+      <p className="mt-4">
+        <a className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-500 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank">
+          <strong>Download the Tool</strong> <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+        </a>
       </p>
 
       <h1>Documentation</h1>
