@@ -3,6 +3,7 @@
 import React from "react";
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
+import { useState } from "react";
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function CodeAstra() {
@@ -26,23 +27,51 @@ export default function CodeAstra() {
 }
 
 function Article() {
+  const [enlargedImage, setEnlargedImage] = useState("");
+
+  const enlargeImage = (src: string) => {
+    setEnlargedImage(src);
+  };
+
   return (
     <>
+      <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
+
+      <div className="mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+          <div key={0}>
+            <img
+              className="rounded-lg"
+              src={"/app_icon.png"}
+              alt={"CodeAstra Logo"}
+              style={{ cursor: "pointer", maxWidth: "100%" }}
+              onClick={() => enlargeImage("/app_icon.png")}
+            />
+          </div>
+        </div>
+
+        {enlargedImage && (
+          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
+            <img src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
+            <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
+          </div>
+        )}
+      </div>
       <h6 className="mt-4 text-xl font-bold">CodeAstra ~ Modern Code Editor</h6>
       <p className="mt-4">
-        CodeAstra is a modern, extensible, and lightweight code editor built using C++ and Qt6, 
-        designed to offer a fast, customizable, and feature-rich development experience. 
-        Inspired by NeoVim and VSCode, it will provide efficient file navigation, syntax highlighting, 
-        and a powerful plugin system, making it an ideal choice for developers who need speed, 
-        flexibility, and control. With a focus on performance and usability, the editor will 
-        support split views, an integrated terminal, customizable key bindings, and seamless 
+        CodeAstra is a modern, extensible, and lightweight code editor built using C++ and Qt6,
+        designed to offer a fast, customizable, and feature-rich development experience.
+        Inspired by NeoVim and VSCode, it will provide efficient file navigation, syntax highlighting,
+        and a powerful plugin system, making it an ideal choice for developers who need speed,
+        flexibility, and control. With a focus on performance and usability, the editor will
+        support split views, an integrated terminal, customizable key bindings, and seamless
         Git integration, catering to both beginners and power users.
       </p>
       <p className="mt-4">
         This project was born from my desire to help students at my university.
-        As the Open Source Coordinator for the Computer Alliance of Hispanic-Serving Institutions (CAHSI), 
-        I created this project to help club members develop their software engineering skills and improve 
-        their collaboration abilities. Additionally, this project is giving me the opportunity to lead 
+        As the Open Source Coordinator for the Computer Alliance of Hispanic-Serving Institutions (CAHSI),
+        I created this project to help club members develop their software engineering skills and improve
+        their collaboration abilities. Additionally, this project is giving me the opportunity to lead
         a team of programmers while building something meaningful to me.
       </p>
 
