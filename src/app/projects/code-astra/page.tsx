@@ -47,7 +47,7 @@ function Article() {
       </p>
 
       <a href="https://github.com/sandbox-science/CodeAstra" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
-        Get the CodeAstra <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+        Get CodeAstra <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
       </a>
     </>
   )
