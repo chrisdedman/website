@@ -7,9 +7,9 @@ import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function ResearchTool() {
   return (
-    <div className="h-screen p-4 lg:p-8 mt-16 ">
+    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
-      <div className="p-4">
+      <div className="p-4 max-w-6xl mx-auto flex-grow">
         <h1 className="mb-2 text-2xl font-bold tracking-tight">
           Macromolecule Coarse-Graining Tool
         </h1>

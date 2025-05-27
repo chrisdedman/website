@@ -7,16 +7,14 @@ import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function Asteroid() {
   return (
-    <div className="h-screen p-4 lg:p-8 mt-16">
+    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
-      <div className="p-4">
+      <div className="p-4 max-w-6xl mx-auto flex-grow">
         <h5 className="mb-2 text-2xl font-bold tracking-tight">
-          <a href="/projects" className="underline">Projects</a>{" > "}Near Earth Object, Daily Tracker
+          <a href="/projects" className="underline">Projects</a>{" > "}Near Earth Object, Daily Asteroid Tracker
         </h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div>
-          <address>By <a rel="author" href="/">Chris Dedman-Rollet</a></address>
-          on <time dateTime="03-07-2024" title="March 7th, 2024">03-07-2024</time>
           <Article />
         </div>
       </div>
@@ -42,7 +40,6 @@ function Article() {
 
   return (
     <>
-      <h6 className="mt-4 text-xl font-bold">Daily Asteroid Tracking</h6>
       <p>This web app allows users to retrieve and display information about Near Earth Objects (NEOs). NEOs are asteroids and comets with orbits that come close to Earth&apos;s orbit.</p>
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
       <h3>Key features of the app include:</h3>
