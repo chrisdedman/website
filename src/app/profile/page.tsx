@@ -51,7 +51,7 @@ function AboutMe() {
       <h5 className="mb-2 text-2xl font-bold font tracking-tight flex justify-center">Computer Science Student</h5>
       <p className="mb-3 font-normal font">
         My name is Christopher Dedman-Rollet! I recently graduated (May 2025) with a Bachelor of Science in 
-        Computer Science, and I'm proud to be a first-generation college graduate. I bring a strong passion 
+        Computer Science, and I&apos;m proud to be a first-generation college graduate. I bring a strong passion 
         for programming and a deep curiosity for learning new technologies. I&#39;ve gained hands-on experience 
         in Python, C, C++, Java, JavaScript, Elixir, and Go, and I&#39;ve studied the fundamentals of Assembly 
         Language (MASM). My current focus is on embedded systems software engineering and low-level programming (using C and ARM Assembly).
