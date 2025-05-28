@@ -7,10 +7,10 @@ export default function Skills() {
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <div className="mb-3 font-normal">
         <p className="text-sm font-light font">
-          Microcontrollers, Object Oriented Programing, C/C++, Assembly, Java,
+          Microcontrollers, Object Oriented Programing, C, C++, Assembly, Java,
           Python, Golang, Elixir/Phoenix, TypeScript, React, Next.JS, Fusion.JS,
           Git, GitHub, JIRA, Docker, CI/CD, TCP/IP Protocols, Server Performance Testing,
-          PostgreSQL, MySQL.
+          PostgreSQL, MySQL, Qt6, Make, CMake, QEMU, Vim, NeoVim, GDB Debugger, Kernel Developement.
         </p>
       </div>
     </div>
