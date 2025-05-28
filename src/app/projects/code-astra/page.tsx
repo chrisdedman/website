@@ -54,6 +54,25 @@ function Article() {
         )}
       </div>
       <h6 className="mt-4 text-xl font-bold">CodeAstra ~ Modern Code Editor</h6>
+<hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+      <aside
+        className="bg-blue-200 border border-blue-300 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
+        aria-labelledby="sandbox-science-callout"
+      >
+        <p id="sandbox-science-callout">
+          This project is part of{' '}
+          <a
+            href="https://github.com/sandbox-science"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-blue-500 hover:underline"
+          >
+            Sandbox Science <span className="sr-only">(opens in a new tab)</span>
+          </a>
+          , a collaborative playground which I lead for programmers of all backgrounds to explore, experiment, and grow together.
+        </p>
+      </aside>
+
       <p className="mt-4">
         CodeAstra is a modern, extensible, and lightweight code editor built using C++ and Qt6,
         designed to offer a fast, customizable, and feature-rich development experience.
