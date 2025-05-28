@@ -48,7 +48,7 @@ function AboutMe() {
           height={300}
         />
       </div>
-      <h5 className="mb-2 text-2xl font-bold font tracking-tight flex justify-center">Computer Science Student</h5>
+      <h5 className="mb-2 text-2xl font-bold font tracking-tight flex justify-center">Aspiring Software Engineer</h5>
       <p className="mb-3 font-normal font">
         My name is Christopher Dedman-Rollet! I recently graduated (May 2025) with a Bachelor of Science in 
         Computer Science, and I&apos;m proud to be a first-generation college graduate. I bring a strong passion 
