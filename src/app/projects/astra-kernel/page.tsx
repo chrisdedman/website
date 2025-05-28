@@ -107,7 +107,7 @@ Type away, explore, have fun.`}
         throughout the creation of AstraKernel. This documentation is a work in 
         progress and may be updated as the project evolves. I welcome contributions, 
         feedback, and suggestions for improvement. You can find the latest documentation
-        on GitHub: <a href="https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf</a>
+        on <a href="https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">GitHub</a>.
       </p>
 
       <a href="https://github.com/sandbox-science/AstraKernel" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
