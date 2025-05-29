@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl">
         <hr className="h-px my-8 border-1 separator sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-400 sm:text-center dark:text-gray-500">© 2024 Chris Dedman. All Rights Reserved.
+          <span className="text-sm text-gray-400 sm:text-center dark:text-gray-500">© 2025 Chris Dedman. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             {/* LinkedIn Account */}

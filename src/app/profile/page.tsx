@@ -12,7 +12,7 @@ import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 
 export default function Page() {
   return (
-    <div className="h-screen p-4 lg:p-8 mt-16">
+    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <AboutMe />
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
