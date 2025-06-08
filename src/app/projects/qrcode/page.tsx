@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useCallback } from "react";
-import Link from 'next/link';
 import Menu from "@/components/navigation";
 import Footer from "@/components/footer";
 import { QRCodeCanvas } from 'qrcode.react';
@@ -35,7 +34,7 @@ export default function Page() {
 
       setSubmittedUrl(url);
       setError("");
-      
+
     } catch (error) {
       setError("An error occurred while generating the QR code.");
       console.error(error);
@@ -47,15 +46,15 @@ export default function Page() {
     <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight">
+        <h5 className="mb-2 text-2xl font tracking-tight">
           <a href="/projects" className="underline">Projects</a>{" > "}QR Code
         </h5>
-        
+
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
 
         <form onSubmit={handleSubmit} className="my-4">
           <label htmlFor="urlInput" className="block text-lg font-medium mb-2">
-            Enter URL:
+            Enter your URL in the following box to generate your QR Code:
           </label>
           <input
             type="text"

@@ -11,7 +11,7 @@ export default function Resource() {
     <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight">
+        <h5 className="mb-2 text-2xl font tracking-tight">
           <a href="/projects" className="underline">Projects</a>{" > "}Resource Library
         </h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
@@ -33,7 +33,8 @@ function Article() {
   };
   return (
     <>
-      <h6 className="mt-4 text-xl font-bold">Code Society Library Resources</h6>
+      <h6 className="mt-4 text-xl font-bold font">Code Society Library Resources</h6>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <p className="mt-4">
         This project is a web page that allows users to search for resources by category and keyword.
         The user can also add new resources to the library by adding to the GitHub <a className="underline" href="https://github.com/Code-Society-Lab/resources/blob/main/README.md" target="_blank">README</a> file, which then will be displayed on the webpage.

@@ -11,7 +11,7 @@ export default function AstraKernel() {
     <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight">
+        <h5 className="mb-2 text-2xl font tracking-tight">
           <a href="/projects" className="underline">Open Source Contributions</a>{" > "}Astra Kernel
         </h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
@@ -53,7 +53,8 @@ Welcome to your own little Astra world!
 Type away, explore, have fun.`}
         </code>
       </pre>
-      <h6 className="mt-4 text-xl font-bold">AstraKernel ~ A minimal ARM kernel for QEMU</h6>
+      <h6 className="mt-4 text-xl font-bold font">AstraKernel ~ A minimal ARM kernel for QEMU</h6>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
 
       <aside
         className="bg-blue-200 border border-blue-300 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"

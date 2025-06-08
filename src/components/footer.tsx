@@ -19,7 +19,7 @@ export default function Footer() {
             {/* Matrix Account */}
             <a href="https://matrix.to/#/@astranebula:matrix.org" target="_blank" rel="noreferrer noopener" className="text-gray-400 hover:text-gray-500 dark:hover:text-white ms-5" title="LinkedIn">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="32px" height="16px" viewBox="0 0 789.322 336.807" enable-background="new 0 0 789.322 336.807"
+                width="32px" height="16px" viewBox="0 0 789.322 336.807" enableBackground="new 0 0 789.322 336.807"
               >
                 <path d="M8.876,7.71v321.386h23.13v7.711H0V0h32.006v7.71H8.876z" />
                 <path d="M97.989,109.594v16.264h0.463c4.338-6.191,9.563-10.998,15.684-14.406c6.117-3.402,13.129-5.11,21.027-5.11
