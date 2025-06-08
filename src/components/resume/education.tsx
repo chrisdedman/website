@@ -23,8 +23,8 @@ export default function Educations() {
         <p className="text-sm font-light italic">July 2021 - June 2023</p>
         <p className="text-sm font-light">
           As a student at El Camino College, I have completed several computer science courses,
-          including Data Structures and Algorithms, Assembly Language, Introduction to C++, and Introduction do Java.
-          I have also completed several courses, including English, Calculus 1 & 2, Discret Mathemathics, and Cisco Network Engineering (CCNA).
+          including Data Structures and Algorithms, Assembly Language, Introduction to C++, and Introduction to Java.
+          I have also completed several courses, including English, Calculus 1 & 2, Discrete Mathematics, and Cisco Network Engineering (CCNA).
         </p>
       </div>
     </div>
