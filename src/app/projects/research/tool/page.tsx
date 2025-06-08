@@ -174,7 +174,7 @@ function Article() {
         </code>
       </pre>
 
-      <h3>Output File Format</h3>
+      <h3 className="mt-4 text-xl font">Output File Format</h3>
       <p>
         Your data will be stored in a text file that you&#39;ll provide as a third argument in your command-line.
         The generic format is an array of a 2D array of 3 floating-point coordinates, each paired with charge value.
