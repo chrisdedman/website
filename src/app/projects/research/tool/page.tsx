@@ -10,9 +10,9 @@ export default function ResearchTool() {
     <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h1 className="mb-2 text-2xl font-bold tracking-tight">
-          Macromolecule Coarse-Graining Tool
-        </h1>
+        <h5 className="mb-2 text-2xl font tracking-tight">
+          <a href="/projects" className="underline">Achievements</a>{" > "} <a href="/projects/research" className="underline">Research - Computational BioPhysics</a>{" > "} Macromolecule Coarse-Graining Tool
+        </h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div>
           <Article />
@@ -27,16 +27,19 @@ function Article() {
   return (
     <>
       <p className="mt-4">
-        <a className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-500 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank">
+        <span className="inline-flex pr-2">You can download the tool by clicking on the following: </span>
+        <a className="inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-gray-500 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank">
           <strong>Download the Tool</strong> <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
         </a>
       </p>
 
-      <h1>Documentation</h1>
-
       <p>
-        Here are the requirements, along with instructions on how to use the tool, including file formatting and the expected output format.
+        Here are the documentation and requirements, along with instructions on how to use the tool, including file formatting and the expected output format.
       </p>
+
+      <h6 className="mt-4 text-xl font-bold font">Documentation</h6>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+
       <p>
         This project implements a Java application with multiple classes, including:</p>
       <ul>
@@ -51,7 +54,8 @@ function Article() {
         The project uses a <code>Makefile</code> to simplify the process of compiling, running, and cleaning.
       </p>
 
-      <h2>Requirements</h2>
+      <h6 className="mt-4 text-xl font-bold font">Requirements</h6>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <ul>
         <li><strong><a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank">Java Development Kit (JDK)</a></strong></li>
         <li><strong><a href="https://www.gnu.org/software/make/" target="_blank">make Utility</a></strong></li>
@@ -76,9 +80,11 @@ function Article() {
       </pre>
 
       <p>Alternatively, the provided <code>Makefile</code> automates common tasks. Below are the available commands:</p>
-      <h3>Available Commands</h3>
-      <ul>
 
+      <h6 className="mt-4 text-xl font-bold font">Available Commands</h6>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+
+      <ul>
         <li>
           <code>make compile</code>
           <br />
@@ -110,14 +116,15 @@ function Article() {
         </li>
       </ul>
 
-      <h2>Files Formatting</h2>
+      <h6 className="mt-4 text-xl font">Files Formatting</h6>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
 
-      <h3>Input Files Format</h3>
+      <h3 className="mt-4 text-xl font">Input Files Format</h3>
       <p>The project requires two input text files with specific formats. These two files must be provided as command-line arguments.
         The first file to provide is the <strong>Point Charge File</strong>, while the second is the <strong>Control Point File</strong>.
       </p>
 
-      <h4>1. Point Charge File</h4>
+      <h4 className="mt-4 text-xl font">1. Point Charge File</h4>
       <p>
         Contains coordinates paired with charge values. Each entry is enclosed in double curly braces (<code>&#123;&#123;&#125;&#125;</code>), where the first part represents
         the coordinates (<code>X, Y, Z</code>), and the second part specifies the charge. Each set of coordinates paired with charge values is separated
@@ -143,7 +150,7 @@ function Article() {
         </code>
       </pre>
 
-      <h4>2. Control Point File</h4>
+      <h4 className="mt-4 text-xl font">2. Control Point File</h4>
       <p>
         Contains a list of coordinates, each enclosed in curly braces (<code>&#123;&#125;</code>). Each coordinate is represented by three floating-point numbers
         (<code>X, Y, Z</code>). Each set of coordinates is separated by a newline.

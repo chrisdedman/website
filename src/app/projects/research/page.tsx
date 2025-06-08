@@ -10,7 +10,7 @@ export default function Research() {
     <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight">
+        <h5 className="mb-2 text-2xl font tracking-tight">
           <a href="/projects" className="underline">Achievements</a>{" > "}Research - Computational BioPhysics
         </h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
@@ -26,7 +26,7 @@ export default function Research() {
 function Article() {
   return (
     <>
-      <h6 className="mt-4 text-xl font-bold">A tool for the automatic generation of interaction beads in a coarse-grained model of a macromolecule.</h6>
+      <h6 className="mt-4 text-xl font-bold font">A tool for the automatic generation of interaction beads in a coarse-grained model of a macromolecule.</h6>
       <p className="mt-4">
         This tool, developed as part of a Research, Scholarship, and Creative Activities (RSCA) grant,
         is designed to provide a practical solution for overcoming the limitations of traditional multipole

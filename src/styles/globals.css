@@ -21,7 +21,7 @@
 
 @layer base {
   .font {
-    font-family: 'inter';
+    font-family: 'Roboto';
   }
 }
 
@@ -66,6 +66,7 @@ pre {
   border-radius: 5px;
   overflow-x: auto;
 }
+
 code {
   font-family: Consolas, "Courier New", Courier, monospace;
   border-radius: 3px;
@@ -129,5 +130,61 @@ button.hid {
 
   100% {
     transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
+
+.typing-container {
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
+  position: relative;
+  animation: fadein 1s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#static-text {
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
+}
+
+#dynamic-text {
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-family: 'Roboto Mono', monospace;
+  padding: 3px;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s step-end infinite;
+  font-size: 0.9em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
   }
 }

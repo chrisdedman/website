@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   openGraph: {
-    title: 'Chris Dedman\'s Portfolio',
+    title: 'Chris Dedman | Software Engineer, Computer Scientist',
     description: 'Software Engineer, Chris Dedman\'s Portfolio showcasing projects, skills, and experiences.',
     url: 'https://chrisdedman.vercel.app',
     siteName: 'Chris Dedman\'s Portfolio',
@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Chris Dedman | Software Engineer, Computer Scientist</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
