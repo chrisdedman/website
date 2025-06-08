@@ -3,18 +3,18 @@
 import React, { useState, useEffect } from "react";
 import Menu from "@/components/navigation";
 
-const roles = ["a software engineer.", "a computer scientist", "a problem solver.", "a critical thinker.", "chris dedman."];
+const roles = ["a software engineer.", "a computer scientist.", "a problem solver.", "a critical thinker.", "chris dedman."];
 
 export default function Page() {
   const [dynamicText, setDynamicText] = useState("");
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  const [roleIndex, setRoleIndex]     = useState(0);
+  const [charIndex, setCharIndex]     = useState(0);
+  const [isDeleting, setIsDeleting]   = useState(false);
 
   useEffect(() => {
     const typingSpeed       = 100;
     const deletingSpeed     = 50;
-    const delayBetweenRoles = 1000;
+    const delayBetweenRoles = 500;
 
     const handleTyping = () => {
       const currentRole = roles[roleIndex];
