@@ -94,10 +94,10 @@ function Article() {
 
       <p className="mt-4">
         matrix.py is a lightweight and intuitive Python library to build bots
-        on the <a href="https://matrix.org/" className="underline">Matrix protocol</a>. It provides a clean, decorator-based API
+        on the <a href="https://matrix.org/" className="underline" target="_blank" rel="noreferrer noopener">Matrix protocol</a>. It provides a clean, decorator-based API
         similar to popular event-driven frameworks, allowing developers to
         focus on behavior rather than boilerplate.
-        It is built on top of <a href="https://github.com/poljar/matrix-nio" className="underline">matrix-nio</a>, a powerful Matrix client library for Python.
+        It is built on top of <a href="https://github.com/poljar/matrix-nio" className="underline" target="_blank" rel="noreferrer noopener">matrix-nio</a>, a powerful Matrix client library for Python.
       </p>
 
       <p className="mt-4">
@@ -106,10 +106,10 @@ function Article() {
       </p>
 
       <p>
-        You can see my contributions to the project on <a href="https://github.com/Code-Society-Lab/matrixpy/commits?author=chrisdedman" className="underline" rel="noreferrer noopener">GitHub</a>.
+        You can see my contributions to the project on <a href="https://github.com/Code-Society-Lab/matrixpy/commits?author=chrisdedman" className="underline" target="_blank" rel="noreferrer noopener">GitHub</a>.
       </p>
       <p className="mt-4">
-        The project is open source and licensed under the <a href="https://github.com/Code-Society-Lab/matrixpy/blob/main/LICENSE" className="underline" rel="noreferrer noopener">GNU General Public License v3.0</a>.
+        The project is open source and licensed under the <a href="https://github.com/Code-Society-Lab/matrixpy/blob/main/LICENSE" className="underline" target="_blank" rel="noreferrer noopener">GNU General Public License v3.0</a>.
       </p>
 
       <a href="https://github.com/Code-Society-Lab/matrixpy" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
@@ -124,13 +124,13 @@ function Article() {
       >
         <p id="info-callout">
           If you are not familiar with Matrix, I would recommend creating an
-          account on <a href="https://app.cinny.in/register/matrix.org" className="underline" rel="noreferrer noopener">Cinny</a>,
+          account on <a href="https://app.cinny.in/register/matrix.org" className="underline" target="_blank" rel="noreferrer noopener">Cinny</a>,
           which is a web-based Matrix client that is fast and lightweight (the one I am using).
 
-          Another popular client is <a href="https://app.element.io/" className="underline" rel="noreferrer noopener">Element</a>,
+          Another popular client is <a href="https://app.element.io/" className="underline" target="_blank" rel="noreferrer noopener">Element</a>,
           which is an official Matrix client that is available on all platforms.
 
-          Otherwise, you can also use <a href="https://matrix.org/ecosystem/clients/" className="underline" rel="noreferrer noopener">this list</a> to find a client that suits your needs.
+          Otherwise, you can also use <a href="https://matrix.org/ecosystem/clients/" className="underline" target="_blank" rel="noreferrer noopener">this list</a> to find a client that suits your needs.
         </p>
       </aside>
     </>
