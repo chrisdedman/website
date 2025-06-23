@@ -7,7 +7,7 @@ export default function Educations() {
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <div className="mb-3">
         <strong>California State University, Dominguez Hills</strong>
-        <p className="text-sm">Bachelor of Science, Computer Science (Graduated with Honor <b>Summa Cum Laude</b>)</p>
+        <p className="text-sm">Bachelor of Science, Computer Science (Graduated with Honor <b>Magna Cum Laude</b>)</p>
         <p className="text-sm font-light italic">January 2023 - May 2025</p>
         <p className="text-sm font-light">
           As a student at California State University, Dominguez Hills, I have completed several computer science courses,
