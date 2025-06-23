@@ -181,6 +181,26 @@ export default function Page() {
               </div>
             </div>
           </div>
+
+          <div className="w-full lg:w-100 mb-4 lg:mb-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+              <a href="/projects/research-ai">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Research - AI/ML</h5>
+              </a>
+              <p className="mb-3 text-gray-700">
+                Classify cancer subtypes using gene expression data.
+                Unsupervised learning techniques, such as clustering and
+                dimensionality reduction, were used along with supervised
+                models like Decision Trees and Random Forests on the TCGA
+                Pan-Cancer dataset.
+              </p>
+              <div className="text-center">
+                <a href="/projects/research-ai" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+                  Learn more! <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
