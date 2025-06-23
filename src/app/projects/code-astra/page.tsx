@@ -56,7 +56,7 @@ function Article() {
       <h6 className="mt-4 text-xl font-bold font">CodeAstra ~ Modern Code Editor</h6>
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <aside
-        className="bg-blue-200 border border-blue-300 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
+        className="bg-blue-300 border border-blue-300 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
         aria-labelledby="sandbox-science-callout"
       >
         <p id="sandbox-science-callout">

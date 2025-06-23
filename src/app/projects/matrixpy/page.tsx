@@ -75,7 +75,7 @@ function Article() {
         </svg>
       </div>
       <aside
-        className="bg-blue-200 border border-blue-300 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
+        className="bg-blue-400 border border-blue-300 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
         aria-labelledby="matrix-callout"
       >
         <p id="matrix-callout">
@@ -119,7 +119,7 @@ function Article() {
       <hr className="h-px my-8 bg-black border-0 separator mt-4 mb-0" />
 
       <aside
-        className="bg-green-100 border border-green-200 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
+        className="bg-green-500 border border-green-200 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
         aria-labelledby="info-callout"
       >
         <p id="info-callout">
