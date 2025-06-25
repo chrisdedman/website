@@ -20,8 +20,9 @@ export default function MyTimer() {
       duration / 3,
       duration / 4,
       0,
-    ];
+    ] as [number, number, number, number];
   }, [duration]);
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value, 10);
@@ -70,11 +71,13 @@ export default function MyTimer() {
         </button>
         <button
           onClick={handleReset}
-          className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded"
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
         >
           Reset
         </button>
       </div>
+
+      {isComplete && <Confetti width={width} height={height} />}
 
       <div className="flex justify-center mt-8">
         <CountdownCircleTimer
@@ -112,7 +115,6 @@ export default function MyTimer() {
             );
           }}
         </CountdownCircleTimer>
-        {isComplete && <Confetti width={width} height={height} />}
       </div>
 
       <p className="mt-4 text-lg">
