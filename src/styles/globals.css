@@ -100,6 +100,20 @@ button.hid {
   animation: spin 1s linear infinite;
 }
 
+.spin {
+  animation: spin 3s linear infinite;
+}
+
+.tick {
+  animation: tick 0.2s ease-in-out;
+}
+
+@keyframes tick {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
