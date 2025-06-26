@@ -1,11 +1,13 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import Confetti from 'react-confetti';
 import { useWindowSize } from '@react-hook/window-size';
 
 
 export default function MyTimer() {
+  const [hasLoaded, setHasLoaded] = useState(false);
   const [width, height] = useWindowSize();
+  const [sessionCount, setSessionCount] = useState(0);
 
   const [inputMinutes, setInputMinutes] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -45,6 +47,20 @@ export default function MyTimer() {
     setIsComplete(false);
     setTimerKey(prev => prev + 1);
   };
+
+  useEffect(() => {
+    const storedCount = localStorage.getItem("sessionCount");
+    if (storedCount !== null) {
+      setSessionCount(Number(storedCount));
+    }
+    setHasLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (hasLoaded) {
+      localStorage.setItem("sessionCount", String(sessionCount));
+    }
+  }, [sessionCount, hasLoaded]);
 
   return (
     <div className="text-center p-4">
@@ -93,24 +109,33 @@ export default function MyTimer() {
           onComplete={() => {
             setIsRunning(false);
             setIsComplete(true);
+            setSessionCount((count) => count + 1);
             return { shouldRepeat: false };
           }}
         >
           {({ remainingTime }) => {
-            const minutes = Math.floor(remainingTime / 60);
+            const hours = Math.floor(remainingTime / 3600)
+            const minutes = Math.floor((remainingTime % 3600) / 60);
             const seconds = remainingTime % 60;
             return (
               <div role="timer" aria-live="assertive">
                 <p className="text-lg font-semibold mb-1">
-                  {remainingTime === 0 ? 'Well Done!' : 'Deep Work Time'}
+                  {isRunning ? 'Deep Work Running' : remainingTime === 0 && isComplete ? 'Well Done!' : 'Ready to Start?'}
                 </p>
-                <p className="text-3xl font-bold">
-                  {minutes}:{seconds < 10 ? '0' : ''}
-                  {seconds}
+                <p
+                  key={remainingTime}
+                  className={`text-3xl font-bold ${remainingTime <= 59 ? 'tick' : ''}`}
+                >
+                  {hours > 0 && `${hours}h`}
+                  {(minutes > 0 || hours > 0) && `${minutes.toString().padStart(2, '0')}m`}
+                  {`${seconds.toString().padStart(2, '0')}s`}
                 </p>
-                <p className="text-sm">
-                  {minutes > 0 ? 'minutes' : 'seconds'}
+
+                <p className="text-sm text-gray-600">
+                  {isRunning ? 'Remaining time' : ''}
                 </p>
+
+                {isRunning ? <span className="inline-block spin">⏳</span> : '⏳'}
               </div>
             );
           }}
@@ -118,8 +143,22 @@ export default function MyTimer() {
       </div>
 
       <p className="mt-4 text-lg">
-        {isComplete ? 'Session complete ✅' : isRunning ? 'Running ⏳' : 'Not running'}
+        {isComplete ? 'Session complete ✅' : isRunning ? 'Session Activated' : 'Session Not Activated'}
       </p>
+
+      <hr className="h-px my-8 bg-black border-0 separator" />
+
+      <p className="text-sm text-gray-500 mt-2">
+        Session {sessionCount} {sessionCount === 1 ? 'focus block' : 'focus blocks'} completed
+      </p>
+
+      <button onClick={() => {
+        setSessionCount(0);
+        localStorage.removeItem("sessionCount");
+      }}
+        className='mt-4 text-sm text-blue-500 underline'
+      >Clear Session History</button>
+
     </div>
   );
 }
