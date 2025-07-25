@@ -64,7 +64,7 @@ function Article() {
       </p>
 
       <div className="mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Tech Stack</h3>
+          <h3>Tech Stack</h3>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
             <li>Rust</li>
             <li>whisper-rs</li>
@@ -74,7 +74,7 @@ function Article() {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Key Features</h3>
+          <h3>Key Features</h3>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2 space-y-1">
             <li>Converts WAV/MP3/MP4 into karaoke-style videos</li>
             <li>Whisper-based transcription with real-time timing</li>
@@ -86,7 +86,7 @@ function Article() {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">What I Did</h3>
+          <h3>What I Did</h3>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
             <li>Designed the CLI and modular Rust architecture</li>
             <li>Integrated Whisper and FFmpeg</li>
@@ -97,7 +97,7 @@ function Article() {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Challenges</h3>
+          <h3>Challenges</h3>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mt-2">
             <li>Learning Rust</li>
             <li>Handling real-time word-level timestamping</li>
@@ -107,7 +107,7 @@ function Article() {
         </div>
 
         <div className="mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Demo</h3>
+          <h3>Demo</h3>
           <video
             controls
             className="w-full rounded-lg shadow-lg"

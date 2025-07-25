@@ -65,7 +65,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="w-full lg:w-100 mb-16 lg:mb-12">
+          <div className="w-full lg:w-100 mb-4 lg:mb-12">
             <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
               <a href="/projects/matrixpy">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Matrix.py</h5>
