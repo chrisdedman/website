@@ -76,11 +76,11 @@ export default function Page() {
       <div className="flex-col p-4 lg:p-8 mt-16">
         <div className="p-4 max-w-6xl mx-auto flex-grow bg-white rounded-lg shadow-md">
           <p className="text-gray-800 leading-relaxed">
-            Christopher Dedman Rollet is a recent computer science graduate,
-            he is passionate about programming and eager to apply skills in an
+            I am a recent computer science graduate,
+            I am passionate about programming and eager to apply skills in an
             entry-level software engineering role. With experience in various
-            programming languages and a focus on backend and embedded systems, Chris
-            seeks opportunities to grow and make an impact.
+            programming languages and a focus on backend and low-level systems, I
+            seek opportunities to grow and make an impact.
           </p>
         </div>
         <Footer />
