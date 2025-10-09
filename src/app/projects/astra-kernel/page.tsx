@@ -43,10 +43,10 @@ function Article() {
         <code>
           {`========================================
   AstraKernel  v0.1.0
-  Built May 15 2025 at 22:58:58
+  Built Aug 27 2025 at 12:56:35
 ========================================
 
-  CPU: ARM926EJ-S @ 200MHz (simulated)
+  CPU: Cortex-A8 @ 200MHz (simulated)
   RAM: 128MB SDRAM at 0x00000000
 
 Welcome to your own little Astra world!
@@ -75,12 +75,7 @@ Type away, explore, have fun.`}
       </aside>
 
       <p className="mt-4">
-        AstraKernel is a minimal experimental kernel written in modern C and ARM Assembly.
-        Designed to run on QEMU&#39;s VersatilePB (ARM926EJ-S) emulated platform,
-        AstraKernel is intended to provide a clear and approachable introduction
-        to the fundamental concepts of operating system design and kernel development.
-        This project also reflects my personal journey in learning about kernel design
-        and development, as well as systems programming.
+        AstraKernel is a minimal experimental kernel written in modern C and ARM assembly, designed to run on QEMU&#39;s Versatile AB/PB board with a Cortex-A8 CPU override (-cpu cortex-a8). This setup keeps the simple Versatile peripheral map while enabling ARMv7-A features for experimentation. The purpose is educational, showing the fundamental steps of bringing up a bare-metal system, from low-level bootstrapping to higher-level interactive features to explore kernel development concepts. This project also reflects my personal journey in learning about kernel design and development, as well as systems programming.
       </p>
       <p className="mt-4">
         This project was developed with a focus on clarity, simplicity, and educational value. Rather
