@@ -6,6 +6,15 @@ export default function Educations() {
       <h5 className="mb-2 text-m tracking-tight">Educations</h5>
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <div className="mb-3">
+        <strong>California State University, Long Beach</strong>
+        <p className="text-sm">Master of Science, Computer Science</p>
+        <p className="text-sm font-light italic">January 2026 - ...</p>
+        <p className="text-sm font-light">
+          In spring 2026, I will be starting my Master of Science in Computer Science at California State University, Long Beach with a focus on embedded systems and low-level programming.
+        </p>
+      </div>
+
+      <div className="mb-3">
         <strong>California State University, Dominguez Hills</strong>
         <p className="text-sm">Bachelor of Science, Computer Science (Graduated with Honor <b>Magna Cum Laude</b>)</p>
         <p className="text-sm font-light italic">January 2023 - May 2025</p>
