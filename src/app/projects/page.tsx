@@ -194,7 +194,7 @@ export default function Page() {
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">CRUD Web Template</h5>
               </a>
               <p className="mb-3 text-gray-700">
-                A simple CRUD template web application built with Golang and PostgreSQL.
+                A boilerplate template for quickly setting up a full-stack web application using Go with backend APIs, database integration, and frontend setup.
               </p>
               <div className="text-center">
                 <a href="/projects/crud-template" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
