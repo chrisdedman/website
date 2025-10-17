@@ -10,6 +10,13 @@ export default function Page() {
     <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
       <Menu />
       <div className="p-4 max-w-6xl mx-auto flex-grow">
+        {
+        /*
+         ************************************
+         * Open Source Contributions Section *
+         *************************************
+         */
+         }
         <h5 className="mb-2 text-2xl font tracking-tight">Open Source Contributions</h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-stretch">
@@ -100,6 +107,13 @@ export default function Page() {
           </div>
         </div>
 
+        {
+        /*
+         ********************
+         * Projects Section *
+         ********************
+         */
+         }
         <h5 className="mb-2 text-2xl font tracking-tight">Projects</h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-stretch">
@@ -157,7 +171,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="w-full lg:w-100 mb-16 lg:mb-12">
+          <div className="w-full lg:w-100 mb-4 lg:mb-12">
             <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
               <a href="/projects/qrcode">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">QR Code Generator</h5>
@@ -173,8 +187,31 @@ export default function Page() {
               </div>
             </div>
           </div>
+
+          <div className="w-full lg:w-100 mb-16 lg:mb-12">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+              <a href="/projects/crud-template">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">CRUD Web Template</h5>
+              </a>
+              <p className="mb-3 text-gray-700">
+                A simple CRUD template web application built with Golang and PostgreSQL.
+              </p>
+              <div className="text-center">
+                <a href="/projects/crud-template" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+                  Try it! <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
+        {
+        /*
+         ************************
+         * Achievements Section *
+         ************************
+         */
+         }
         <h5 className="mb-2 text-2xl tracking-tight">Achievements</h5>
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-stretch">
