@@ -10,7 +10,7 @@ export default function Skills() {
           Microcontrollers, Object Oriented Programing, C, C++, Assembly, Java,
           Python, Golang, Elixir/Phoenix, TypeScript, React, Next.JS, Fusion.JS,
           Git, GitHub, JIRA, Docker, CI/CD, TCP/IP Protocols, Server Performance Testing,
-          PostgreSQL, MySQL, Qt6, Make, CMake, QEMU, Vim, NeoVim, GDB Debugger, Kernel Developement.
+          PostgreSQL, MySQL, Qt6, Make, CMake, QEMU, Vim, NeoVim, GDB Debugger, Kernel Developement, Event-Driven Developement.
         </p>
       </div>
     </div>
