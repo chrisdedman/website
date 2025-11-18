@@ -61,7 +61,7 @@ export default function Menu() {
         <div className={`${isOpen ? 'block' : 'hidden'} md:flex items-center space-x-2`} id="navbar-sticky">
           <NavItem to="/profile">profile</NavItem>
           <NavItem to="/projects">work</NavItem>
-          <NavItem to="https://astranebula.gitbook.io/">blog</NavItem>
+          <NavItem to="https://astradedman.vercel.app/">blog</NavItem>
         </div>
 
       </div>
