@@ -10,24 +10,12 @@ export default function Experiences() {
         <p className="text-sm">Software/Data Engineering Intern</p>
         <p className="text-sm font-light italic">May 2024 - August 2024</p>
         <p className="text-sm font-light">
-          During my second internship as a Software/Data Engineering Intern at Uber, I worked with the AdTech team, focusing on data engineering project.
-          My primary responsibility was to design and implement a new SQL table to centralize metadata storage for the team.
-          This initiative aimed to eliminate redundant metadata across multiple tables in the codebase, thereby enhancing efficiency.
-          I designed the schema for the new table, wrote SQL queries to create it, and developed Python scripts to generate data pipelines that
-          populate the table with data from various sources. Additionally, I implemented sensors to establish dependencies on the data sources, ensuring data integrity and consistency.
-          As a result of my work, the system became more streamlined, reducing the number of queries needed to access metadata.
-          This improvement boosted the performance of the team&apos;s services and made it easier for the marketing team and other stakeholders to access the data they needed.
+          During my second Software Engineering internship at Uber on the AdTech team, I focused on data engineering project. I designed and implemented a new SQL table to centralize duplicated metadata storage, eliminating redundancy across multiple tables and improving codebase efficiency by 30%. I developed and optimized Python scripts to automate CI pipelines, merging data from multiple sources into the centralized table and increasing data aggregation speed by 50%. This involved designing the database schema, writing SQL queries, and performing rigorous data validation to ensure data accuracy and reliability. Additionally, I implemented sensors to establish data dependencies, maintaining integrity and consistency across data sources. Throughout the project, I maintained proactive communication with stakeholders, staying aligned with evolving requirements and demonstrating a detail-oriented approach across the data lifecycle.
         </p>
         <p className="text-sm">UberSTAR Software Engineering Intern</p>
         <p className="text-sm font-light italic">June 2023 - September 2023</p>
         <p className="text-sm font-light">
-          During my time as a UberSTAR Software Engineering Intern at Uber with the DOTCOM team, I was responsible for leading initiatives such as load testing and deploying web services,
-          with the goal of enhancing the performance of Fusion.js. The primary objective of these initiatives was to improve server throughput while maintaining a 300ms latency and 1% error rate for P99.
-          I developed a consistent and repeatable way to measure and analyze the performance of web applications at Uber by creating hypotheses and testing them to identify signals.
-          I conducted research on systematic approaches for analyzing web server performance based on the 4 Golden Signals: Latency, Traffic, Errors, and Saturation.
-          I used Uber&apos;s Ballast tool for automated testing and contributed to significant cost savings. Additionally, I took the initiative to streamline the execution
-          of Ballast tests directly from within Uber&apos;s development environment, simplifying the process and enhancing efficiency.
-          I facilitated continuous service creation and played a crucial role in process improvement through comprehensive documentation.
+          During my Software Engineering Internship at Uber on the DOTCOM team, I led initiatives to load test and deploy web services with the goal of optimizing Fusion.js performance. My work focused on improving server throughput while maintaining a 300ms latency and 1% P99 error rate. I developed a consistent, repeatable methodology to measure and analyze web application performance, forming hypotheses and testing them to extract meaningful signals. I conducted research on systematic approaches to server performance analysis using the Four Golden Signals: Latency, Traffic, Errors, and Saturation. Leveraging Uber&apos;s Ballast tool, I automated performance testing, contributing to substantial cost savings, and streamlined test execution directly within the development environment, improving efficiency by 150%. Additionally, I facilitated continuous service creation and drove process improvements through comprehensive documentation.
         </p>
       </div>
 
