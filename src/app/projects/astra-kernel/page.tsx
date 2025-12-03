@@ -80,33 +80,48 @@ Type away, explore, have fun.`}
         AstraKernel is a minimal experimental kernel written in modern C and ARM assembly, designed to run on QEMU&#39;s Versatile AB/PB board with a Cortex-A8 CPU override (-cpu cortex-a8). This setup keeps the simple Versatile peripheral map while enabling ARMv7-A features for experimentation. The purpose is educational, showing the fundamental steps of bringing up a bare-metal system, from low-level bootstrapping to higher-level interactive features to explore kernel development concepts. This project also reflects my personal journey in learning about kernel design and development, as well as systems programming.
       </p>
       <p className="mt-4">
-        This project was developed with a focus on clarity, simplicity, and educational value. Rather
-        than attempting to recreate the complexity of established operating systems, the goal of this kernel is
-        to strip away unnecessary abstractions and present a clean, understandable codebase for anyone
-        interested in the &quot;bare metal&quot; foundations of computing.
+        I am developing this project with a focus on clarity, simplicity, and educational value. Rather than trying to recreate the complexity of available operating
+        systems, the goal of this kernel is to strip away unnecessary abstractions
+        and present a clean, understandable codebase for anyone interested in
+        the &quot;bare metal&quot; foundations of computing.
       </p>
       <p className="mt-4">
-        Through the implementation of kernel bootstrapping, direct hardware communication, and
-        basic user interaction, AstraKernel demonstrates how fundamental OS components come together.
-        The project showcases how modern C best practices can be utilized in a systems programming
-        context to create code that is maintainable, portable, and robust, while still being accessible to
-        those new to kernel development. The design of this kernel emphasizes modularity and extensibility,
-        allowing developers to easily add new features or modify existing ones. This makes it ideal for
-        educational purposes, as it provides a clear structure that can be followed and built upon.
+        Through the implementation of kernel bootstrapping, direct hardware
+        communication, and basic user interaction, this project demonstrates
+        how fundamental OS components come together. AstraKernel showcases
+        how modern C best practices can be utilized in a systems programming
+        context to create code that is maintainable, portable, and robust, 
+        while still being accessible to those new to kernel development.
+        The design of this kernel pushes on modularity and extensibility,
+        allowing developers to easily add new features or modify existing ones.
+        This makes it ideal for educational purposes, as it provides a clear
+        structure that can be followed and built upon.
       </p>
       <p className="mt-4">
-        It is my hope that AstraKernel will not only serve as a foundation for those wishing to understand
-        kernel development, but also inspire curiosity and confidence in exploring lower-level aspects of
-        computer systems. The project is open source and available on GitHub, where you can find the source code, documentation,
-        and instructions for building and running the kernel in QEMU.
+        It is my hope that AstraKernel will not only serve as a foundation for
+        those wishing to understand kernel development, but also inspire curiosity
+        and confidence in exploring lower-level aspects of computer systems. The
+        project is open source and available on GitHub, where you can find the source code, documentation, and instructions for building and running the kernel in QEMU.
       </p>
-      <p className="mt-4">
-        Alongside this project, I am documenting the development process and design decisions made
-        throughout the creation of AstraKernel. This documentation is a work in
-        progress and may be updated as the project evolves. I welcome contributions,
-        feedback, and suggestions for improvement. You can find the latest documentation
-        on <a href="https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">GitHub</a>.
-      </p>
+
+      {/* <p className="mt-4">
+        Alongside this project, I am documenting the development process and design
+        decisions made throughout the creation of AstraKernel. This documentation is
+        a work in progress and may be updated as the project evolves. I welcome
+        contributions, feedback, and suggestions for improvement. You can find the
+        latest documentation on <a href="https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">GitHub</a>.
+      </p> */}
+
+      <aside
+        className="bg-green-400 border border-blue-400 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
+        aria-labelledby="sandbox-science-callout"
+      >
+        <p id="sandbox-science-callout">
+          I also implemented a CI/CD pipeline using GitHub Action to automatically build
+        and deploy in production the latest documentation of the kernel using Doxygen.
+        The documentation is hosted on GitHub Pages and can be found <a href="https://sandbox-science.github.io/AstraKernel/" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">here</a>.
+        </p>
+      </aside>
 
       <a href="https://github.com/sandbox-science/AstraKernel" target="_blank" rel="noreferrer noopener" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
         Get AstraKernel <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
@@ -121,6 +136,8 @@ Type away, explore, have fun.`}
                 className="rounded-lg"
                 src={image.src}
                 alt={image.alt}
+                width={400}
+                height={300}
                 style={{ cursor: "pointer", maxWidth: "100%" }}
                 onClick={() => enlargeImage(image.src)}
               />
