@@ -5,6 +5,8 @@ import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
 import { useState } from "react";
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+
 
 export default function Resource() {
   return (
@@ -60,7 +62,7 @@ function Article() {
       <div className="mt-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           <div key={0}>
-            <img
+            <Image
               className="rounded-lg"
               src={"/screenshot.png"}
               alt={"Resource Page"}
@@ -72,7 +74,7 @@ function Article() {
 
         {enlargedImage && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
-            <img src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
+            <Image src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
             <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
           </div>
         )}

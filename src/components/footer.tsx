@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 
 export default function Footer() {
   return (
@@ -76,7 +78,7 @@ export default function Footer() {
             </a>
             {/* BlueSky Account */}
             <a href="https://bsky.app/profile/astranebula.bsky.social" target="_blank" rel="noreferrer noopener" className="text-gray-400 hover:text-gray-500 dark:hover:text-white ms-5" title="BlueSky">
-              <img width="16" height="16" alt="New Bluesky logo, released in December 2023." src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Bluesky_butterfly-logo.svg" />
+              <Image width="16" height="16" alt="New Bluesky logo, released in December 2023." src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Bluesky_butterfly-logo.svg" />
               <span className="sr-only">Bluesky page</span>
             </a>
             {/* GitHub Account */}

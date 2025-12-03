@@ -5,6 +5,8 @@ import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
 import { useState } from "react";
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+
 
 export default function AstraKernel() {
   return (
@@ -99,9 +101,9 @@ Type away, explore, have fun.`}
         and instructions for building and running the kernel in QEMU.
       </p>
       <p className="mt-4">
-        Alongside this project, I am documenting the development process and design decisions made 
-        throughout the creation of AstraKernel. This documentation is a work in 
-        progress and may be updated as the project evolves. I welcome contributions, 
+        Alongside this project, I am documenting the development process and design decisions made
+        throughout the creation of AstraKernel. This documentation is a work in
+        progress and may be updated as the project evolves. I welcome contributions,
         feedback, and suggestions for improvement. You can find the latest documentation
         on <a href="https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">GitHub</a>.
       </p>
@@ -115,7 +117,7 @@ Type away, explore, have fun.`}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div key={index}>
-              <img
+              <Image
                 className="rounded-lg"
                 src={image.src}
                 alt={image.alt}
@@ -128,7 +130,7 @@ Type away, explore, have fun.`}
 
         {enlargedImage && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
-            <img src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
+            <Image src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
             <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
           </div>
         )}
