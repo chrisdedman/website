@@ -1,5 +1,4 @@
 "use client"
-import React from "react";
 import Link from 'next/link';
 import MyTimer from '@/components/timer/timer';
 import ProjectLayout from '@/components/project-layout';

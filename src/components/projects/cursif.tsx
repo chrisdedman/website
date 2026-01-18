@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react";
 import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import ImageGallery from '@/components/image-gallery';
