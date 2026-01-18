@@ -20,7 +20,7 @@ export default function Page() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-stretch">
 
           <div className="w-full lg:w-100 mb-4 lg:mb-0">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/astra-kernel">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">AstraKernel</h5>
               </Link>
@@ -37,7 +37,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-0">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/code-astra">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">CodeAstra</h5>
               </Link>
@@ -53,7 +53,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-0">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/cursif">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Cursif</h5>
               </Link>
@@ -71,7 +71,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-12">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/matrixpy">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Matrix.py</h5>
               </Link>
@@ -89,7 +89,7 @@ export default function Page() {
           </div>
           
           <div className="w-full lg:w-100 mb-16 lg:mb-12">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/capski">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Capski</h5>
               </Link>
@@ -116,7 +116,7 @@ export default function Page() {
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-stretch">
           <div className="w-full lg:w-100 mb-4 lg:mb-0">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/astra-pulse">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">AstraPulse</h5>
               </Link>
@@ -132,7 +132,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-0">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/asteroid">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Near Earth Object, Daily Tracker</h5>
               </Link>
@@ -150,7 +150,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-0">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/resources">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Resource Library</h5>
               </Link>
@@ -169,7 +169,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-12">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/deep-work">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Deep Work Timer</h5>
               </Link>
@@ -186,7 +186,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-12">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/qrcode">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">QR Code Generator</h5>
               </Link>
@@ -203,7 +203,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-16 lg:mb-12">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/crud-template">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">CRUD Web Template</h5>
               </Link>
@@ -230,7 +230,7 @@ export default function Page() {
         <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-stretch">
           <div className="w-full lg:w-100 mb-4 lg:mb-8">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/research">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Research - Computational BioPhysics</h5>
               </Link>
@@ -250,7 +250,7 @@ export default function Page() {
           </div>
 
           <div className="w-full lg:w-100 mb-4 lg:mb-8">
-            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8">
+            <div className="max-w-sm h-full flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow mt-8 lg:mr-8">
               <Link href="/projects/research-ai">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center">Research - AI/ML</h5>
               </Link>
