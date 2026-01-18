@@ -87,7 +87,7 @@ export default function Menu() {
         </button>
 
         <div
-          className={`${isOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row items-stretch md:items-center gap-2 md:space-x-2 absolute md:static top-full left-0 z-20 w-full md:w-auto bg-[color:var(--nav-background-color)] md:bg-transparent border-b md:border-0 border-[color:var(--nav-tab-hover-background-color)] px-6 py-4 md:p-0 shadow-lg md:shadow-none`}
+          className={`flex flex-col md:flex-row items-stretch md:items-center gap-2 md:space-x-2 absolute md:static top-full left-0 z-20 w-full md:w-auto bg-[color:var(--nav-background-color)] md:bg-transparent border-b md:border-0 border-[color:var(--nav-tab-hover-background-color)] px-6 py-4 md:p-0 shadow-lg md:shadow-none overflow-hidden transition-all duration-300 ease-out md:transition-none ${isOpen ? 'max-h-60 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'} md:max-h-none md:opacity-100 md:translate-y-0 md:pointer-events-auto`}
           id="navbar-sticky"
         >
           <NavItem to="/profile">profile</NavItem>
