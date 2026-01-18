@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --foreground-color: black;
@@ -19,12 +17,6 @@
   --background-code: #f4f4f4
 }
 
-@layer base {
-  .font {
-    font-family: 'Roboto';
-  }
-}
-
 body {
   color: var(--foreground-color);
   background: var(--background-color);
@@ -39,24 +31,38 @@ nav {
   background-color: var(--separator-color);
 }
 
-p {
-  @apply mt-3 mb-3 font-normal
-}
+@layer base {
+  .font {
+    font-family: 'Roboto';
+  }
 
-h4 {
-  @apply mb-3 font text-base
-}
+  p {
+    @apply mt-3 mb-3 font-normal;
+  }
 
-h3 {
-  @apply mb-3 font-bold font text-lg
-}
+  h4 {
+    @apply mb-3 text-base;
+    font-family: 'Roboto';
+  }
 
-h2 {
-  @apply mb-3 font-bold font text-xl
-}
+  h3 {
+    @apply mb-3 font-bold text-lg;
+    font-family: 'Roboto';
+  }
 
-h1 {
-  @apply mb-3 font-bold font text-2xl
+  h2 {
+    @apply mb-3 font-bold text-xl;
+    font-family: 'Roboto';
+  }
+
+  h1 {
+    @apply mb-3 font-bold text-2xl;
+    font-family: 'Roboto';
+  }
+
+  button.hid {
+    @apply inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200;
+  }
 }
 
 pre {
@@ -90,10 +96,6 @@ li {
 
 button.btn {
   color: var(--foreground-color);
-}
-
-button.hid {
-  @apply inline-flex items-center p-2 w-8 h-8 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200;
 }
 
 .spin-on-hover:hover {
