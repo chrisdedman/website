@@ -1,17 +1,26 @@
 .light {
-  --foreground-color: black;
-  --background-color: white;
+  --foreground-color: #0f172a;
+  --background-color: #f8fafc;
 
-  --nav-background-color: #E3E3E3;
-  --nav-tab-hover-background-color: #BFBFBF;
-  --nav-selected-background-color: #D3D3D3;
-  --nav-selected-foreground-color: black;
+  --nav-background-color: #0b1220;
+  --nav-tab-hover-background-color: #111b2d;
+  --nav-selected-background-color: #0b1220;
+  --nav-selected-foreground-color: #f8fafc;
 
-  --button-background-color: black;
-  --button-foreground-color: white;
+  --button-background-color: #0f172a;
+  --button-foreground-color: #f8fafc;
 
-  --separator-color: black;
-  --background-code: #f4f4f4
+  --separator-color: #0f172a;
+  --background-code: #eef2f7;
+
+  --card-bg: #ffffff;
+  --card-border: rgba(15, 23, 42, 0.12);
+  --card-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  --card-shadow-hover: 0 28px 60px rgba(15, 23, 42, 0.14);
+
+  --accent: #ef4444;
+  --accent-ink: #fff7ed;
+  --muted-foreground: #334155;
 }
 
 .light .svg {

@@ -1,16 +1,26 @@
 .dark {
-  --background-color: #212121;
-  --foreground-color: white;
+  --background-color: #0b1120;
+  --foreground-color: #e2e8f0;
 
-  --nav-background-color: #1a1a1a;
-  --nav-tab-hover-background-color: #222;
-  --nav-selected-background-color: #2a2a2a;
-  --nav-selected-foreground-color: white;
+  --nav-background-color: #0b1120;
+  --nav-tab-hover-background-color: #162036;
+  --nav-selected-background-color: #0b1120;
+  --nav-selected-foreground-color: #e2e8f0;
 
-  --button-background-color: white;
-  --button-foreground-color: black;
+  --button-background-color: #e2e8f0;
+  --button-foreground-color: #0b1120;
 
-  --separator-color: white;
+  --separator-color: #94a3b8;
+  --background-code: rgba(15, 23, 42, 0.8);
+
+  --card-bg: #111827;
+  --card-border: rgba(148, 163, 184, 0.2);
+  --card-shadow: 0 18px 45px rgba(15, 23, 42, 0.4);
+  --card-shadow-hover: 0 28px 60px rgba(15, 23, 42, 0.6);
+
+  --accent: #f97316;
+  --accent-ink: #0b1120;
+  --muted-foreground: #94a3b8;
 }
 
 .dark .svg {
@@ -19,19 +29,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #212121;
-    --foreground-color: white;
+    --background-color: #0b1120;
+    --foreground-color: #e2e8f0;
 
-    --nav-background-color: #1a1a1a;
-    --nav-tab-hover-background-color: #222;
-    --nav-selected-background-color: #2a2a2a;
-    --nav-selected-foreground-color: white;
+    --nav-background-color: #0b1120;
+    --nav-tab-hover-background-color: #162036;
+    --nav-selected-background-color: #0b1120;
+    --nav-selected-foreground-color: #e2e8f0;
 
-    --button-background-color: white;
-    --button-foreground-color: black;
+    --button-background-color: #e2e8f0;
+    --button-foreground-color: #0b1120;
 
-    --separator-color: white;
-    --background-code: rgba(0, 0, 0, 0.183);
+    --separator-color: #94a3b8;
+    --background-code: rgba(15, 23, 42, 0.8);
+
+    --card-bg: #111827;
+    --card-border: rgba(148, 163, 184, 0.2);
+    --card-shadow: 0 18px 45px rgba(15, 23, 42, 0.4);
+    --card-shadow-hover: 0 28px 60px rgba(15, 23, 42, 0.6);
+
+    --accent: #f97316;
+    --accent-ink: #0b1120;
+    --muted-foreground: #94a3b8;
   }
 
   .svg {
