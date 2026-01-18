@@ -3,6 +3,8 @@ import '@styles/themes/dark.css'
 import '@styles/themes/light.css'
 
 import type { Metadata, Viewport } from 'next'
+import type { ReactNode } from 'react'
+import { Fraunces, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -49,13 +51,23 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const displayFont = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+});
+
+const bodyFont = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-body',
+});
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
       <body className="min-w-[350px]" suppressHydrationWarning>
         {children}
         <Analytics />

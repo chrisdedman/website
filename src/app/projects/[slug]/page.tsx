@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { projectComponents } from '@/lib/project-components';
-import { projectMetadata } from '@/lib/project-metadata';
+import { projectMap, projects } from '@/lib/projects';
 
 type ProjectParams = {
   params: Promise<{
@@ -11,12 +10,12 @@ type ProjectParams = {
 };
 
 export function generateStaticParams() {
-  return Object.keys(projectMetadata).map((slug) => ({ slug }));
+  return projects.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: ProjectParams): Promise<Metadata | undefined> {
   const { slug } = await params;
-  const entry = projectMetadata[slug];
+  const entry = projectMap[slug];
   if (!entry) {
     return undefined;
   }
@@ -29,10 +28,11 @@ export async function generateMetadata({ params }: ProjectParams): Promise<Metad
 
 export default async function ProjectPage({ params }: ProjectParams) {
   const { slug } = await params;
-  const ProjectComponent = projectComponents[slug];
-  if (!ProjectComponent) {
+  const entry = projectMap[slug];
+  if (!entry) {
     notFound();
   }
 
+  const ProjectComponent = entry.Component;
   return <ProjectComponent />;
 }
