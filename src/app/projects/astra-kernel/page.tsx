@@ -92,14 +92,13 @@ Type away, explore, have fun.`}
         and confidence in exploring lower-level aspects of computer systems. The
         project is open source and available on GitHub, where you can find the source code, documentation, and instructions for building and running the kernel in QEMU.
       </p>
-
-      {/* <p className="mt-4">
+      <p className="mt-4">
         Alongside this project, I am documenting the development process and design
         decisions made throughout the creation of AstraKernel. This documentation is
         a work in progress and may be updated as the project evolves. I welcome
         contributions, feedback, and suggestions for improvement. You can find the
         latest documentation on <a href="https://github.com/sandbox-science/AstraKernel/blob/main/doc/AstraKernelManual.pdf" target="_blank" rel="noreferrer noopener" className="text-blue-500 hover:underline">GitHub</a>.
-      </p> */}
+      </p>
 
       <aside
         className="bg-green-400 border border-blue-400 rounded-lg p-4 my-4 max-w-2xl mx-auto prose"
