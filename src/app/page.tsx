@@ -16,40 +16,32 @@ export default function Page() {
     const typingSpeed       = 100;
     const deletingSpeed     = 50;
     const delayBetweenRoles = 500;
+    const currentRole = roles[roleIndex];
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-    const handleTyping = () => {
-      const currentRole = roles[roleIndex];
+    if (isDeleting && charIndex === 0) {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    } else if (!isDeleting && charIndex === currentRole.length) {
+      timeoutId = setTimeout(() => setIsDeleting(true), delayBetweenRoles);
+    } else {
+      const speed = isDeleting ? deletingSpeed : typingSpeed;
+      timeoutId = setTimeout(() => {
+        if (isDeleting) {
+          setDynamicText((prev) => prev.slice(0, -1));
+          setCharIndex((prev) => prev - 1);
+        } else {
+          setDynamicText((prev) => prev + currentRole[charIndex]);
+          setCharIndex((prev) => prev + 1);
+        }
+      }, speed);
+    }
 
-      if (!isDeleting && charIndex < currentRole.length)
-      {
-        setDynamicText((prev) => prev + currentRole[charIndex]);
-        setCharIndex((prev) => prev + 1);
-      }
-
-      else if (isDeleting && charIndex > 0)
-      {
-        setDynamicText((prev) => prev.slice(0, -1));
-        setCharIndex((prev) => prev - 1);
-      }
-
-      else if (isDeleting && charIndex === 0)
-      {
-        setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % roles.length);
-      }
-
-      else if (!isDeleting && charIndex === currentRole.length)
-      {
-        setTimeout(() => setIsDeleting(true), delayBetweenRoles);
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
       }
     };
-
-    const typingInterval = setInterval(
-      handleTyping,
-      isDeleting ? deletingSpeed : typingSpeed
-    );
-
-    return () => clearInterval(typingInterval);
   }, [charIndex, isDeleting, roleIndex]);
 
   return (
