@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { RocketLaunchIcon } from '@heroicons/react/24/solid';
@@ -30,6 +30,7 @@ export default function Menu() {
   const [isOpen, setIsOpen]     = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const lastPathnameRef = useRef(pathname);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -61,13 +62,14 @@ export default function Menu() {
   }, [isOpen]);
 
   useEffect(() => {
-    if (!isOpen) {
+    if (lastPathnameRef.current === pathname) {
       return;
     }
 
+    lastPathnameRef.current = pathname;
     const timer = setTimeout(() => setIsOpen(false), 0);
     return () => clearTimeout(timer);
-  }, [pathname, isOpen]);
+  }, [pathname]);
 
   return (
     <nav className={`fixed w-full z-20 top-0 start-0 border-b text-[color:var(--nav-selected-foreground-color)] bg-[color:var(--nav-background-color)] shadow-lg ${scrolled ? 'bg-opacity-90' : ''}`}>
