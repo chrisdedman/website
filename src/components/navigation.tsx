@@ -99,7 +99,7 @@ export default function Menu() {
         >
           <NavItem to="/profile">profile</NavItem>
           <NavItem to="/projects">work</NavItem>
-          <NavItem to="https://astradedman.vercel.app/">blog</NavItem>
+          <NavItem to="https://astradedman.vercel.app/">writing</NavItem>
         </div>
 
       </div>
