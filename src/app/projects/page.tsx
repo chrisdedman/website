@@ -1,9 +1,12 @@
-"use client"
-
-import React from "react";
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import ProjectLayout from '@/components/project-layout';
+
+export const metadata: Metadata = {
+  title: 'Projects',
+  description: 'Open source contributions, personal projects, and research highlights from Chris Dedman.',
+};
 
 export default function Page() {
   return (

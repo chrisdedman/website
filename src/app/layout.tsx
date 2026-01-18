@@ -2,27 +2,51 @@ import '@styles/globals.css'
 import '@styles/themes/dark.css'
 import '@styles/themes/light.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+const siteTitle = 'Chris Dedman | Software Engineer, Computer Scientist';
+const siteDescription = 'Software Engineer, Chris Dedman\'s Portfolio showcasing projects, skills, and experiences.';
+const siteUrl = 'https://chrisdedman.vercel.app';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteTitle,
+    template: '%s | Chris Dedman',
+  },
+  description: siteDescription,
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
-    title: 'Chris Dedman | Software Engineer, Computer Scientist',
-    description: 'Software Engineer, Chris Dedman\'s Portfolio showcasing projects, skills, and experiences.',
-    url: 'https://chrisdedman.vercel.app',
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
     siteName: 'Chris Dedman\'s Portfolio',
     images: [
       {
-        url: 'https://chrisdedman.vercel.app/website.jpeg',
+        url: `${siteUrl}/website.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Chris Dedman\'s Portfolio'
-      }
+        alt: 'Chris Dedman\'s Portfolio',
+      },
     ],
     locale: 'en_US',
     type: 'website',
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+    images: [`${siteUrl}/website.jpeg`],
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -32,11 +56,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>Chris Dedman | Software Engineer, Computer Scientist</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body className="min-w-[350px]" suppressHydrationWarning>
         {children}
         <Analytics />
