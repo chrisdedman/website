@@ -1,47 +1,37 @@
 "use client"
 
-import React, { useState } from "react";
-import Menu from '@/components/navigation'
-import Footer from '@/components/footer'
+import React from "react";
+import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import ImageGallery from '@/components/image-gallery';
+import ProjectLayout from '@/components/project-layout';
 
 
 export default function Cursif() {
   return (
-    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
-      <Menu />
-      <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font tracking-tight">
-          <a href="/projects" className="underline">Open Source Contributions</a>{" > "}Cursif
-        </h5>
-        <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
-        <div>
-          <Article />
-        </div>
+    <ProjectLayout>
+      <h5 className="mb-2 text-2xl font tracking-tight">
+        <Link href="/projects" className="underline">Open Source Contributions</Link>{" > "}Cursif
+      </h5>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+      <div>
+        <Article />
       </div>
-      <Footer />
-    </div>
+    </ProjectLayout>
   );
 }
 
 function Article() {
   const images = [
-    { src: '/homepage.png', alt: 'Cursif Homepage' },
-    { src: '/login.png', alt: 'Cursif Login Page' },
-    { src: '/dashboard.png', alt: 'Cursif Notebook Dashboard' },
-    { src: '/dashboard-page.png', alt: 'Cursif Dashboard Pages' },
-    { src: '/markdown-editor.png', alt: 'Cursif Markdown Editor' },
-    { src: '/update-notebook.png', alt: 'Cursif Update Notebook' },
-    { src: '/create-notebook.png', alt: 'Cursif Create Notebook' },
-    { src: '/navigation-page.png', alt: 'Cursif Navigation Pages' },
+    { src: '/homepage.png', alt: 'Cursif Homepage', width: 800, height: 500 },
+    { src: '/login.png', alt: 'Cursif Login Page', width: 800, height: 500 },
+    { src: '/dashboard.png', alt: 'Cursif Notebook Dashboard', width: 800, height: 500 },
+    { src: '/dashboard-page.png', alt: 'Cursif Dashboard Pages', width: 800, height: 500 },
+    { src: '/markdown-editor.png', alt: 'Cursif Markdown Editor', width: 800, height: 500 },
+    { src: '/update-notebook.png', alt: 'Cursif Update Notebook', width: 800, height: 500 },
+    { src: '/create-notebook.png', alt: 'Cursif Create Notebook', width: 800, height: 500 },
+    { src: '/navigation-page.png', alt: 'Cursif Navigation Pages', width: 800, height: 500 },
   ];
-
-  const [enlargedImage, setEnlargedImage] = useState("");
-
-  const enlargeImage = (src: string) => {
-    setEnlargedImage(src);
-  };
 
   return (
     <>
@@ -102,26 +92,7 @@ function Article() {
 
       <div>
         <h3>Cursif Development Gallery Images</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          {images.map((image, index) => (
-            <div key={index}>
-              <Image
-                className="rounded-lg"
-                src={image.src}
-                alt={image.alt}
-                style={{ cursor: "pointer", maxWidth: "100%" }}
-                onClick={() => enlargeImage(image.src)}
-              />
-            </div>
-          ))}
-        </div>
-
-        {enlargedImage && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
-            <Image src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
-            <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
-          </div>
-        )}
+        <ImageGallery images={images} />
       </div>
     </>
   )

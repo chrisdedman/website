@@ -1,48 +1,40 @@
 "use client"
 
 import React from "react";
-import Menu from '@/components/navigation'
-import Footer from '@/components/footer'
-import { useState } from "react";
+import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import ImageGallery from '@/components/image-gallery';
+import ProjectLayout from '@/components/project-layout';
 
 
 export default function Resource() {
   return (
-    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
-      <Menu />
-      <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font tracking-tight">
-          <a href="/projects" className="underline">Projects</a>{" > "}Resource Library
-        </h5>
-        <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
-        <div>
-          <Article />
-        </div>
+    <ProjectLayout>
+      <h5 className="mb-2 text-2xl font tracking-tight">
+        <Link href="/projects" className="underline">Projects</Link>{" > "}Resource Library
+      </h5>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+      <div>
+        <Article />
       </div>
-      <Footer />
-    </div>
+    </ProjectLayout>
   );
 }
 
 function Article() {
-
-  const [enlargedImage, setEnlargedImage] = useState("");
-
-  const enlargeImage = (src: string) => {
-    setEnlargedImage(src);
-  };
+  const images = [
+    { src: '/screenshot.png', alt: 'Resource Page', width: 800, height: 500 },
+  ];
   return (
     <>
       <h6 className="mt-4 text-xl font-bold font">Code Society Library Resources</h6>
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <p className="mt-4">
         This project is a web page that allows users to search for resources by category and keyword.
-        The user can also add new resources to the library by adding to the GitHub <a className="underline" href="https://github.com/Code-Society-Lab/resources/blob/main/README.md" target="_blank">README</a> file, which then will be displayed on the webpage.
+        The user can also add new resources to the library by adding to the GitHub <a className="underline" href="https://github.com/Code-Society-Lab/resources/blob/main/README.md" target="_blank" rel="noreferrer noopener">README</a> file, which then will be displayed on the webpage.
       </p>
       <p className="mt-4">
-        The library is a collection of resources put together by the members of the <a className="underline" href="https://codesociety.xyz" target="_blank">Code Society</a> for
+        The library is a collection of resources put together by the members of the <a className="underline" href="https://codesociety.xyz" target="_blank" rel="noreferrer noopener">Code Society</a> for
         various programming and software development subjects that the community have found useful.
         It&apos;s a great place to find books, articles, videos, and more to help you learn and
         grow as a programmer or scientist.
@@ -59,26 +51,7 @@ function Article() {
 
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
 
-      <div className="mt-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          <div key={0}>
-            <Image
-              className="rounded-lg"
-              src={"/screenshot.png"}
-              alt={"Resource Page"}
-              style={{ cursor: "pointer", maxWidth: "100%" }}
-              onClick={() => enlargeImage("/screenshot.png")}
-            />
-          </div>
-        </div>
-
-        {enlargedImage && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
-            <Image src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
-            <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
-          </div>
-        )}
-      </div>
+      <ImageGallery images={images} className="mt-4" />
     </>
   )
 }

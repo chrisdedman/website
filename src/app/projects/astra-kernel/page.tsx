@@ -1,43 +1,32 @@
 "use client"
 
 import React from "react";
-import Menu from '@/components/navigation'
-import Footer from '@/components/footer'
-import { useState } from "react";
+import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import ImageGallery from '@/components/image-gallery';
+import ProjectLayout from '@/components/project-layout';
 
 
 export default function AstraKernel() {
   return (
-    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
-      <Menu />
-      <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font tracking-tight">
-          <a href="/projects" className="underline">Open Source Contributions</a>{" > "}Astra Kernel
-        </h5>
-        <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
-        <div>
-          <Article />
-        </div>
+    <ProjectLayout>
+      <h5 className="mb-2 text-2xl font tracking-tight">
+        <Link href="/projects" className="underline">Open Source Contributions</Link>{" > "}Astra Kernel
+      </h5>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+      <div>
+        <Article />
       </div>
-      <Footer />
-    </div>
+    </ProjectLayout>
   );
 }
 
 function Article() {
 
   const images = [
-    { src: '/kernel1.png', alt: 'AstraKernel Booted in QEMU' },
-    { src: '/kernel2.png', alt: 'AstraKernel Console Commands' },
+    { src: '/kernel1.png', alt: 'AstraKernel Booted in QEMU', width: 400, height: 300 },
+    { src: '/kernel2.png', alt: 'AstraKernel Console Commands', width: 400, height: 300 },
   ];
-
-  const [enlargedImage, setEnlargedImage] = useState("");
-
-  const enlargeImage = (src: string) => {
-    setEnlargedImage(src);
-  };
 
   return (
     <>
@@ -129,28 +118,7 @@ Type away, explore, have fun.`}
       <hr className="h-px my-8 mb-0 bg-black border-0 separator" />
       <div>
         <h3>AstraKernel Development Gallery Images</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          {images.map((image, index) => (
-            <div key={index}>
-              <Image
-                className="rounded-lg"
-                src={image.src}
-                alt={image.alt}
-                width={400}
-                height={300}
-                style={{ cursor: "pointer", maxWidth: "100%" }}
-                onClick={() => enlargeImage(image.src)}
-              />
-            </div>
-          ))}
-        </div>
-
-        {enlargedImage && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
-            <Image src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
-            <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
-          </div>
-        )}
+        <ImageGallery images={images} thumbWidth={400} thumbHeight={300} />
       </div>
     </>
   )

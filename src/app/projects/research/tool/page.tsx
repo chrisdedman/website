@@ -1,25 +1,22 @@
 "use client"
 
 import React from "react";
-import Menu from '@/components/navigation'
-import Footer from '@/components/footer'
+import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
+import ProjectLayout from '@/components/project-layout';
 
 export default function ResearchTool() {
   return (
-    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
-      <Menu />
-      <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font tracking-tight">
-          <a href="/projects" className="underline">Achievements</a>{" > "} <a href="/projects/research" className="underline">Research - Computational BioPhysics</a>{" > "} Macromolecule Coarse-Graining Tool
-        </h5>
-        <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
-        <div>
-          <Article />
-        </div>
+    <ProjectLayout>
+      <h5 className="mb-2 text-2xl font tracking-tight">
+        <Link href="/projects" className="underline">Achievements</Link>{" > "}{' '}
+        <Link href="/projects/research" className="underline">Research - Computational BioPhysics</Link>{" > "} Macromolecule Coarse-Graining Tool
+      </h5>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+      <div>
+        <Article />
       </div>
-      <Footer />
-    </div>
+    </ProjectLayout>
   );
 }
 
@@ -28,7 +25,7 @@ function Article() {
     <>
       <p className="mt-4">
         <span className="inline-flex pr-2">You can download the tool by clicking on the following: </span>
-        <a className="inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-gray-500 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank">
+        <a className="inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-gray-500 rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300" href="/CGBioMoleculesTool.zip" download="CGBioMoleculesTool.zip" target="_blank" rel="noreferrer noopener">
           <strong>Download the Tool</strong> <CursorArrowRaysIcon className="w-4 h-4 ms-2" />
         </a>
       </p>
@@ -57,9 +54,9 @@ function Article() {
       <h6 className="mt-4 text-xl font-bold font">Requirements</h6>
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <ul>
-        <li><strong><a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank">Java Development Kit (JDK)</a></strong></li>
-        <li><strong><a href="https://www.gnu.org/software/make/" target="_blank">make Utility</a></strong></li>
-        <li><strong><a href="https://git-scm.com/" target="_blank">git (Version Control for development purposes)</a></strong></li>
+        <li><strong><a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank" rel="noreferrer noopener">Java Development Kit (JDK)</a></strong></li>
+        <li><strong><a href="https://www.gnu.org/software/make/" target="_blank" rel="noreferrer noopener">make Utility</a></strong></li>
+        <li><strong><a href="https://git-scm.com/" target="_blank" rel="noreferrer noopener">git (Version Control for development purposes)</a></strong></li>
       </ul>
 
 

@@ -1,60 +1,38 @@
 "use client"
 
 import React from "react";
-import Menu from '@/components/navigation'
-import Footer from '@/components/footer'
-import { useState } from "react";
+import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
-import Image from "next/image";
+import ImageGallery from '@/components/image-gallery';
+import ProjectLayout from '@/components/project-layout';
 
 
 export default function CapSki() {
   return (
-    <div className="min-h-screen flex-col p-4 lg:p-8 mt-16">
-      <Menu />
-      <div className="p-4 max-w-6xl mx-auto flex-grow">
-        <h5 className="mb-2 text-2xl font tracking-tight">
-          <a href="/projects" className="underline">Open Source Contributions</a>{" > "}Capski
-        </h5>
-        <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
-        <div>
-          <Article />
-        </div>
+    <ProjectLayout>
+      <h5 className="mb-2 text-2xl font tracking-tight">
+        <Link href="/projects" className="underline">Open Source Contributions</Link>{" > "}Capski
+      </h5>
+      <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
+      <div>
+        <Article />
       </div>
-      <Footer />
-    </div>
+    </ProjectLayout>
   );
 }
 
 function Article() {
-  const [enlargedImage, setEnlargedImage] = useState("");
-
-  const enlargeImage = (src: string) => {
-    setEnlargedImage(src);
-  };
+  const images = [
+    { src: '/capski_logo.png', alt: 'Capski Logo', width: 300, height: 300 },
+  ];
 
   return (
     <>
-      <div className="flex justify-center items-center mt-8 mb-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-            <div key={0} className="flex justify-center items-center">
-              <Image
-                className="rounded-lg"
-                src={"/capski_logo.png"}
-                alt={"Capski Logo"}
-                style={{ cursor: "pointer", maxWidth: "100%" }}
-                onClick={() => enlargeImage("/capski_logo.png")}
-              />
-            </div>
-          </div>
-      
-        {enlargedImage && (
-            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50" onClick={() => setEnlargedImage("")}>
-              <Image src={enlargedImage} alt="Enlarged Image" className="max-w-full max-h-full" />
-              <button className="absolute top-4 right-4 text-white" onClick={() => setEnlargedImage("")}>Close</button>
-            </div>
-          )}
-      </div>
+      <ImageGallery
+        images={images}
+        className="mt-8 mb-8"
+        itemClassName="flex justify-center items-center"
+      />
 
       <h6 className="mt-4 text-xl font-bold font">Capski ~ Audio-to-Karaoke Video Tool</h6>
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
