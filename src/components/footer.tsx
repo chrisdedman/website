@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="sr-only">LinkedIn account</span>
             </a>
             {/* Matrix Account */}
-            <a href="https://matrix.to/#/@astranebula:matrix.org" target="_blank" rel="noreferrer noopener" className="text-gray-400 hover:text-gray-500 dark:hover:text-white ms-5" title="LinkedIn">
+            <a href="https://matrix.to/#/@astranebula:matrix.org" target="_blank" rel="noreferrer noopener" className="text-gray-400 hover:text-gray-500 dark:hover:text-white ms-5" title="Matrix">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 width="32px" height="16px" viewBox="0 0 789.322 336.807" enableBackground="new 0 0 789.322 336.807"
               >
