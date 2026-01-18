@@ -5,9 +5,15 @@ import { useWindowSize } from '@react-hook/window-size';
 
 
 export default function MyTimer() {
-  const [hasLoaded, setHasLoaded] = useState(false);
   const [width, height] = useWindowSize();
-  const [sessionCount, setSessionCount] = useState(0);
+  const [sessionCount, setSessionCount] = useState(() => {
+    if (typeof window === 'undefined') {
+      return 0;
+    }
+
+    const storedCount = localStorage.getItem('sessionCount');
+    return storedCount ? Number(storedCount) : 0;
+  });
 
   const [inputMinutes, setInputMinutes] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -49,18 +55,10 @@ export default function MyTimer() {
   };
 
   useEffect(() => {
-    const storedCount = localStorage.getItem("sessionCount");
-    if (storedCount !== null) {
-      setSessionCount(Number(storedCount));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('sessionCount', String(sessionCount));
     }
-    setHasLoaded(true);
-  }, []);
-
-  useEffect(() => {
-    if (hasLoaded) {
-      localStorage.setItem("sessionCount", String(sessionCount));
-    }
-  }, [sessionCount, hasLoaded]);
+  }, [sessionCount]);
 
   return (
     <div className="text-center p-4">

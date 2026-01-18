@@ -20,8 +20,10 @@ export default function Page() {
     let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
     if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
+      timeoutId = setTimeout(() => {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, 0);
     } else if (!isDeleting && charIndex === currentRole.length) {
       timeoutId = setTimeout(() => setIsDeleting(true), delayBetweenRoles);
     } else {

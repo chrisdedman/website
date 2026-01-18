@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react";
+import Link from 'next/link';
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
 import Pagination from "@/components/pagination";
@@ -14,7 +15,7 @@ export default function Page() {
           <h5 className="mb-2 text-2xl font-bold tracking-tight">Introduction to Programming (Part I)</h5>
           <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
           <div>
-            <address>By <a rel="author" href="/">Chris Dedman-Rollet</a></address>
+            <address>By <Link rel="author" href="/">Chris Dedman-Rollet</Link></address>
             on <time dateTime="12-09-2022" title="April 30th, 2023">04-30-2023</time>
           </div>
 

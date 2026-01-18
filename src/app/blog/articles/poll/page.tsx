@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react";
+import Link from 'next/link';
 import { CodeBlock,dracula } from "react-code-blocks"; 
 import Menu from '@/components/navigation'
 import Footer from '@/components/footer'
@@ -14,7 +15,7 @@ export default function Page() {
           <h5 className="mb-2 text-2xl font-bold tracking-tight">&lt;poll.h&gt; Library</h5>
           <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
           <div>
-            <address>By <a rel="author" href="/">Chris Dedman-Rollet</a></address>
+            <address>By <Link rel="author" href="/">Chris Dedman-Rollet</Link></address>
             on <time dateTime="01-10-2024" title="Jan 10th, 2024">01-10-2024</time>
           </div>
           <p>
