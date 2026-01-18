@@ -1,25 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 :root {
-  --foreground-color: black;
-  --background-color: white;
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-body: "Space Grotesk", "Trebuchet MS", sans-serif;
 
-  --nav-background-color: #E3E3E3;
-  --nav-tab-hover-background-color: #eee;
-  --nav-selected-background-color: #D3D3D3;
-  --nav-selected-background-color: black;
+  --foreground-color: #0f172a;
+  --background-color: #f8fafc;
 
-  --button-background-color: white;
-  --button-foreground-color: black;
+  --nav-background-color: #0b1220;
+  --nav-tab-hover-background-color: #111b2d;
+  --nav-selected-background-color: #0b1220;
+  --nav-selected-foreground-color: #f8fafc;
 
-  --separator-color: black;
+  --button-background-color: #0f172a;
+  --button-foreground-color: #f8fafc;
 
-  --background-code: #f4f4f4
+  --separator-color: #0f172a;
+  --background-code: #eef2f7;
+
+  --card-bg: #ffffff;
+  --card-border: rgba(15, 23, 42, 0.12);
+  --card-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  --card-shadow-hover: 0 28px 60px rgba(15, 23, 42, 0.14);
+
+  --accent: #ef4444;
+  --accent-ink: #fff7ed;
+  --muted-foreground: #334155;
 }
 
 body {
   color: var(--foreground-color);
   background: var(--background-color);
+  font-family: var(--font-body);
 }
 
 nav {
@@ -33,31 +46,36 @@ nav {
 
 @layer base {
   .font {
-    font-family: 'Roboto';
+    font-family: var(--font-display);
   }
 
   p {
     @apply mt-3 mb-3 font-normal;
+    font-family: var(--font-body);
   }
 
   h4 {
     @apply mb-3 text-base;
-    font-family: 'Roboto';
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
   }
 
   h3 {
     @apply mb-3 font-bold text-lg;
-    font-family: 'Roboto';
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
   }
 
   h2 {
     @apply mb-3 font-bold text-xl;
-    font-family: 'Roboto';
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
   }
 
   h1 {
     @apply mb-3 font-bold text-2xl;
-    font-family: 'Roboto';
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
   }
 
   button.hid {
@@ -96,6 +114,42 @@ li {
 
 button.btn {
   color: var(--foreground-color);
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  margin-top: 4px;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(15, 23, 42, 0.2);
+}
+
+.project-card-title {
+  font-family: var(--font-display);
+  color: var(--foreground-color);
+}
+
+.project-card-text {
+  color: var(--muted-foreground);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.4));
+}
+
+.hero-panel {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(248, 250, 252, 0.18);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
 }
 
 .spin-on-hover:hover {
@@ -150,15 +204,12 @@ button.btn {
 }
 
 .typing-container {
-  font-size: 0.9em;
+  font-size: 1.05em;
   white-space: nowrap;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Space Grotesk", monospace;
   color: #fff;
   position: relative;
   animation: fadein 1s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3px;
-  background: rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadein {
@@ -172,25 +223,24 @@ button.btn {
 }
 
 #static-text {
-  font-size: 0.9em;
+  font-size: 1.05em;
   white-space: nowrap;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Space Grotesk", monospace;
   color: #fff;
 }
 
 #dynamic-text {
-  font-size: 0.9em;
+  font-size: 1.05em;
   white-space: nowrap;
-  font-family: 'Roboto Mono', monospace;
-  padding: 3px;
+  font-family: "Space Grotesk", monospace;
 }
 
 .cursor {
   display: inline-block;
   margin-left: 3px;
   animation: blink 0.7s step-end infinite;
-  font-size: 0.9em;
-  font-family: 'Roboto Mono', monospace;
+  font-size: 1.05em;
+  font-family: "Space Grotesk", monospace;
 }
 
 @keyframes blink {
