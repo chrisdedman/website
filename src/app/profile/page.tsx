@@ -1,6 +1,5 @@
-"use client"
 
-import React from "react";
+import type { Metadata } from 'next'
 import Menu from '@/components/navigation';
 import Experiences from "@/components/resume/experience";
 import Educations from "@/components/resume/education";
@@ -8,6 +7,11 @@ import Honors from "@/components/resume/honors";
 import Skills from "@/components/resume/skills";
 import Footer from '@/components/footer';
 import AboutMe from '@/components/resume/aboutme';
+
+export const metadata: Metadata = {
+    title: 'Profile',
+    description: 'Chris Dedman Profile — Resume, Skills & Honors',
+}
 
 export default function Page() {
   return (

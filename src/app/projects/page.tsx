@@ -4,7 +4,7 @@ import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import ProjectLayout from '@/components/project-layout';
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: 'Work',
   description: 'Open source contributions, personal projects, and research highlights from Chris Dedman.',
 };
 
