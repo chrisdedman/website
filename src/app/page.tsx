@@ -1,51 +1,8 @@
-"use client"
-
-import React, { useState, useEffect } from "react";
 import Menu from "@/components/navigation";
 import Footer from '@/components/footer'
-
-const roles = ["a software engineer.", "a computer scientist.", "a problem solver.", "a critical thinker.", "chris dedman."];
+import HeroTyping from '@/components/home/hero-typing'; 
 
 export default function Page() {
-  const [dynamicText, setDynamicText] = useState("");
-  const [roleIndex, setRoleIndex]     = useState(0);
-  const [charIndex, setCharIndex]     = useState(0);
-  const [isDeleting, setIsDeleting]   = useState(false);
-
-  useEffect(() => {
-    const typingSpeed       = 100;
-    const deletingSpeed     = 50;
-    const delayBetweenRoles = 500;
-    const currentRole = roles[roleIndex];
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-
-    if (isDeleting && charIndex === 0) {
-      timeoutId = setTimeout(() => {
-        setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % roles.length);
-      }, 0);
-    } else if (!isDeleting && charIndex === currentRole.length) {
-      timeoutId = setTimeout(() => setIsDeleting(true), delayBetweenRoles);
-    } else {
-      const speed = isDeleting ? deletingSpeed : typingSpeed;
-      timeoutId = setTimeout(() => {
-        if (isDeleting) {
-          setDynamicText((prev) => prev.slice(0, -1));
-          setCharIndex((prev) => prev - 1);
-        } else {
-          setDynamicText((prev) => prev + currentRole[charIndex]);
-          setCharIndex((prev) => prev + 1);
-        }
-      }, speed);
-    }
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-    };
-  }, [charIndex, isDeleting, roleIndex]);
-
   return (
     <>
       <div
@@ -63,11 +20,7 @@ export default function Page() {
           <div className="hero-panel max-w-xl rounded-2xl p-6 text-white">
             <p className="text-xs uppercase tracking-[0.35em] text-white/70">Portfolio</p>
             <h1 className="mt-3 text-4xl font-bold text-white md:text-5xl">Chris Dedman-Rollet</h1>
-            <div className="typing-container mt-4">
-              <span id="static-text">I am </span>
-              <span id="dynamic-text">{dynamicText}</span>
-              <span className="cursor">|</span>
-            </div>
+            <HeroTyping />
             <p className="mt-4 text-sm text-white/80">
               Building dependable systems, tooling, and open-source software with a focus on clarity and craft.
             </p>
