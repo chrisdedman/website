@@ -2,10 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import ProjectLayout from '@/components/project-layout';
+import { siteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Work',
   description: 'Open source contributions, personal projects, and research highlights from Chris Dedman.',
+  alternates: {
+    canonical: `${siteUrl}/projects`,
+  },
 };
 
 export default function Page() {

@@ -1,6 +1,15 @@
+import type { Metadata } from 'next';
 import Menu from "@/components/navigation";
 import Footer from '@/components/footer'
-import HeroTyping from '@/components/home/hero-typing'; 
+import HeroTyping from '@/components/home/hero-typing';
+import { siteUrl } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  description: 'Chris Dedman portfolio with featured projects and background.',
+  alternates: {
+    canonical: siteUrl,
+  },
+};
 
 export default function Page() {
   return (

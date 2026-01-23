@@ -7,11 +7,15 @@ import Honors from "@/components/resume/honors";
 import Skills from "@/components/resume/skills";
 import Footer from '@/components/footer';
 import AboutMe from '@/components/resume/aboutme';
+import { siteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-    title: 'Profile',
-    description: 'Chris Dedman Profile — Resume, Skills & Honors',
-}
+  title: 'Resume & Experience',
+  description: 'Chris Dedman resume, experience, skills, and honors.',
+  alternates: {
+    canonical: `${siteUrl}/profile`,
+  },
+};
 
 export default function Page() {
   return (

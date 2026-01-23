@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { projectMap, projects } from '@/lib/projects';
+import { siteUrl } from '@/lib/seo';
 
 type ProjectParams = {
   params: Promise<{
@@ -20,9 +21,14 @@ export async function generateMetadata({ params }: ProjectParams): Promise<Metad
     return undefined;
   }
 
+  const projectUrl = `${siteUrl}/projects/${slug}`;
+
   return {
     title: entry.title,
     description: entry.description,
+    alternates: {
+      canonical: projectUrl,
+    },
   };
 }
 
