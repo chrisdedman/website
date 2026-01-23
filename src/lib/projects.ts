@@ -7,7 +7,7 @@ export type ProjectEntry = {
   Component: React.ComponentType;
 };
 
-export const projects: ProjectEntry[] = [
+export const projects = [
   {
     slug: 'astra-kernel',
     title: 'AstraKernel',
@@ -86,8 +86,10 @@ export const projects: ProjectEntry[] = [
     description: 'Research on multi-class classification of cancer subtypes using gene expression data.',
     Component: dynamic(() => import('@/components/projects/research-ai')),
   },
-];
+ ] satisfies ProjectEntry[];
 
-export const projectMap = Object.fromEntries(
+export type ProjectSlug = (typeof projects)[number]['slug'];
+
+export const projectMap: Record<ProjectSlug, ProjectEntry> = Object.fromEntries(
   projects.map((project) => [project.slug, project]),
-);
+) as Record<ProjectSlug, ProjectEntry>;
