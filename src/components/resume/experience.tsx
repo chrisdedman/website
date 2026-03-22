@@ -6,6 +6,15 @@ export default function Experiences() {
       <h5 className="mb-2 text-m tracking-tight">Experiences</h5>
       <hr className="h-px my-8 bg-black border-0 separator mt-0 mb-0" />
       <div className="mb-3">
+        <strong>Profound</strong>
+        <p className="text-sm">Full-Stack Software Engineer</p>
+        <p className="text-sm font-light italic">December 2025 - Present</p>
+        <p className="text-sm font-light">
+          At Profound, I work on a full-stack CMS built in a TypeScript monorepo. I&apos;ve contributed across routing, document editing, deployments, media workflows, and internal tooling, and I&apos;ve led observability work across the client, server, edge, proxy, and tRPC layers using Sentry and structured telemetry.
+        </p>
+      </div>
+
+      <div className="mb-3">
         <strong>Uber</strong>
         <p className="text-sm">Software/Data Engineering Intern</p>
         <p className="text-sm font-light italic">May 2024 - August 2024</p>
