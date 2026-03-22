@@ -8,9 +8,9 @@ export default function Educations() {
       <div className="mb-3">
         <strong>California State University, Long Beach</strong>
         <p className="text-sm">Master of Science, Computer Science</p>
-        <p className="text-sm font-light italic">January 2026 - ...</p>
+        <p className="text-sm font-light italic">January 2026 - Present</p>
         <p className="text-sm font-light">
-          In spring 2026, I will be starting my Master of Science in Computer Science at California State University, Long Beach with a focus on embedded systems and low-level programming.
+          Currently studying for my Master of Science in Computer Science at California State University, Long Beach with a focus on embedded systems and low-level programming.
         </p>
       </div>
 
