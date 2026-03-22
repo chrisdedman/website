@@ -78,7 +78,14 @@ export default function Footer() {
             </a>
             {/* BlueSky Account */}
             <a href="https://bsky.app/profile/astranebula.bsky.social" target="_blank" rel="noreferrer noopener" className="text-gray-400 hover:text-gray-500 dark:hover:text-white ms-5" title="BlueSky">
-              <Image width="16" height="16" alt="New Bluesky logo, released in December 2023." src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Bluesky_butterfly-logo.svg" />
+              <Image
+                width={16}
+                height={16}
+                alt="Bluesky logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Bluesky_butterfly-logo.svg"
+                style={{ height: "auto" }}
+              />
+
               <span className="sr-only">Bluesky page</span>
             </a>
             {/* GitHub Account */}
