@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -29,9 +29,6 @@
       "@styles/*": [
         "./src/styles/*"
       ],
-      "@components/*": [
-        "./src/components/*"
-      ]
     }
   },
   "include": [
