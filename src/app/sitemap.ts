@@ -1,46 +1,26 @@
 import type { MetadataRoute } from 'next';
 
-import { projects } from '@/lib/projects';
-import { siteUrl } from '@/lib/seo';
+import { site } from '@/content/site';
+import { work } from '@/content/work';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: siteUrl,
+  return [
+    { url: site.url, lastModified: now, changeFrequency: 'monthly', priority: 1 },
+    { url: `${site.url}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.8 },
+    { url: `${site.url}/work`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    ...work.map((entry) => ({
+      url: `${site.url}/work/${entry.slug}`,
       lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
     {
-      url: `${siteUrl}/profile`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/projects`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/projects/research/tool`,
+      url: `${site.url}/work/research/tool`,
       lastModified: now,
       changeFrequency: 'yearly',
       priority: 0.5,
     },
   ];
-
-  const projectRoutes: MetadataRoute.Sitemap = projects.map(
-    (project): MetadataRoute.Sitemap[number] => ({
-      url: `${siteUrl}/projects/${project.slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    }),
-  );
-
-  return [...staticRoutes, ...projectRoutes];
 }

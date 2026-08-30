@@ -1,133 +1,128 @@
-import '@styles/globals.css'
-import '@styles/themes/dark.css'
-import '@styles/themes/light.css'
-
-import type { Metadata, Viewport } from 'next'
-import type { ReactNode } from 'react'
-import { Fraunces, Space_Grotesk } from 'next/font/google'
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
+import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import { siteDescription, siteImage, siteName, siteTitle, siteUrl } from '@/lib/seo';
+import '@/styles/globals.css';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
+import ThemeScript from '@/components/layout/theme-script';
+import { site } from '@/content/site';
+
+const sans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-plex-sans',
+  display: 'swap',
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-plex-mono',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(site.url),
   title: {
-    default: siteTitle,
-    template: 'Chris Dedman | %s',
+    default: site.title,
+    template: `%s — ${site.shortName}`,
   },
-  description: siteDescription,
-  applicationName: siteName,
+  description: site.description,
+  applicationName: site.name,
   referrer: 'origin-when-cross-origin',
   keywords: [
     'Chris Dedman',
     'software engineer',
-    'computer scientist',
+    'kernel development',
+    'systems programming',
     'portfolio',
-    'projects',
-    'resume',
   ],
-  authors: [{ name: 'Chris Dedman', url: siteUrl }],
-  creator: 'Chris Dedman',
-  publisher: 'Chris Dedman',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: {
-    canonical: siteUrl,
-  },
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  formatDetection: { email: false, address: false, telephone: false },
+  alternates: { canonical: site.url },
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      "max-snippet": -1,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
     },
   },
-  icons: {
-    icon: '/favicon.ico',
-  },
+  icons: { icon: '/favicon.ico' },
   openGraph: {
-    title: siteTitle,
-    description: siteDescription,
-    url: siteUrl,
-    siteName,
-    images: [
-      {
-        url: siteImage,
-        width: 1200,
-        height: 630,
-        alt: siteName,
-      },
-    ],
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
+    images: [{ url: site.image, width: 1200, height: 630, alt: site.name }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteTitle,
-    description: siteDescription,
-    images: [siteImage],
+    title: site.title,
+    description: site.description,
+    images: [site.image],
   },
-}
+};
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-}
+};
 
-const displayFont = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-display',
-});
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    url: site.url,
+    description: site.description,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: site.name,
+    url: site.url,
+    description: site.description,
+    jobTitle: 'Software Engineer',
+    image: `${site.url}${site.image}`,
+  },
+];
 
-const bodyFont = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-body',
-});
-
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
-  const jsonLd = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: siteName,
-      url: siteUrl,
-      description: siteDescription,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Chris Dedman',
-      url: siteUrl,
-      description: siteDescription,
-      jobTitle: 'Software Engineer',
-      image: siteImage,
-    },
-  ];
-
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable}`}>
+    <html lang="en" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
+        <ThemeScript />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-w-[350px]" suppressHydrationWarning>
-        {children}
+      <body className="flex min-h-dvh flex-col">
+        <a
+          href="#main"
+          className="label sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-ink focus:bg-paper focus:px-3 focus:py-2"
+        >
+          Skip to content
+        </a>
+        <Header />
+        <main id="main" className="grow">
+          {children}
+        </main>
+        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>
     </html>
-  )
+  );
 }
