@@ -12,7 +12,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-rule bg-paper/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-30 border-b border-rule bg-paper">
       <div className="mx-auto flex w-full max-w-[68rem] items-center justify-between gap-4 px-5 py-3.5 sm:px-8 lg:px-12">
         <Link
           href="/"

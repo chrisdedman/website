@@ -5,12 +5,16 @@ import SectionHeading from '@/components/ui/section-heading';
 import WorkIndex from '@/components/ui/work-index';
 import { groupedWork, kindLabels, work } from '@/content/work';
 import { site } from '@/content/site';
+import { share } from '@/lib/metadata';
+
+const description =
+  'Open source contributions, personal projects, and research from Chris Dedman — kernels, developer tooling, and full-stack systems.';
 
 export const metadata: Metadata = {
   title: 'Work',
-  description:
-    'Open source contributions, personal projects, and research from Chris Dedman — kernels, developer tooling, and full-stack systems.',
+  description,
   alternates: { canonical: `${site.url}/work` },
+  ...share({ title: `Work — ${site.shortName}`, description, path: '/work' }),
 };
 
 export default function WorkPage() {
@@ -26,7 +30,7 @@ export default function WorkPage() {
       </header>
 
       {groupedWork.map((group) => (
-        <section key={group.kind} className="mt-16">
+        <section key={group.kind} id={group.kind} className="mt-16 scroll-mt-20">
           <SectionHeading aside={`${group.entries.length}`}>
             {kindLabels[group.kind]}
           </SectionHeading>

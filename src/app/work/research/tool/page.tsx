@@ -5,12 +5,22 @@ import Breadcrumb from '@/components/ui/breadcrumb';
 import Container from '@/components/ui/container';
 import MetaList from '@/components/ui/meta-list';
 import { site } from '@/content/site';
+import { share } from '@/lib/metadata';
+
+const title = 'Macromolecule Coarse-Graining Tool';
+const description =
+  'Documentation, requirements, file formats, and download for the macromolecule coarse-graining research tool.';
 
 export const metadata: Metadata = {
-  title: 'Macromolecule Coarse-Graining Tool',
-  description:
-    'Documentation, requirements, file formats, and download for the macromolecule coarse-graining research tool.',
+  title,
+  description,
   alternates: { canonical: `${site.url}/work/research/tool` },
+  ...share({
+    title: `${title} — ${site.shortName}`,
+    description,
+    path: '/work/research/tool',
+    type: 'article',
+  }),
 };
 
 export default function ResearchToolPage() {

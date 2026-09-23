@@ -9,6 +9,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import ThemeScript from '@/components/layout/theme-script';
 import { site } from '@/content/site';
+import { share } from '@/lib/metadata';
 
 const sans = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -57,21 +58,7 @@ export const metadata: Metadata = {
     },
   },
   icons: { icon: '/favicon.ico' },
-  openGraph: {
-    title: site.title,
-    description: site.description,
-    url: site.url,
-    siteName: site.name,
-    images: [{ url: site.image, width: 1200, height: 630, alt: site.name }],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: site.title,
-    description: site.description,
-    images: [site.image],
-  },
+  ...share({ title: site.title, description: site.description }),
 };
 
 export const viewport: Viewport = {

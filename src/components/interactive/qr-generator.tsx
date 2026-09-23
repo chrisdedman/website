@@ -20,7 +20,7 @@ export default function QrGenerator() {
         return;
       }
       setError('');
-      setSubmitted(value);
+      setSubmitted(/^https?:\/\//i.test(value) ? value : `https://${value}`);
     },
     [url],
   );
@@ -45,7 +45,7 @@ export default function QrGenerator() {
               setError('');
               setSubmitted('');
             }}
-            className="w-full border border-rule bg-paper-raised px-3 py-2 font-mono text-sm text-ink placeholder:text-ink-faint sm:max-w-sm"
+            className="w-full border border-rule bg-well px-3 py-2 font-mono text-sm text-ink placeholder:text-ink-faint sm:max-w-sm"
           />
           <button
             type="submit"
@@ -66,7 +66,7 @@ export default function QrGenerator() {
       {submitted ? (
         <figure className="mt-8 inline-block border border-rule bg-white p-4">
           <QRCodeCanvas value={submitted} size={200} marginSize={2} level="H" />
-          <figcaption className="label mt-3 max-w-[200px] break-all text-ink-muted">
+          <figcaption className="label mt-3 max-w-[200px] break-all normal-case text-ink-muted">
             {submitted}
           </figcaption>
         </figure>

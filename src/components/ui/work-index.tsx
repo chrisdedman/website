@@ -2,9 +2,9 @@ import Link from 'next/link';
 import type { WorkMeta } from '@/content/work/types';
 
 /**
- * The work index. Deliberately a list of rules-separated rows rather than a
- * card grid: every row exposes year, stack and role, so the page is scannable
- * as a table of contents instead of a wall of equally-weighted boxes.
+ * The work index. Deliberately a list of rule-separated rows rather than a
+ * card grid: every row carries stack, year and role, so the page scans as a
+ * table of contents instead of a wall of equally weighted boxes.
  */
 export default function WorkIndex({
   entries,
@@ -41,13 +41,15 @@ export default function WorkIndex({
                 {entry.summary}
               </span>
               <span className="label mt-2 block sm:hidden">
-                {entry.year} · {entry.stack.join(' · ')}
+                {entry.year} · {entry.role.toLowerCase()} · {entry.stack.join(' · ')}
               </span>
             </span>
 
             <span className="hidden shrink-0 text-right sm:block">
               <span className="label block text-ink-muted">{entry.stack.join(' · ')}</span>
-              <span className="label mt-1.5 block tabular-nums">{entry.year}</span>
+              <span className="label mt-1.5 block tabular-nums">
+                {entry.year} · {entry.role.toLowerCase()}
+              </span>
             </span>
           </Link>
         </li>

@@ -1,63 +1,37 @@
 /*
- * Design tokens. Light is the default; dark is opted into by data-theme="dark"
- * on <html>, or by the OS preference when no explicit choice has been stored.
+ * Design tokens. Each token carries both palettes via light-dark(); which one
+ * applies is decided by `color-scheme` alone — the OS preference by default,
+ * or an explicit choice stored on <html data-theme> (see ThemeScript).
  *
  * The palette is deliberately near-monochrome: warm paper, near-black ink,
  * hairline rules, and one rust accent used sparingly for links and live state.
  */
 
 :root {
+  color-scheme: light dark;
+
+  --paper: light-dark(#f2f0ea, #0d0d0b);
+  --paper-raised: light-dark(#faf9f5, #161613);
+  /* Sunken surfaces sit below the page: code wells, input fields. In dark
+     mode they lift instead, because a surface darker than #0d0d0b reads as a
+     hole rather than a recess. */
+  --well: light-dark(#e7e4db, #1b1b17);
+
+  --ink: light-dark(#17160f, #e9e6dd);
+  --ink-muted: light-dark(#56524a, #a29d90);
+  /* Faintest ink still clears WCAG AA at 11px against --paper. */
+  --ink-faint: light-dark(#6b6659, #8a8578);
+
+  --rule: light-dark(#d4cfc2, #2b2a25);
+
+  --accent: light-dark(#9c3d17, #e08a5c);
+  --accent-soft: light-dark(rgb(156 61 23 / 0.08), rgb(224 138 92 / 0.12));
+}
+
+:root[data-theme='light'] {
   color-scheme: light;
-
-  --paper: #f2f0ea;
-  --paper-raised: #faf9f5;
-  --paper-sunken: #e7e4db;
-
-  --ink: #17160f;
-  --ink-muted: #56524a;
-  --ink-faint: #6b6659;
-
-  --rule: #d4cfc2;
-  --rule-strong: #17160f;
-
-  --accent: #9c3d17;
-  --accent-soft: rgb(156 61 23 / 0.08);
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-
-  --paper: #0d0d0b;
-  --paper-raised: #161613;
-  --paper-sunken: #050504;
-
-  --ink: #e9e6dd;
-  --ink-muted: #a29d90;
-  --ink-faint: #8a8578;
-
-  --rule: #2b2a25;
-  --rule-strong: #e9e6dd;
-
-  --accent: #e08a5c;
-  --accent-soft: rgb(224 138 92 / 0.12);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    color-scheme: dark;
-
-    --paper: #0d0d0b;
-    --paper-raised: #161613;
-    --paper-sunken: #050504;
-
-    --ink: #e9e6dd;
-    --ink-muted: #a29d90;
-    --ink-faint: #8a8578;
-
-    --rule: #2b2a25;
-    --rule-strong: #e9e6dd;
-
-    --accent: #e08a5c;
-    --accent-soft: rgb(224 138 92 / 0.12);
-  }
 }
