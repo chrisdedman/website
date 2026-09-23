@@ -6,12 +6,16 @@ import Container from '@/components/ui/container';
 import SectionHeading from '@/components/ui/section-heading';
 import { awards, education, experience, skills } from '@/content/resume';
 import { site, socials } from '@/content/site';
+import { share } from '@/lib/metadata';
+
+const description =
+  'Chris Dedman — software engineer at Profound, M.S. student at CSULB. Experience, education, and technical skills.';
 
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'Chris Dedman — software engineer at Profound, M.S. student at CSULB. Experience, education, and technical skills.',
+  description,
   alternates: { canonical: `${site.url}/about` },
+  ...share({ title: `About — ${site.shortName}`, description, path: '/about' }),
 };
 
 /**
@@ -69,7 +73,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3" data-print="hide">
             <ActionLink href={`mailto:${site.email}`} external={false}>
               Email me
             </ActionLink>
@@ -91,6 +95,21 @@ export default function AboutPage() {
           className="order-first w-32 border border-rule object-cover sm:order-none sm:w-[200px]"
         />
       </header>
+
+      <figure className="mt-16" data-print="hide">
+        <Image
+          src="/me_engine.jpeg"
+          alt="Chris standing in front of a rocket engine on display, its turbopump plumbing filling the frame behind him"
+          width={1024}
+          height={768}
+          sizes="(max-width: 1088px) 100vw, 1024px"
+          className="w-full border border-rule"
+        />
+        <figcaption className="label mt-3 flex flex-wrap justify-between gap-x-6 gap-y-1">
+          <span>Fig. 1 — Close to the metal. A rocket engine, and the author.</span>
+          <span>Photo: personal collection</span>
+        </figcaption>
+      </figure>
 
       <section className="mt-20">
         <SectionHeading>Experience</SectionHeading>

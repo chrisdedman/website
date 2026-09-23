@@ -7,18 +7,18 @@
  * silently did nothing.
  */
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+@custom-variant print (@media print);
 
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-raised: var(--paper-raised);
-  --color-paper-sunken: var(--paper-sunken);
+  --color-well: var(--well);
 
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-ink-faint: var(--ink-faint);
 
   --color-rule: var(--rule);
-  --color-rule-strong: var(--rule-strong);
 
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
@@ -53,7 +53,7 @@
   body {
     background-color: var(--paper);
     color: var(--ink);
-    font-family: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+    font-family: var(--font-sans);
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -83,7 +83,7 @@
    * metadata. It is the connective tissue of the whole design.
    */
   .label {
-    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-family: var(--font-mono);
     font-size: var(--text-label);
     line-height: 1.2;
     letter-spacing: 0.14em;
@@ -108,7 +108,7 @@
     margin-bottom: 0;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--rule);
-    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-family: var(--font-mono);
     font-size: var(--text-label);
     font-weight: 500;
     line-height: 1.2;
@@ -127,11 +127,6 @@
     font-weight: 600;
     letter-spacing: -0.01em;
     color: var(--ink);
-  }
-
-  .prose ul,
-  .prose ol {
-    padding-left: 1.1rem;
   }
 
   .prose ul {
@@ -157,6 +152,7 @@
 
   .prose ol {
     list-style: decimal;
+    padding-left: 1.1rem;
   }
 
   .prose li + li {
@@ -181,18 +177,18 @@
   }
 
   .prose code {
-    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-family: var(--font-mono);
     font-size: 0.875em;
-    background: var(--paper-sunken);
+    background: var(--well);
     padding: 0.1em 0.35em;
     color: var(--ink);
   }
 
   .prose pre {
-    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-family: var(--font-mono);
     font-size: 0.8125rem;
     line-height: 1.65;
-    background: var(--paper-sunken);
+    background: var(--well);
     border-left: 2px solid var(--rule);
     padding: 0.9rem 1.1rem;
     overflow-x: auto;
@@ -210,6 +206,50 @@
     width: 100%;
     height: auto;
     border: 1px solid var(--rule);
+  }
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  header,
+  footer,
+  [data-print='hide'] {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-family: var(--font-mono);
+    font-size: 0.7em;
+    color: #555;
+  }
+
+  section,
+  article {
+    break-inside: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
   }
 }
 

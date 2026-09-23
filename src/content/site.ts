@@ -5,7 +5,7 @@ export const site = {
   title: 'Chris Dedman | Software Engineer',
   description:
     'Software engineer working on kernels, developer tooling, and full-stack systems. Currently at Profound; M.S. Computer Science at CSULB.',
-  image: '/website.jpeg',
+  image: '/og.png',
   email: 'chrisdedman@proton.me',
   location: 'Los Angeles, California',
 } as const;

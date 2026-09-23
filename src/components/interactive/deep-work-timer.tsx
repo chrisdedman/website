@@ -111,7 +111,7 @@ export default function DeepWorkTimer() {
                 setTimerKey((key) => key + 1);
               }
             }}
-            className="mt-2 w-28 border border-rule bg-paper-raised px-3 py-2 font-mono text-sm text-ink disabled:opacity-40"
+            className="mt-2 w-28 border border-rule bg-well px-3 py-2 font-mono text-sm text-ink disabled:opacity-40"
           />
 
           <div className="mt-6 flex flex-wrap gap-2">

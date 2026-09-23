@@ -35,9 +35,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="label mt-10">
-          © {new Date().getFullYear()} {site.name} · {site.location}
-        </p>
+        {/* Colophon. The motto is Chris's — it was on the old site, and every
+            project he names starts with "astra". It stays, set small. */}
+        <div className="label mt-10 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+          <p>
+            © {new Date().getFullYear()} {site.name} · {site.location}
+          </p>
+          <p>
+            <span lang="la">Ex astris, scientia</span> · Set in IBM Plex ·{' '}
+            <a
+              href="https://github.com/chrisdedman/website"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+            >
+              Source
+            </a>
+          </p>
+        </div>
       </Container>
     </footer>
   );

@@ -26,7 +26,7 @@ src/
     layout/             header, footer, theme
     ui/                 primitives: container, rules, meta lists, work index
     interactive/        the client-side widgets (timer, QR generator)
-  lib/                  external-store adapters for theme and session count
+  lib/                  theme/session stores; share() builds per-page OG + Twitter tags
   styles/               tokens.css (palette) + globals.css (theme + prose)
 ```
 
@@ -53,5 +53,11 @@ npm run typecheck  # tsc --noEmit
 Near-monochrome and typographic: warm paper, near-black ink, hairline rules, and
 a single rust accent. IBM Plex Sans for prose, IBM Plex Mono for metadata and
 labels. Work is presented as a numbered index with year, stack, and role rather
-than as a card grid. Light and dark are both first-class; the visitor's choice is
-stored and applied before first paint.
+than as a card grid. Light and dark are both first-class: every token is a
+`light-dark()` pair in `src/styles/tokens.css`, switched by `color-scheme`, and
+the visitor's choice is stored and applied before first paint. The résumé page
+has a print stylesheet.
+
+The share image (`public/og.png`) is rendered from the same tokens and faces; the
+source page for it is not in the repo, so regenerate it by hand if the tagline
+changes.
