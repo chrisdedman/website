@@ -96,28 +96,16 @@ export default function HomePage() {
       </section>
 
       <section id="experience" className="scroll-mt-16 border-t border-rule bg-panel">
-        <Container className="grid gap-x-16 gap-y-10 py-[clamp(4rem,7vw,5.5rem)] lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
-          <div>
-            <h2 className={sectionTitle}>Experience</h2>
-
-            <h3 className="label mt-10">Education</h3>
-            <ul className="mt-3 divide-y divide-rule border-y border-rule">
-              {education.map((study) => (
-                <li key={study.org} className="py-4">
-                  <p className="text-[0.96875rem] font-semibold text-ink">{study.credential}</p>
-                  <p className="mt-0.5 text-[0.90625rem] leading-normal text-ink-muted">
-                    {study.org}
-                  </p>
-                  <p className="mt-0.5 font-mono text-[0.78125rem] text-ink-faint">
-                    {study.period}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/*
+          On a phone the timeline comes straight after the heading and
+          education follows it; from lg up, education sits under the heading
+          in the left column and the timeline fills the right one.
+        */}
+        <Container className="grid gap-x-16 gap-y-8 py-[clamp(4rem,7vw,5.5rem)] lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-y-10">
+          <h2 className={`${sectionTitle} lg:col-start-1 lg:row-start-1`}>Experience</h2>
 
           {/* The short version: who, what and when. The descriptions are on /profile. */}
-          <div>
+          <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <Timeline
               className="[--ground:var(--panel)]"
               items={experience.map((role, index) => ({
@@ -135,6 +123,23 @@ export default function HomePage() {
               Full history on my profile
               <ArrowRight />
             </Link>
+          </div>
+
+          <div className="lg:col-start-1 lg:row-start-2">
+            <h3 className="label">Education</h3>
+            <ul className="mt-3 divide-y divide-rule border-y border-rule">
+              {education.map((study) => (
+                <li key={study.org} className="py-4">
+                  <p className="text-[0.96875rem] font-semibold text-ink">{study.credential}</p>
+                  <p className="mt-0.5 text-[0.90625rem] leading-normal text-ink-muted">
+                    {study.org}
+                  </p>
+                  <p className="mt-0.5 font-mono text-[0.78125rem] text-ink-faint">
+                    {study.period}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>

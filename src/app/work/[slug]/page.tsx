@@ -75,9 +75,9 @@ export default async function WorkDetailPage({ params }: Params) {
       */}
       <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,44rem)_minmax(16rem,1fr)] lg:gap-16">
         <aside className="order-first lg:order-last">
-          <div className="space-y-6 rounded-xl border border-rule bg-surface p-7 lg:sticky lg:top-24">
+          <div className="space-y-5 rounded-xl border border-rule bg-surface p-5 sm:p-7 lg:sticky lg:top-24 lg:space-y-6">
             <MetaList
-              className="grid-cols-2 lg:grid-cols-1"
+              className="grid-cols-2 gap-y-4 lg:grid-cols-1 lg:gap-y-5 [&>div:last-child]:col-span-2 lg:[&>div:last-child]:col-span-1"
               items={[
                 { term: 'Year', value: entry.year },
                 { term: 'Role', value: entry.role },
