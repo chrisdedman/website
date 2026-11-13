@@ -14,7 +14,7 @@ export type TimelineItem = {
  */
 export default function Timeline({
   items,
-  className = "",
+  className = '',
 }: {
   items: TimelineItem[];
   className?: string;
@@ -29,7 +29,7 @@ export default function Timeline({
           >
             <span
               className={`size-3 rounded-full border-2 border-accent ${
-                item.current ? "bg-accent" : "bg-ground"
+                item.current ? 'bg-accent' : 'bg-ground'
               }`}
             />
             <span className="mt-1.5 w-px flex-1 bg-rule-strong" />
@@ -39,19 +39,13 @@ export default function Timeline({
               <h3 className="text-[1.1875rem] font-semibold leading-snug tracking-[-0.01em] text-ink">
                 {item.title}
               </h3>
-              <span className="font-mono text-[0.78125rem] text-ink-faint">
-                {item.period}
-              </span>
+              <span className="font-mono text-[0.78125rem] text-ink-faint">{item.period}</span>
             </div>
             {item.subtitle ? (
-              <p className="mt-0.5 text-[0.96875rem] font-medium text-ink">
-                {item.subtitle}
-              </p>
+              <p className="mt-0.5 text-[0.96875rem] font-medium text-ink">{item.subtitle}</p>
             ) : null}
             {item.body ? (
-              <p className="mt-2 max-w-[40rem] text-base text-ink-muted">
-                {item.body}
-              </p>
+              <p className="mt-2 max-w-[40rem] text-base text-ink-muted">{item.body}</p>
             ) : null}
           </div>
         </li>
