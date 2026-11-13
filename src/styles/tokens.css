@@ -1,31 +1,42 @@
 /*
  * Design tokens. Each token carries both palettes via light-dark(); which one
- * applies is decided by `color-scheme` alone — the OS preference by default,
+ * applies is decided by `color-scheme` alone: the OS preference by default,
  * or an explicit choice stored on <html data-theme> (see ThemeScript).
  *
- * The palette is deliberately near-monochrome: warm paper, near-black ink,
- * hairline rules, and one rust accent used sparingly for links and live state.
+ * The palette is the site's original one: slate daylight, deep navy night,
+ * a red accent by day and an orange one by night.
  */
 
 :root {
   color-scheme: light dark;
 
-  --paper: light-dark(#f2f0ea, #0d0d0b);
-  --paper-raised: light-dark(#faf9f5, #161613);
-  /* Sunken surfaces sit below the page: code wells, input fields. In dark
-     mode they lift instead, because a surface darker than #0d0d0b reads as a
-     hole rather than a recess. */
-  --well: light-dark(#e7e4db, #1b1b17);
+  --ground: light-dark(#f8fafc, #0b1120);
+  /* Cards and other raised surfaces. */
+  --surface: light-dark(#ffffff, #111827);
+  /* Code blocks and inline code. */
+  --well: light-dark(#eef2f7, #172033);
 
-  --ink: light-dark(#17160f, #e9e6dd);
-  --ink-muted: light-dark(#56524a, #a29d90);
-  /* Faintest ink still clears WCAG AA at 11px against --paper. */
-  --ink-faint: light-dark(#6b6659, #8a8578);
+  --ink: light-dark(#0f172a, #f8fafc);
+  --ink-muted: light-dark(#334155, #cbd5e1);
+  /* Faintest ink still clears WCAG AA for small text on --ground and --surface. */
+  --ink-faint: light-dark(#475569, #94a3b8);
 
-  --rule: light-dark(#d4cfc2, #2b2a25);
+  --rule: light-dark(rgb(15 23 42 / 0.12), rgb(148 163 184 / 0.2));
+  --rule-strong: light-dark(#0f172a, rgb(148 163 184 / 0.55));
+  /* Borders of outlined buttons and form fields. */
+  --edge: light-dark(rgb(15 23 42 / 0.3), rgb(148 163 184 / 0.45));
 
-  --accent: light-dark(#9c3d17, #e08a5c);
-  --accent-soft: light-dark(rgb(156 61 23 / 0.08), rgb(224 138 92 / 0.12));
+  --accent: light-dark(#b91c1c, #f97316);
+
+  /* Primary button: navy by day, inverted at night so it still stands out. */
+  --btn: light-dark(#0b1220, #f8fafc);
+  --btn-ink: light-dark(#f8fafc, #0b1120);
+
+  /* The header, footer and profile band are navy in both themes. */
+  --navy: #0b1220;
+
+  --shadow-color: light-dark(rgb(15 23 42 / 0.08), rgb(0 0 0 / 0.35));
+  --shadow-color-hover: light-dark(rgb(15 23 42 / 0.14), rgb(0 0 0 / 0.5));
 }
 
 :root[data-theme='light'] {

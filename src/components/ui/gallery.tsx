@@ -51,7 +51,7 @@ export default function Gallery({
             key={image.src}
             type="button"
             onClick={() => setActive(image)}
-            className="group block border border-rule bg-paper-raised transition-colors hover:border-ink"
+            className="block overflow-hidden rounded-xl border border-rule bg-surface transition-colors hover:border-edge"
             aria-label={`Enlarge: ${image.alt}`}
           >
             <Image
@@ -66,7 +66,7 @@ export default function Gallery({
         ))}
       </div>
 
-      {caption ? <figcaption className="label mt-3">{caption}</figcaption> : null}
+      {caption ? <figcaption className="mt-3 text-sm text-ink-faint">{caption}</figcaption> : null}
 
       <dialog
         ref={dialogRef}
@@ -85,12 +85,12 @@ export default function Gallery({
               width={active.width ?? 1400}
               height={active.height ?? 900}
               sizes="92vw"
-              className="h-auto max-h-[82dvh] w-auto border border-rule object-contain"
+              className="h-auto max-h-[82dvh] w-auto rounded-xl object-contain"
             />
             <button
               type="button"
               onClick={close}
-              className="label mt-3 border border-rule bg-paper px-3 py-2 text-ink"
+              className="mt-3 min-h-11 rounded-xl bg-ground px-4 font-medium text-ink"
             >
               Close
             </button>

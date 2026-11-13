@@ -5,14 +5,14 @@ export const kinds = ['open-source', 'project', 'research'] as const;
 
 export type Kind = (typeof kinds)[number];
 
-/** Plural, for the index section headings. */
+/** Section headings on the home page and the work index. */
 export const kindLabels: Record<Kind, string> = {
-  'open-source': 'Open source',
+  'open-source': 'Open source contributions',
   project: 'Projects',
   research: 'Research',
 };
 
-/** Singular, for the "Type" field on a single entry. */
+/** Singular, for the "Type" field and breadcrumb of a single entry. */
 export const kindLabelsSingular: Record<Kind, string> = {
   'open-source': 'Open source',
   project: 'Project',

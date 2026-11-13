@@ -17,6 +17,7 @@ deployed on Vercel.
 src/
   app/                  routes only — each page composes content and components
     work/[slug]/        one static page per work entry
+    profile/            résumé
   content/              all copy and data. The single source of truth.
     site.ts             name, URLs, nav, social links
     resume.ts           experience, education, awards, skills
@@ -24,7 +25,7 @@ src/
       index.ts          the registry every page, the sitemap, and SEO read from
   components/
     layout/             header, footer, theme
-    ui/                 primitives: container, rules, meta lists, work index
+    ui/                 primitives: container, headings, buttons, work cards
     interactive/        the client-side widgets (timer, QR generator)
   lib/                  theme/session stores; share() builds per-page OG + Twitter tags
   styles/               tokens.css (palette) + globals.css (theme + prose)
@@ -50,14 +51,14 @@ npm run typecheck  # tsc --noEmit
 
 ## Design
 
-Near-monochrome and typographic: warm paper, near-black ink, hairline rules, and
-a single rust accent. IBM Plex Sans for prose, IBM Plex Mono for metadata and
-labels. Work is presented as a numbered index with year, stack, and role rather
-than as a card grid. Light and dark are both first-class: every token is a
-`light-dark()` pair in `src/styles/tokens.css`, switched by `color-scheme`, and
-the visitor's choice is stored and applied before first paint. The résumé page
-has a print stylesheet.
+The original site's identity, tidied: a navy bar with the rocket, Fraunces for
+headings over Space Grotesk for text, the engine photo in the hero, and work
+shown as cards grouped the way it always was. Slate daylight with a red accent
+by default; deep navy with an orange accent at night. Every colour is a
+`light-dark()` pair in `src/styles/tokens.css`, switched by `color-scheme`: the
+OS preference decides unless the visitor picks a theme in the nav bar, and that
+choice is stored and applied before first paint. The profile page has a print
+stylesheet.
 
-The share image (`public/og.png`) is rendered from the same tokens and faces; the
-source page for it is not in the repo, so regenerate it by hand if the tagline
-changes.
+The share image (`public/og.png`) is a rendering of the hero. Its source page is
+not in the repo, so regenerate it by hand if the hero changes.

@@ -31,7 +31,7 @@ export default function QrGenerator() {
         <label className="label block" htmlFor="url-input">
           URL
         </label>
-        <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+        <div className="mt-2 flex flex-col gap-3 sm:flex-row">
           <input
             id="url-input"
             type="text"
@@ -45,11 +45,11 @@ export default function QrGenerator() {
               setError('');
               setSubmitted('');
             }}
-            className="w-full border border-rule bg-well px-3 py-2 font-mono text-sm text-ink placeholder:text-ink-faint sm:max-w-sm"
+            className="w-full min-h-12 rounded-xl border border-edge bg-surface px-4 text-ink placeholder:text-ink-faint sm:max-w-sm"
           />
           <button
             type="submit"
-            className="border border-ink bg-ink px-4 py-2 font-mono text-[0.75rem] uppercase tracking-[0.12em] text-paper"
+            className="min-h-12 rounded-xl bg-btn px-5 font-medium text-btn-ink transition-opacity hover:opacity-85 disabled:opacity-40"
           >
             Generate
           </button>
@@ -57,16 +57,16 @@ export default function QrGenerator() {
         <p
           id="url-error"
           role="alert"
-          className="mt-2 min-h-[1.2em] font-mono text-[0.75rem] leading-tight text-accent"
+          className="mt-2 min-h-[1.5em] text-[0.9375rem] text-accent"
         >
           {error}
         </p>
       </form>
 
       {submitted ? (
-        <figure className="mt-8 inline-block border border-rule bg-white p-4">
+        <figure className="mt-6 inline-block rounded-2xl border border-rule bg-white p-5 shadow-card">
           <QRCodeCanvas value={submitted} size={200} marginSize={2} level="H" />
-          <figcaption className="label mt-3 max-w-[200px] break-all normal-case text-ink-muted">
+          <figcaption className="mt-3 max-w-[200px] break-all text-sm text-slate-600">
             {submitted}
           </figcaption>
         </figure>

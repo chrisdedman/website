@@ -40,15 +40,15 @@ export default function DeepWorkTimer() {
             key={timerKey}
             isPlaying={isRunning}
             duration={duration}
-            size={230}
-            strokeWidth={2}
-            trailStrokeWidth={2}
-            strokeLinecap="butt"
+            size={240}
+            strokeWidth={8}
+            trailStrokeWidth={8}
+            strokeLinecap="round"
             // This library types its colors as hex literals, so the theme
-            // tokens cannot be handed to it. These two are mid-tones chosen to
-            // stay legible against both the light and the dark background.
-            colors="#c25a2c"
-            trailColor="#918b7e"
+            // tokens cannot be handed to it. The orange is picked to read
+            // against both the light and the dark background.
+            colors="#ea580c"
+            trailColor="#94a3b8"
             onComplete={() => {
               setIsRunning(false);
               setIsComplete(true);
@@ -61,7 +61,7 @@ export default function DeepWorkTimer() {
                 <p className="label">
                   {isRunning ? 'running' : isComplete ? 'complete' : 'ready'}
                 </p>
-                <p className="mt-2 font-mono text-2xl tabular-nums text-ink">
+                <p className="mt-2 font-display text-[1.75rem] font-semibold tabular-nums text-ink">
                   {format(remainingTime)}
                 </p>
               </div>
@@ -82,10 +82,9 @@ export default function DeepWorkTimer() {
                   setIsComplete(false);
                   setTimerKey((key) => key + 1);
                 }}
-                className={`border px-3 py-1.5 font-mono text-[0.75rem] transition-colors disabled:opacity-40 ${
-                  minutes === preset
-                    ? 'border-ink bg-ink text-paper'
-                    : 'border-rule text-ink hover:border-ink'
+                aria-pressed={minutes === preset}
+                className={`min-h-11 rounded-full border px-4 font-medium tabular-nums transition-opacity hover:opacity-85 disabled:opacity-40 ${
+                  minutes === preset ? 'border-btn bg-btn text-btn-ink' : 'border-edge text-ink'
                 }`}
               >
                 {preset}m
@@ -111,10 +110,10 @@ export default function DeepWorkTimer() {
                 setTimerKey((key) => key + 1);
               }
             }}
-            className="mt-2 w-28 border border-rule bg-well px-3 py-2 font-mono text-sm text-ink disabled:opacity-40"
+            className="mt-2 w-28 min-h-12 rounded-xl border border-edge bg-surface px-4 text-ink tabular-nums disabled:opacity-40"
           />
 
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-6 flex flex-wrap gap-3">
             <button
               type="button"
               onClick={() => {
@@ -123,7 +122,7 @@ export default function DeepWorkTimer() {
                 setIsRunning(true);
               }}
               disabled={isRunning || minutes <= 0}
-              className="border border-ink bg-ink px-4 py-2 font-mono text-[0.75rem] uppercase tracking-[0.12em] text-paper transition-opacity disabled:opacity-40"
+              className="min-h-12 rounded-xl bg-btn px-5 font-medium text-btn-ink transition-opacity hover:opacity-85 disabled:opacity-40"
             >
               Start
             </button>
@@ -134,7 +133,7 @@ export default function DeepWorkTimer() {
                 setIsComplete(false);
                 setTimerKey((key) => key + 1);
               }}
-              className="border border-rule px-4 py-2 font-mono text-[0.75rem] uppercase tracking-[0.12em] text-ink transition-colors hover:border-ink"
+              className="min-h-12 rounded-xl border border-edge px-5 font-medium text-ink transition-opacity hover:opacity-85"
             >
               Reset
             </button>
@@ -143,13 +142,13 @@ export default function DeepWorkTimer() {
       </div>
 
       <div className="mt-10 flex flex-wrap items-baseline justify-between gap-4 border-t border-rule pt-4">
-        <p className="label">
+        <p className="text-ink-muted">
           {sessions} focus {sessions === 1 ? 'block' : 'blocks'} completed
         </p>
         <button
           type="button"
           onClick={() => setSessions(0)}
-          className="label underline decoration-rule underline-offset-4 transition-colors hover:text-accent"
+          className="min-h-11 font-medium text-accent underline-offset-4 hover:underline"
         >
           Clear history
         </button>

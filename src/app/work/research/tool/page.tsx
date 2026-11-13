@@ -25,42 +25,43 @@ export const metadata: Metadata = {
 
 export default function ResearchToolPage() {
   return (
-    <Container className="pb-8 pt-12 sm:pt-16">
+    <Container className="pb-24 pt-10 sm:pt-14">
       <Breadcrumb
         trail={[
           { label: 'work', href: '/work' },
           { label: 'coarse-graining macromolecules', href: '/work/research' },
-          { label: 'Tool' },
+          { label: 'tool' },
         ]}
       />
 
-      <header className="mt-8 border-b border-rule pb-10">
-        <h1 className="max-w-[22ch] text-title font-semibold text-ink">
+      <header className="mt-8 border-b border-rule-strong pb-8">
+        <p className="text-sm uppercase tracking-[0.3em] text-accent">Research tool</p>
+        <h1 className="mt-4 max-w-[20ch] font-display text-title font-bold text-ink">
           Macromolecule Coarse-Graining Tool
         </h1>
-        <p className="mt-4 max-w-[58ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+        <p className="mt-5 max-w-[40rem] text-[1.1875rem] leading-[1.55] text-ink-muted">
           Documentation, requirements, and file formats for the coarse-graining tool, plus the
           download.
         </p>
 
         <MetaList
-          className="mt-8 sm:grid-cols-2"
+          className="mt-8 grid-cols-2 sm:grid-cols-4"
           items={[
             { term: 'Language', value: 'Java (JDK 11+)' },
             { term: 'Build', value: 'GNU Make' },
-            { term: 'Entry', value: <code className="font-mono text-sm">src.CGPartitioning</code> },
-            { term: 'License', value: 'Research tool, RSCA grant' },
+            { term: 'Entry point', value: 'src.CGPartitioning' },
+            { term: 'Origin', value: 'RSCA research grant' },
           ]}
         />
 
         <div className="mt-8">
-          <ActionLink href="/CGBioMoleculesTool.zip" external={false}>
+          <ActionLink href="/CGBioMoleculesTool.zip" external={false} variant="primary">
             Download the tool (.zip)
           </ActionLink>
         </div>
       </header>
 
-      <article className="prose mt-10 max-w-[68ch]">
+      <article className="prose mt-10 max-w-[44rem]">
         <h2>Overview</h2>
         <p>
           The project is a Java application built from several classes:{' '}

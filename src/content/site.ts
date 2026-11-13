@@ -1,17 +1,21 @@
 export const site = {
   name: 'Chris Dedman-Rollet',
   shortName: 'Chris Dedman',
+  /** As it has always appeared in the nav bar: full first name, lower case. */
+  navName: 'christopher dedman rollet',
   url: 'https://chrisdedman.vercel.app',
   title: 'Chris Dedman | Software Engineer',
+  tagline:
+    'Building dependable systems, tooling, and open-source software with a focus on clarity and craft.',
   description:
-    'Software engineer working on kernels, developer tooling, and full-stack systems. Currently at Profound; M.S. Computer Science at CSULB.',
+    'Chris Dedman-Rollet, software engineer and computer scientist. Projects, open source work, research, and experience.',
   image: '/og.png',
   email: 'chrisdedman@proton.me',
   location: 'Los Angeles, California',
 } as const;
 
 export const nav = [
-  { href: '/about', label: 'about' },
+  { href: '/profile', label: 'profile' },
   { href: '/work', label: 'work' },
   { href: 'https://astradedman.vercel.app/', label: 'writing', external: true },
 ] as const;

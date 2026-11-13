@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
-import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google';
+import { Fraunces, Space_Grotesk } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -11,17 +11,17 @@ import ThemeScript from '@/components/layout/theme-script';
 import { site } from '@/content/site';
 import { share } from '@/lib/metadata';
 
-const sans = IBM_Plex_Sans({
+const display = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-plex-sans',
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
+  variable: '--font-fraunces',
   display: 'swap',
 });
 
-const mono = IBM_Plex_Mono({
+const body = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-plex-mono',
+  variable: '--font-grotesk',
   display: 'swap',
 });
 
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   keywords: [
     'Chris Dedman',
     'software engineer',
-    'kernel development',
-    'systems programming',
+    'computer scientist',
+    'open source',
     'portfolio',
   ],
   authors: [{ name: site.name, url: site.url }],
@@ -87,7 +87,7 @@ const jsonLd = [
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
       <head>
         <ThemeScript />
         <script
@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="label sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:border focus:border-ink focus:bg-paper focus:px-3 focus:py-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-btn focus:px-4 focus:py-3 focus:font-medium focus:text-btn-ink"
         >
           Skip to content
         </a>

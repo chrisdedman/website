@@ -2,36 +2,31 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 /**
- * The one call-to-action treatment: a mono label over a rule that fills with
- * ink on hover. Replaces the red pill buttons, which were the loudest generic
- * element of the old design.
+ * The site's button. `primary` is the filled one, used once per view at most;
+ * the default is outlined.
  */
 export default function ActionLink({
   href,
   children,
   external,
+  variant = 'outline',
 }: {
   href: string;
   children: ReactNode;
   external?: boolean;
+  variant?: 'primary' | 'outline';
 }) {
   const isExternal = external ?? /^https?:\/\//.test(href);
-  const className =
-    'group inline-flex items-center gap-2 border border-rule px-3.5 py-2 font-mono text-[0.75rem] uppercase tracking-[0.12em] text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper';
-
-  const content = (
-    <>
-      {children}
-      <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
-        {isExternal ? '↗' : '→'}
-      </span>
-    </>
-  );
+  const className = [
+    'inline-flex min-h-12 items-center gap-2 rounded-xl px-5 font-medium transition-opacity hover:opacity-85',
+    variant === 'primary' ? 'bg-btn text-btn-ink' : 'border border-edge text-ink',
+  ].join(' ');
 
   if (isExternal) {
     return (
       <a href={href} target="_blank" rel="noreferrer noopener" className={className}>
-        {content}
+        {children}
+        <span aria-hidden="true">↗</span>
         <span className="sr-only">(opens in a new tab)</span>
       </a>
     );
@@ -39,7 +34,7 @@ export default function ActionLink({
 
   return (
     <Link href={href} className={className}>
-      {content}
+      {children}
     </Link>
   );
 }

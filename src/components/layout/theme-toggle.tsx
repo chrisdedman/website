@@ -10,7 +10,7 @@ import {
   type Theme,
 } from '@/lib/theme-store';
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ className = '' }: { className?: string }) {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const next: Theme = theme === 'dark' ? 'light' : 'dark';
 
@@ -18,7 +18,7 @@ export default function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(next)}
-      className="label -mr-2 px-2 py-1 transition-colors hover:text-ink"
+      className={`${className} text-slate-300`}
       aria-label={`Switch to ${next} theme`}
     >
       {next}

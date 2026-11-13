@@ -5,10 +5,7 @@ export type MetaItem = {
   value: ReactNode;
 };
 
-/**
- * The spec-sheet block: a mono term in a fixed left column, the value beside it.
- * Used for the "currently" rail on the home page and the header of each project.
- */
+/** Facts about a piece of work: a small label with its value underneath. */
 export default function MetaList({
   items,
   className = '',
@@ -17,11 +14,11 @@ export default function MetaList({
   className?: string;
 }) {
   return (
-    <dl className={`grid gap-x-6 gap-y-3 ${className}`}>
+    <dl className={`grid gap-x-8 gap-y-5 ${className}`}>
       {items.map((item) => (
-        <div key={item.term} className="grid grid-cols-[5.5rem_1fr] items-baseline gap-x-4">
-          <dt className="label pt-[0.2em]">{item.term}</dt>
-          <dd className="text-[0.9375rem] leading-snug text-ink">{item.value}</dd>
+        <div key={item.term}>
+          <dt className="label">{item.term}</dt>
+          <dd className="mt-1 text-ink">{item.value}</dd>
         </div>
       ))}
     </dl>

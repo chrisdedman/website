@@ -49,8 +49,6 @@ export function getWork(slug: string): WorkEntry | undefined {
 export type WorkGroup = {
   kind: Kind;
   entries: WorkEntry[];
-  /** Running offset so the index numbers continuously across all groups. */
-  startIndex: number;
 };
 
 /**
@@ -60,15 +58,14 @@ export type WorkGroup = {
  */
 export const groupedWork: WorkGroup[] = kinds
   .map((kind) => ({ kind, entries: work.filter((entry) => entry.kind === kind) }))
-  .filter((group) => group.entries.length > 0)
-  .reduce<WorkGroup[]>((groups, group) => {
-    const previous = groups.at(-1);
-    const startIndex = previous ? previous.startIndex + previous.entries.length : 0;
-    groups.push({ ...group, startIndex });
-    return groups;
-  }, []);
+  .filter((group) => group.entries.length > 0);
 
-export const featured: WorkEntry[] = ['astra-kernel', 'capski', 'cursif', 'code-astra']
+export function workOfKind(kind: Kind): WorkEntry[] {
+  return work.filter((entry) => entry.kind === kind);
+}
+
+/** The three personal projects shown on the home page; the rest are on /work. */
+export const homeProjects: WorkEntry[] = ['astra-pulse', 'asteroid', 'deep-work']
   .map((slug) => workBySlug.get(slug))
   .filter((entry): entry is WorkEntry => entry !== undefined);
 

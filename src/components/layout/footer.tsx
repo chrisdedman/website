@@ -1,59 +1,42 @@
-import Container from '@/components/ui/container';
 import { site, socials } from '@/content/site';
+
+const footerLink =
+  'inline-flex min-h-11 items-center px-3 underline-offset-4 transition-colors hover:text-white hover:underline';
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-rule py-10">
-      <Container>
-        <div className="grid gap-8 sm:grid-cols-[1fr_auto] sm:items-start">
-          <div>
-            <p className="label">Elsewhere</p>
-            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
-              {socials.map((social) => (
-                <li key={social.label}>
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-[0.875rem] text-ink-muted underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
-                  >
-                    {social.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <footer className="border-t border-white/10 bg-navy text-slate-300">
+      <div className="mx-auto flex w-full max-w-[81rem] flex-wrap items-center justify-between gap-x-10 gap-y-4 px-[clamp(1.25rem,5vw,4.5rem)] py-9">
+        <p className="font-display text-xl italic text-slate-50" lang="la">
+          Ex astris, scientia.
+        </p>
 
-          <div className="sm:text-right">
-            <p className="label">Contact</p>
-            <a
-              href={`mailto:${site.email}`}
-              className="mt-3 block text-[0.875rem] text-ink-muted underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
-            >
-              {site.email}
-            </a>
-          </div>
-        </div>
+        <nav aria-label="Elsewhere" className="-mx-3">
+          <ul className="flex flex-wrap gap-x-1">
+            <li>
+              <a href={`mailto:${site.email}`} className={footerLink}>
+                Email
+              </a>
+            </li>
+            {socials.map((social) => (
+              <li key={social.label}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className={footerLink}
+                >
+                  {social.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        {/* Colophon. The motto is Chris's — it was on the old site, and every
-            project he names starts with "astra". It stays, set small. */}
-        <div className="label mt-10 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <p>
-            © {new Date().getFullYear()} {site.name} · {site.location}
-          </p>
-          <p>
-            <span lang="la">Ex astris, scientia</span> · Set in IBM Plex ·{' '}
-            <a
-              href="https://github.com/chrisdedman/website"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
-            >
-              Source
-            </a>
-          </p>
-        </div>
-      </Container>
+        <p className="text-sm text-slate-400">
+          © {new Date().getFullYear()} {site.name}
+        </p>
+      </div>
     </footer>
   );
 }

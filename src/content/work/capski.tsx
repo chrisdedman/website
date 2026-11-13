@@ -62,7 +62,7 @@ export default function Body() {
       </ul>
 
       <h2>Demo</h2>
-      <video controls preload="metadata" src="/capski_demo.mp4" className="w-full border border-rule">
+      <video controls preload="metadata" src="/capski_demo.mp4">
         Your browser does not support the video tag.
       </video>
 
