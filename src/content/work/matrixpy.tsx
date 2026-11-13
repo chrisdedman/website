@@ -37,7 +37,7 @@ export default function Body() {
         </a>
         . It provides a clean, decorator-based API in the style of popular event-driven frameworks,
         so developers write behaviour rather than boilerplate. It builds on{' '}
-        <a href="https://github.com/poljar/matrix-nio" target="_blank" rel="noreferrer noopener">
+        <a href="https://github.com/matrix-nio/matrix-nio" target="_blank" rel="noreferrer noopener">
           matrix-nio
         </a>
         , a Matrix client library for Python, and supports the major Matrix features: rooms, events,

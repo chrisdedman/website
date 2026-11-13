@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
+import { ArrowUpRight } from './icons';
+
 /**
  * The site's button. `primary` is the filled one, used once per view at most;
  * the default is outlined.
@@ -18,15 +20,17 @@ export default function ActionLink({
 }) {
   const isExternal = external ?? /^https?:\/\//.test(href);
   const className = [
-    'inline-flex min-h-12 items-center gap-2 rounded-xl px-5 font-medium transition-opacity hover:opacity-85',
-    variant === 'primary' ? 'bg-btn text-btn-ink' : 'border border-edge text-ink',
+    'inline-flex min-h-11 items-center gap-2 rounded-lg px-5 font-semibold transition-colors',
+    variant === 'primary'
+      ? 'bg-btn text-btn-ink hover:bg-btn-hover'
+      : 'border border-rule-strong text-ink hover:bg-raised',
   ].join(' ');
 
   if (isExternal) {
     return (
       <a href={href} target="_blank" rel="noreferrer noopener" className={className}>
         {children}
-        <span aria-hidden="true">↗</span>
+        <ArrowUpRight size={14} />
         <span className="sr-only">(opens in a new tab)</span>
       </a>
     );

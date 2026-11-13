@@ -3,16 +3,14 @@ import type { WorkMeta } from './types';
 
 export const meta: WorkMeta = {
   slug: 'cursif',
+  cover: { src: '/dashboard.png', alt: 'Cursif notebook dashboard', width: 1900, height: 1149 },
   title: 'Cursif',
   kind: 'open-source',
-  year: '2023—',
+  year: '2023–2024',
   role: 'Core full-stack contributor',
   stack: ['Elixir', 'Phoenix', 'TypeScript', 'PostgreSQL'],
   summary: 'A collaborative note-taking app whose notes are scriptable through user-defined macros.',
-  links: [
-    { label: 'Live app', href: 'https://cursif.codesociety.xyz/' },
-    { label: 'Repository', href: 'https://github.com/Code-Society-Lab/cursif' },
-  ],
+  links: [{ label: 'Repository', href: 'https://github.com/Code-Society-Lab/cursif' }],
 };
 
 export default function Body() {
@@ -21,11 +19,11 @@ export default function Body() {
       <p>
         Cursif is a note-taking application with a twist: notes are scriptable, so you can write
         personal macros to automate the parts of note-keeping that are otherwise repetitive. It is
-        under active development by the team at the Code Society Lab.
+        built by the team at the Code Society Lab.
       </p>
       <p>
-        I have been involved since the summer of 2023, working with an international group of
-        developers. The stack is TypeScript with Next.js and Apollo on the frontend, and Elixir with
+        I worked on it from June 2023 to August 2024, with an international group of developers.
+        The stack is TypeScript with Next.js and Apollo on the frontend, and Elixir with
         Phoenix, Absinthe, and PostgreSQL on the backend.
       </p>
 

@@ -34,9 +34,9 @@ export default function ResearchToolPage() {
         ]}
       />
 
-      <header className="mt-8 border-b border-rule-strong pb-8">
-        <p className="text-sm uppercase tracking-[0.3em] text-accent">Research tool</p>
-        <h1 className="mt-4 max-w-[20ch] font-display text-title font-bold text-ink">
+      <header className="mt-8 border-b border-rule pb-8">
+        <p className="eyebrow">Research tool</p>
+        <h1 className="mt-4 max-w-[20ch] font-display text-title font-semibold text-ink">
           Macromolecule Coarse-Graining Tool
         </h1>
         <p className="mt-5 max-w-[40rem] text-[1.1875rem] leading-[1.55] text-ink-muted">

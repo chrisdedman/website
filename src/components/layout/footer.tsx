@@ -1,13 +1,13 @@
 import { site, socials } from '@/content/site';
 
 const footerLink =
-  'inline-flex min-h-11 items-center px-3 underline-offset-4 transition-colors hover:text-white hover:underline';
+  'inline-flex min-h-11 items-center rounded-lg px-3 text-[0.90625rem] text-ink-muted transition-colors hover:bg-raised hover:text-ink';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-navy text-slate-300">
-      <div className="mx-auto flex w-full max-w-[81rem] flex-wrap items-center justify-between gap-x-10 gap-y-4 px-[clamp(1.25rem,5vw,4.5rem)] py-9">
-        <p className="font-display text-xl italic text-slate-50" lang="la">
+    <footer className="border-t border-rule">
+      <div className="mx-auto flex w-full max-w-[78rem] flex-wrap items-center justify-between gap-x-8 gap-y-2 px-6 py-7">
+        <p className="font-display text-[1.1875rem] italic text-ink" lang="la">
           Ex astris, scientia.
         </p>
 
@@ -33,7 +33,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-ink-faint">
           © {new Date().getFullYear()} {site.name}
         </p>
       </div>

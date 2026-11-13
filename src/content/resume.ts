@@ -21,10 +21,16 @@ export type Award = {
 
 export const experience: Position[] = [
   {
+    org: 'Baro',
+    title: 'Founding Software Engineer',
+    period: 'Aug 2026 — present',
+    body: 'Second founding engineer at Baro (a16z SR007), which is building an AI general manager for consumer brands: one place for what a brand needs to grow in the US market. I work across its TypeScript monorepo (Next.js, Supabase, Inngest), mostly on GM, the app the Baro team and brand founders use to run a brand day to day: creator campaigns and outreach, email flows, the CRM, and customer support. I also work on CI speed and reliability.',
+  },
+  {
     org: 'Profound',
     title: 'Full-Stack Software Engineer',
-    period: 'Dec 2025 — present',
-    body: 'Work on a full-stack CMS in a TypeScript monorepo, contributing across routing, document editing, deployments, media workflows, and internal tooling. Led observability work spanning the client, server, edge, proxy, and tRPC layers using Sentry and structured telemetry.',
+    period: 'Dec 2025 — Nov 2026',
+    body: 'Contract role. Worked on a full-stack CMS in a TypeScript and Rust monorepo, contributing across routing, document editing, deployments, media workflows, and internal tooling. Led observability work spanning the client, server, edge, proxy, and tRPC layers using Sentry and structured telemetry.',
   },
   {
     org: 'Uber',
@@ -68,14 +74,14 @@ export const education: Study[] = [
   {
     org: 'California State University, Long Beach',
     credential: 'M.S. Computer Science',
-    period: 'Jan 2026 — present',
-    body: 'Focused on embedded systems and low-level programming.',
+    period: 'Jan 2026 — Jun 2026, on hiatus',
+    body: 'Focused on embedded systems and low-level programming. On hiatus because of the workload at a startup; I plan to finish it when I have more free time.',
   },
   {
     org: 'California State University, Dominguez Hills',
-    credential: 'B.S. Computer Science — Magna Cum Laude',
+    credential: 'B.S. Computer Science — Magna Cum Laude, with departmental honors',
     period: 'Jan 2023 — May 2025',
-    body: 'Data structures, design and analysis of algorithms, database management, operating systems, software engineering, computer organisation, finite automata, and security engineering, alongside probability and statistics and physics 1 & 2.',
+    body: 'Data structures, design and analysis of algorithms, database management, operating systems, software engineering, computer organisation, finite automata, and security engineering, alongside probability and statistics and physics 1 & 2. Open Source Coordinator for the Computing Alliance of Hispanic-Serving Institutions (CAHSI) club.',
   },
   {
     org: 'El Camino College',
@@ -86,6 +92,11 @@ export const education: Study[] = [
 ];
 
 export const awards: Award[] = [
+  {
+    org: 'Cisco',
+    detail: 'Cisco Champion 2021 and 2022 · Community Spotlight Award · IT Blog Awards, Top 50',
+    period: '2021 — 2022',
+  },
   {
     org: 'National Society of Leadership & Success',
     detail: 'FOL 101-1 Certificate',
@@ -105,12 +116,16 @@ export const skills: { group: string; items: string[] }[] = [
     items: ['C', 'C++', 'ARM assembly', 'Rust', 'QEMU', 'Make', 'CMake', 'GDB', 'Microcontrollers'],
   },
   {
+    group: 'Mac apps',
+    items: ['Swift', 'SwiftUI', 'WidgetKit', 'App Intents', 'launchd'],
+  },
+  {
     group: 'Backend',
-    items: ['Go', 'Python', 'Java', 'Elixir / Phoenix', 'PostgreSQL', 'MySQL'],
+    items: ['Go', 'Python', 'Java', 'Elixir / Phoenix', 'PostgreSQL', 'MySQL', 'Supabase', 'Inngest'],
   },
   {
     group: 'Web',
-    items: ['TypeScript', 'React', 'Next.js', 'Fusion.js', 'tRPC'],
+    items: ['TypeScript', 'React', 'Next.js', 'Fusion.js', 'tRPC', 'Turborepo'],
   },
   {
     group: 'Practice',

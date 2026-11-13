@@ -58,9 +58,9 @@ export default async function WorkDetailPage({ params }: Params) {
         ]}
       />
 
-      <header className="mt-8 border-b border-rule-strong pb-8">
-        <p className="text-sm uppercase tracking-[0.3em] text-accent">{kind}</p>
-        <h1 className="mt-4 max-w-[18ch] font-display text-title font-bold text-ink">
+      <header className="mt-8 border-b border-rule pb-8">
+        <p className="eyebrow">{kind}</p>
+        <h1 className="mt-4 max-w-[18ch] font-display text-title font-semibold text-ink">
           {entry.title}
         </h1>
         <p className="mt-5 max-w-[40rem] text-[1.1875rem] leading-[1.55] text-ink-muted">
@@ -75,13 +75,13 @@ export default async function WorkDetailPage({ params }: Params) {
       */}
       <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,44rem)_minmax(16rem,1fr)] lg:gap-16">
         <aside className="order-first lg:order-last">
-          <div className="space-y-6 rounded-2xl border border-rule bg-surface p-7 shadow-card lg:sticky lg:top-24">
+          <div className="space-y-6 rounded-xl border border-rule bg-surface p-7 lg:sticky lg:top-24">
             <MetaList
               className="grid-cols-2 lg:grid-cols-1"
               items={[
                 { term: 'Year', value: entry.year },
                 { term: 'Role', value: entry.role },
-                { term: 'Built with', value: entry.stack.join(' · ') },
+                { term: 'Built with', value: entry.stack.join(', ') },
               ]}
             />
             {entry.links?.length ? (
@@ -106,7 +106,7 @@ export default async function WorkDetailPage({ params }: Params) {
       </div>
 
       <nav
-        className="mt-20 grid gap-6 border-t border-rule-strong pt-6 sm:grid-cols-2"
+        className="mt-20 grid gap-6 border-t border-rule pt-6 sm:grid-cols-2"
         aria-label="Adjacent entries"
       >
         <Link href={`/work/${previous.slug}`} className="group block">

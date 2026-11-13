@@ -3,45 +3,32 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { Planet } from '@/components/ui/icons';
 import { nav, site } from '@/content/site';
 import ThemeToggle from './theme-toggle';
 
 const navItem =
-  'inline-flex min-h-11 items-center rounded-md px-3.5 transition-colors hover:bg-white/10';
+  'inline-flex min-h-11 items-center rounded-lg px-3 text-[0.90625rem] font-medium capitalize text-ink-muted transition-colors hover:bg-raised hover:text-ink';
 
 /**
- * The navy bar is navy in both themes. On narrow screens the links wrap
- * under the name instead of hiding behind a menu button.
+ * A translucent bar that lets the page show through as it scrolls under. On
+ * narrow screens the links wrap under the name instead of hiding behind a
+ * menu button, and the bar scrolls away rather than holding three rows of the
+ * screen.
  */
 export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-white/10 bg-navy text-slate-50 sm:sticky sm:top-0 sm:z-30">
-      <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-1 px-[clamp(1.25rem,5vw,4.5rem)] py-3">
-        <Link href="/" className="group flex min-h-11 items-center gap-2.5 text-base">
-          <svg
-            aria-hidden="true"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-          >
-            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-          </svg>
-          <span>{site.navName}</span>
+    <header className="border-b border-rule bg-ground/80 backdrop-blur-[14px] backdrop-saturate-150 sm:sticky sm:top-0 sm:z-30">
+      <div className="mx-auto flex w-full max-w-[78rem] flex-wrap items-center justify-between gap-x-6 gap-y-1 px-6 py-2.5">
+        <Link href="/" className="flex min-h-11 items-center gap-3 text-ink">
+          <Planet />
+          <span className="font-display text-xl font-semibold tracking-[-0.01em]">{site.navName}</span>
         </Link>
 
-        <nav aria-label="Main" className="-mx-3.5 sm:mx-0">
-          <ul className="flex flex-wrap items-center gap-x-1">
+        <nav aria-label="Main" className="-mx-3 sm:mx-0">
+          <ul className="flex flex-wrap items-center gap-x-0.5">
             {nav.map((item) => (
               <li key={item.href}>
                 {'external' in item ? (
@@ -53,7 +40,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     aria-current={pathname.startsWith(item.href) ? 'page' : undefined}
-                    className={`${navItem} aria-[current=page]:bg-white/10`}
+                    className={`${navItem} aria-[current=page]:bg-selected aria-[current=page]:text-ink`}
                   >
                     {item.label}
                   </Link>
@@ -62,6 +49,14 @@ export default function Header() {
             ))}
             <li>
               <ThemeToggle className={navItem} />
+            </li>
+            <li className="ml-2">
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-flex min-h-10 items-center rounded-lg bg-btn px-4 text-[0.90625rem] font-semibold text-btn-ink transition-colors hover:bg-btn-hover"
+              >
+                Email me
+              </a>
             </li>
           </ul>
         </nav>

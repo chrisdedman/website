@@ -10,21 +10,18 @@ export default function WorkCard({ entry }: { entry: WorkMeta }) {
   return (
     <Link
       href={`/work/${entry.slug}`}
-      className="group flex h-full flex-col gap-2.5 rounded-2xl border border-rule bg-surface p-7 shadow-card transition duration-200 hover:shadow-card-hover motion-safe:hover:-translate-y-[3px]"
+      className="group flex h-full flex-col rounded-xl border border-rule bg-surface p-6 transition-colors hover:border-rule-strong"
     >
-      <p className="text-sm text-ink-faint">{entry.stack.join(' · ')}</p>
-      <h3 className="font-display text-[1.875rem] font-bold leading-[1.1] tracking-[-0.01em] text-ink">
-        {entry.title}
-      </h3>
-      <p className="text-ink-muted">{entry.summary}</p>
-      <p className="mt-auto pt-3 font-medium text-accent">
-        {entry.interactive ? 'Try it' : 'Read more'}{' '}
-        <span
-          aria-hidden="true"
-          className="inline-block transition-transform group-hover:translate-x-0.5"
-        >
-          →
-        </span>
+      <div className="flex items-baseline justify-between gap-4">
+        <h3 className="font-display text-[1.375rem] font-semibold leading-tight tracking-[-0.01em] text-ink underline-offset-4 group-hover:underline">
+          {entry.title}
+        </h3>
+        <span className="font-mono text-[0.75rem] text-ink-faint">{entry.year}</span>
+      </div>
+      <p className="mt-2 text-[0.96875rem] leading-[1.55] text-ink-muted">{entry.summary}</p>
+      <p className="mt-auto pt-4 font-mono text-[0.78125rem] text-ink-faint">
+        {entry.stack.join(' · ')}
+        {entry.interactive ? ' · runs in the browser' : ''}
       </p>
     </Link>
   );
@@ -32,7 +29,7 @@ export default function WorkCard({ entry }: { entry: WorkMeta }) {
 
 export function WorkCardGrid({ entries }: { entries: WorkMeta[] }) {
   return (
-    <ul className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {entries.map((entry) => (
         <li key={entry.slug}>
           <WorkCard entry={entry} />

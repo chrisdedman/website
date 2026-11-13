@@ -47,8 +47,8 @@ export default function DeepWorkTimer() {
             // This library types its colors as hex literals, so the theme
             // tokens cannot be handed to it. The orange is picked to read
             // against both the light and the dark background.
-            colors="#ea580c"
-            trailColor="#94a3b8"
+            colors="#8b87f7"
+            trailColor="#989288"
             onComplete={() => {
               setIsRunning(false);
               setIsComplete(true);
@@ -122,7 +122,7 @@ export default function DeepWorkTimer() {
                 setIsRunning(true);
               }}
               disabled={isRunning || minutes <= 0}
-              className="min-h-12 rounded-xl bg-btn px-5 font-medium text-btn-ink transition-opacity hover:opacity-85 disabled:opacity-40"
+              className="min-h-12 rounded-lg bg-btn px-5 font-semibold text-btn-ink transition-colors hover:bg-btn-hover disabled:opacity-40"
             >
               Start
             </button>
@@ -133,7 +133,7 @@ export default function DeepWorkTimer() {
                 setIsComplete(false);
                 setTimerKey((key) => key + 1);
               }}
-              className="min-h-12 rounded-xl border border-edge px-5 font-medium text-ink transition-opacity hover:opacity-85"
+              className="min-h-12 rounded-lg border border-rule-strong px-5 font-semibold text-ink transition-colors hover:bg-raised"
             >
               Reset
             </button>

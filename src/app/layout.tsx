@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
-import { Fraunces, Space_Grotesk } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
@@ -10,20 +9,6 @@ import Footer from '@/components/layout/footer';
 import ThemeScript from '@/components/layout/theme-script';
 import { site } from '@/content/site';
 import { share } from '@/lib/metadata';
-
-const display = Fraunces({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  axes: ['opsz'],
-  variable: '--font-fraunces',
-  display: 'swap',
-});
-
-const body = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-grotesk',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -87,7 +72,7 @@ const jsonLd = [
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <ThemeScript />
         <script
@@ -98,7 +83,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-btn focus:px-4 focus:py-3 focus:font-medium focus:text-btn-ink"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-btn focus:px-5 focus:py-3 focus:font-semibold focus:text-btn-ink"
         >
           Skip to content
         </a>

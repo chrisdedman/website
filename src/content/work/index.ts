@@ -6,11 +6,13 @@ import * as codeAstra from './code-astra';
 import * as crudTemplate from './crud-template';
 import * as cursif from './cursif';
 import * as deepWork from './deep-work';
+import * as headroom from './headroom';
 import * as matrixpy from './matrixpy';
 import * as qrcode from './qrcode';
 import * as research from './research';
 import * as researchAi from './research-ai';
 import * as resources from './resources';
+import * as toji from './toji';
 import { kinds, type Kind, type WorkEntry, type WorkModule } from './types';
 
 /*
@@ -23,11 +25,13 @@ import { kinds, type Kind, type WorkEntry, type WorkModule } from './types';
  * split, and generateStaticParams renders them all at build time regardless.
  */
 const modules: WorkModule[] = [
+  headroom,
+  toji,
   astraKernel,
-  codeAstra,
-  cursif,
   matrixpy,
   capski,
+  codeAstra,
+  cursif,
   astraPulse,
   asteroid,
   resources,
@@ -63,11 +67,6 @@ export const groupedWork: WorkGroup[] = kinds
 export function workOfKind(kind: Kind): WorkEntry[] {
   return work.filter((entry) => entry.kind === kind);
 }
-
-/** The three personal projects shown on the home page; the rest are on /work. */
-export const homeProjects: WorkEntry[] = ['astra-pulse', 'asteroid', 'deep-work']
-  .map((slug) => workBySlug.get(slug))
-  .filter((entry): entry is WorkEntry => entry !== undefined);
 
 export { kindLabels, kindLabelsSingular, kinds } from './types';
 export type { Kind, WorkEntry, WorkMeta } from './types';

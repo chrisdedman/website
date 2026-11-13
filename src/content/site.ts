@@ -1,7 +1,7 @@
 export const site = {
   name: 'Chris Dedman-Rollet',
   shortName: 'Chris Dedman',
-  /** As it has always appeared in the nav bar: full first name, lower case. */
+  /** As it has always appeared in the header: full first name, lower case. */
   navName: 'christopher dedman rollet',
   url: 'https://chrisdedman.vercel.app',
   title: 'Chris Dedman | Software Engineer',

@@ -4,9 +4,10 @@ import type { WorkMeta } from './types';
 
 export const meta: WorkMeta = {
   slug: 'astra-kernel',
+  cover: { src: '/kernel1.png', alt: 'AstraKernel booted in QEMU', width: 643, height: 572 },
   title: 'AstraKernel',
   kind: 'open-source',
-  year: '2025',
+  year: '2025—',
   role: 'Author, project lead',
   stack: ['C', 'ARM assembly', 'QEMU'],
   summary:

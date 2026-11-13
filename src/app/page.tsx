@@ -1,87 +1,168 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import WorkBrowser, { type WorkBrowserGroup } from '@/components/home/work-browser';
 import ActionLink from '@/components/ui/action-link';
 import Container from '@/components/ui/container';
-import SectionHeading from '@/components/ui/section-heading';
-import { WorkCardGrid } from '@/components/ui/work-card';
+import { ArrowRight } from '@/components/ui/icons';
+import Timeline from '@/components/ui/timeline';
+import { education, experience, skills } from '@/content/resume';
 import { site } from '@/content/site';
-import { homeProjects, kindLabels, workOfKind } from '@/content/work';
+import { groupedWork, kindLabelsSingular, work, type Kind } from '@/content/work';
 
-const textLink =
-  'inline-flex min-h-11 items-center font-medium underline-offset-4 hover:underline';
+/** Shorter than the section headings on /work: these sit in a narrow sidebar. */
+const sidebarLabels: Record<Kind, string> = {
+  app: 'Mac apps',
+  'open-source': 'Open source',
+  project: 'Projects',
+  research: 'Research',
+};
+
+/*
+ * Only the metadata crosses to the client component: the write-up bodies are
+ * server components and stay on their own pages.
+ */
+const browserGroups: WorkBrowserGroup[] = groupedWork.map((group) => ({
+  label: sidebarLabels[group.kind],
+  singular: kindLabelsSingular[group.kind],
+  entries: group.entries.map((entry) => ({
+    slug: entry.slug,
+    title: entry.title,
+    kind: entry.kind,
+    year: entry.year,
+    summary: entry.summary,
+    stack: entry.stack,
+    role: entry.role,
+    links: entry.links,
+    cover: entry.cover,
+    interactive: entry.interactive,
+  })),
+}));
+
+const sectionTitle = 'font-display text-title font-semibold text-ink';
+const textLink = 'font-medium text-accent underline underline-offset-4 hover:no-underline';
 
 export default function HomePage() {
   return (
     <>
-      <Container className="flex flex-wrap items-center gap-x-16 gap-y-12 pb-16 pt-[clamp(3rem,7vw,6rem)]">
-        <div className="flex-[1_1_26rem]">
-          <p className="text-sm uppercase tracking-[0.3em] text-accent">Portfolio</p>
-          <h1 className="mt-4 font-display text-display font-bold text-ink">{site.name}</h1>
-          <p className="mt-5 font-display text-[clamp(1.375rem,2.4vw,1.875rem)] italic leading-[1.3] text-ink-muted">
-            Software engineer and computer scientist.
+      <Container className="flex flex-wrap items-center gap-x-16 gap-y-12 pb-20 pt-[clamp(3rem,6vw,5rem)]">
+        <div className="flex-[1_1_28rem]">
+          <h1 className="font-display text-display font-semibold text-ink">Chris Dedman</h1>
+          <p className="mt-5 max-w-[34rem] text-[1.375rem] leading-[1.45] text-ink">
+            Founding software engineer at Baro. I also make Mac apps, and work on kernels and open
+            source in my own time.
           </p>
-          <p className="mt-5 max-w-[31rem] text-ink-muted">{site.tagline}</p>
-          <div className="mt-8 flex flex-wrap gap-x-4 gap-y-3">
-            <ActionLink href="/work" variant="primary">
+          <p className="mt-5 max-w-[34rem] text-[1.0625rem] leading-[1.6] text-ink-muted">
+            Before Baro I worked on a CMS at Profound and did two internships at Uber. Before
+            software, I served in the French military and worked as a butcher.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <ActionLink href="#work" variant="primary">
               See my work
             </ActionLink>
-            <ActionLink href={`mailto:${site.email}`} external={false}>
-              Email me
-            </ActionLink>
+            <ActionLink href="/profile">Read my profile</ActionLink>
           </div>
         </div>
 
-        <div className="flex-[1_1_26rem]">
+        <figure className="flex-[1_1_24rem]">
           <Image
             src="/me_engine.jpeg"
             alt="Chris standing in front of a rocket engine"
             width={1024}
             height={768}
             priority
-            sizes="(max-width: 1024px) 100vw, 600px"
-            className="h-[clamp(18rem,40vw,30rem)] w-full rounded-3xl object-cover object-[62%_35%] shadow-card-hover"
+            sizes="(max-width: 1024px) 100vw, 560px"
+            className="h-[clamp(18rem,32vw,27rem)] w-full rounded-xl object-cover object-[62%_35%]"
           />
-        </div>
+          <figcaption className="mt-2.5 text-sm text-ink-faint">
+            Me, with a rocket engine. {site.location}.
+          </figcaption>
+        </figure>
       </Container>
 
-      <Container className="pb-8 pt-10">
-        <SectionHeading
-          aside={
-            <Link href="/work" className={`${textLink} text-accent`}>
-              All work →
+      <section id="work" className="scroll-mt-16 border-t border-rule">
+        <Container className="py-[clamp(4rem,7vw,5.5rem)]">
+          <h2 className={sectionTitle}>Work</h2>
+          <p className="mt-3 max-w-[40rem] text-lg text-ink-muted">
+            {`${work.length} things I've built or helped build: Mac apps, open source, personal projects and research. `}
+            They&rsquo;re also{' '}
+            <Link href="/work" className={textLink}>
+              all on one page
             </Link>
-          }
-        >
-          {kindLabels['open-source']}
-        </SectionHeading>
-        <WorkCardGrid entries={workOfKind('open-source')} />
-      </Container>
+            .
+          </p>
+          <WorkBrowser groups={browserGroups} />
+        </Container>
+      </section>
 
-      <Container className="pb-24 pt-14">
-        <SectionHeading>{kindLabels.project}</SectionHeading>
-        <WorkCardGrid entries={homeProjects} />
-      </Container>
+      <section id="experience" className="scroll-mt-16 border-t border-rule bg-panel">
+        <Container className="grid gap-x-16 gap-y-10 py-[clamp(4rem,7vw,5.5rem)] lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+          <div>
+            <h2 className={sectionTitle}>Experience</h2>
 
-      <section className="border-t border-white/10 bg-navy text-slate-200">
-        <Container className="flex flex-wrap items-center gap-x-16 gap-y-10 py-20">
-          <Image
-            src="/me.jpg"
-            alt="Portrait of Chris"
-            width={200}
-            height={200}
-            sizes="200px"
-            className="size-[12.5rem] flex-none rounded-full object-cover"
-          />
-          <div className="flex-[1_1_26rem]">
-            <p className="font-display text-lede text-slate-50">
-              I work on a full-stack CMS at Profound and study for an M.S. in Computer Science at
-              CSU Long Beach. Before that, two software engineering internships at Uber.
-            </p>
-            <Link href="/profile" className={`${textLink} mt-4 text-orange-300`}>
-              Read my profile →
+            <h3 className="label mt-10">Education</h3>
+            <ul className="mt-3 divide-y divide-rule border-y border-rule">
+              {education.map((study) => (
+                <li key={study.org} className="py-4">
+                  <p className="text-[0.96875rem] font-semibold text-ink">{study.credential}</p>
+                  <p className="mt-0.5 text-[0.90625rem] leading-normal text-ink-muted">
+                    {study.org}
+                  </p>
+                  <p className="mt-0.5 font-mono text-[0.78125rem] text-ink-faint">
+                    {study.period}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* The short version: who, what and when. The descriptions are on /profile. */}
+          <div>
+            <Timeline
+              className="[--ground:var(--panel)]"
+              items={experience.map((role, index) => ({
+                key: `${role.org}-${role.period}`,
+                title: role.org,
+                period: role.period,
+                subtitle: role.title,
+                current: index === 0,
+              }))}
+            />
+            <Link
+              href="/profile#experience"
+              className="ml-8 inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline-offset-4 hover:underline"
+            >
+              Full history on my profile
+              <ArrowRight />
             </Link>
           </div>
+        </Container>
+      </section>
+
+      <section id="tools" className="scroll-mt-16 border-t border-rule">
+        <Container className="grid gap-x-16 gap-y-8 py-[clamp(4rem,7vw,5.5rem)] lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+          <h2 className={sectionTitle}>Tools</h2>
+          <dl className="divide-y divide-rule border-y border-rule">
+            {skills.map((group) => (
+              <div key={group.group} className="grid gap-x-8 gap-y-1 py-4 sm:grid-cols-[8rem_1fr]">
+                <dt className="label pt-1.5">{group.group}</dt>
+                <dd className="text-ink-muted">{group.items.join(', ')}</dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      <section className="border-t border-rule bg-panel">
+        <Container className="grid gap-x-16 gap-y-6 py-[clamp(4rem,7vw,5.5rem)] lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
+          <h2 className={sectionTitle}>Contact</h2>
+          <p className="max-w-[40rem] font-display text-lede text-ink">
+            Email is the quickest way to reach me:{' '}
+            <a href={`mailto:${site.email}`} className={textLink}>
+              {site.email}
+            </a>
+            . The other places I&rsquo;m on are in the footer.
+          </p>
         </Container>
       </section>
     </>

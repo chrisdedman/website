@@ -49,7 +49,7 @@ export default function QrGenerator() {
           />
           <button
             type="submit"
-            className="min-h-12 rounded-xl bg-btn px-5 font-medium text-btn-ink transition-opacity hover:opacity-85 disabled:opacity-40"
+            className="min-h-12 rounded-lg bg-btn px-5 font-semibold text-btn-ink transition-colors hover:bg-btn-hover disabled:opacity-40"
           >
             Generate
           </button>
@@ -64,7 +64,7 @@ export default function QrGenerator() {
       </form>
 
       {submitted ? (
-        <figure className="mt-6 inline-block rounded-2xl border border-rule bg-white p-5 shadow-card">
+        <figure className="mt-6 inline-block rounded-xl border border-rule bg-white p-5 shadow-card">
           <QRCodeCanvas value={submitted} size={200} marginSize={2} level="H" />
           <figcaption className="mt-3 max-w-[200px] break-all text-sm text-slate-600">
             {submitted}

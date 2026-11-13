@@ -8,9 +8,5 @@ export default function Container({
   children: ReactNode;
   className?: string;
 }) {
-  return (
-    <div className={`mx-auto w-full max-w-[81rem] px-[clamp(1.25rem,5vw,4.5rem)] ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`mx-auto w-full max-w-[78rem] px-6 ${className}`}>{children}</div>;
 }

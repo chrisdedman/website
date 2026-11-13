@@ -3,6 +3,7 @@ import type { WorkMeta } from './types';
 
 export const meta: WorkMeta = {
   slug: 'asteroid',
+  cover: { src: '/neo1.png', alt: 'NEO tracker daily listing', width: 3112, height: 1804 },
   title: 'Near Earth Object Tracker',
   kind: 'project',
   year: '2024',

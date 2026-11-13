@@ -3,6 +3,7 @@ import type { WorkMeta } from './types';
 
 export const meta: WorkMeta = {
   slug: 'crud-template',
+  cover: { src: '/homepage_crud.png', alt: 'CRUD template homepage', width: 1862, height: 1000 },
   title: 'CRUD Web Template',
   kind: 'project',
   year: '2024',

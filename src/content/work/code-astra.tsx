@@ -37,8 +37,8 @@ export default function Body() {
         CodeAstra is a modern, extensible, and lightweight code editor built with C++ and Qt6,
         designed for a fast and customisable development experience. Inspired by Neovim and VS Code,
         it provides efficient file navigation, syntax highlighting, and a plugin system, for
-        developers who want speed, flexibility, and control. Planned work covers split views, an
-        integrated terminal, customisable key bindings, and Git integration.
+        developers who want speed, flexibility, and control. Split views, an integrated terminal,
+        customisable key bindings, and Git integration were planned next.
       </p>
 
       <h2>Why it exists</h2>

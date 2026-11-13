@@ -3,6 +3,7 @@ import type { WorkMeta } from './types';
 
 export const meta: WorkMeta = {
   slug: 'resources',
+  cover: { src: '/screenshot.png', alt: 'Resource library page', width: 3126, height: 1364 },
   title: 'Resource Library',
   kind: 'project',
   year: '2023',
