@@ -1,0 +1,51 @@
+/*
+ * Design tokens. Each token carries both palettes via light-dark(); which one
+ * applies is decided by `color-scheme` alone: the OS preference by default,
+ * or an explicit choice stored on <html data-theme> (see ThemeScript).
+ *
+ * The palette is warm paper by day and a warm near-black at night, with one
+ * vermilion accent.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --ground: light-dark(#fbf8f1, #121114);
+  /* Alternating section bands, the work sidebar, chips. */
+  --panel: light-dark(#f4efe4, #17161a);
+  /* Cards and other raised surfaces. */
+  --surface: light-dark(#fffdf8, #1c1b20);
+  /* Hover state of anything sitting on --ground, --panel or --surface. */
+  --raised: light-dark(#ffffff, #25242b);
+  --selected: light-dark(#ece6d9, #2b2a33);
+  /* Code blocks and inline code. */
+  --well: light-dark(#f1ece1, #17161a);
+
+  --ink: light-dark(#1f1c18, #f1ece2);
+  --ink-muted: light-dark(#57524a, #bdb7ac);
+  /* Faintest ink still clears WCAG AA for small text on --ground and --panel. */
+  --ink-faint: light-dark(#6b655c, #989288);
+
+  --rule: light-dark(rgb(40 33 24 / 0.12), rgb(241 236 226 / 0.1));
+  --rule-strong: light-dark(rgb(40 33 24 / 0.22), rgb(241 236 226 / 0.2));
+  /* Borders of outlined buttons and form fields. */
+  --edge: light-dark(rgb(40 33 24 / 0.3), rgb(241 236 226 / 0.28));
+
+  /* The one accent: a vermilion, used for links, markers and the main button. */
+  --accent: light-dark(#b8321f, #f47d69);
+
+  /* Primary button: the same fill in both themes, white text on it. */
+  --btn: #c8392a;
+  --btn-hover: #b8321f;
+  --btn-ink: #ffffff;
+
+  --shadow-color: light-dark(rgb(40 33 24 / 0.07), rgb(0 0 0 / 0.3));
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
